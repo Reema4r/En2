@@ -1,0 +1,62 @@
+{
+  "categories": [
+    {
+      "id": "standalone-irregular-verbs",
+      "lesson_slugs": ["past-simple-irregular-verbs"]
+    },
+    {
+      "id": "unit-1-foundations",
+      "lesson_slugs": [
+        "grammar-be-am-is-are",
+        "possessive-adjectives-s",
+        "coordinating-conjunctions-and-or-but",
+        "there-is-there-are"
+      ]
+    },
+    {
+      "id": "unit-2-nouns-place-tense",
+      "lesson_slugs": [
+        "prepositions-of-place",
+        "plural-nouns",
+        "demonstratives-this-that-these-those",
+        "present-simple"
+      ]
+    },
+    {
+      "id": "unit-3-writing-routines",
+      "lesson_slugs": ["capital-letters", "like-love-noun-ing", "adverbs-of-frequency"]
+    },
+    {
+      "id": "unit-4-ability-quantity",
+      "lesson_slugs": [
+        "can-cant-ability",
+        "countable-uncountable-some-any",
+        "a-lot-much-many",
+        "how-much-how-many"
+      ]
+    },
+    {
+      "id": "unit-5-past",
+      "lesson_slugs": ["was-were-past-be", "past-simple-regular-verbs"]
+    },
+    {
+      "id": "unit-6-compare-link-aspect",
+      "lesson_slugs": ["comparative-superlative-adjectives", "so-and-because", "present-continuous-tense"]
+    },
+    {
+      "id": "unit-7-future-purpose-senses",
+      "lesson_slugs": ["be-going-to-future-plans", "infinitive-of-purpose", "sense-verbs-opinions"]
+    },
+    {
+      "id": "unit-8-perfect-modals-articles",
+      "lesson_slugs": [
+        "present-perfect-tense",
+        "past-simple-vs-present-perfect",
+        "have-to-dont-have-to",
+        "should-shouldnt-advice",
+        "will-future-tense",
+        "articles-definite-zero"
+      ]
+    }
+  ]
+}

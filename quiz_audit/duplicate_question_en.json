@@ -1,0 +1,15 @@
+[
+  {
+    "normalized_en": "birds ___ south in winter",
+    "occurrences": [
+      {
+        "lessonId": "past-simple-irregular-verbs",
+        "source": "quizStages[5]"
+      },
+      {
+        "lessonId": "present-simple",
+        "source": "quiz"
+      }
+    ]
+  }
+]

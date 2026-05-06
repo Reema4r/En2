@@ -1,0 +1,5703 @@
+{
+  "standalone-irregular-verbs": [
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[0]",
+      "indexInSource": 0,
+      "question_en": "She ___ very tired after work.",
+      "options": [
+        "became",
+        "becomed",
+        "become"
+      ],
+      "correct": 0,
+      "why_ar": "become → became في الماضي.",
+      "rule_ar": "become/became.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[0]",
+      "indexInSource": 1,
+      "question_en": "They ___ home late yesterday.",
+      "options": [
+        "came",
+        "come",
+        "comes"
+      ],
+      "correct": 0,
+      "why_ar": "come → came.",
+      "rule_ar": "come/came.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[0]",
+      "indexInSource": 2,
+      "question_en": "The ticket ___ only five pounds.",
+      "options": [
+        "cost",
+        "costed",
+        "costs"
+      ],
+      "correct": 0,
+      "why_ar": "cost يبقى cost.",
+      "rule_ar": "cost/cost/cost.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[0]",
+      "indexInSource": 3,
+      "question_en": "He ___ his ankle in the match.",
+      "options": [
+        "hurt",
+        "hurted",
+        "hurts"
+      ],
+      "correct": 0,
+      "why_ar": "hurt يبقى hurt.",
+      "rule_ar": "hurt/hurt/hurt.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[0]",
+      "indexInSource": 4,
+      "question_en": "My dad ___ me use his laptop.",
+      "options": [
+        "let",
+        "lets",
+        "letted"
+      ],
+      "correct": 0,
+      "why_ar": "let يبقى let.",
+      "rule_ar": "let/let/let.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[0]",
+      "indexInSource": 5,
+      "question_en": "She ___ the keys on the table.",
+      "options": [
+        "put",
+        "putted",
+        "puts"
+      ],
+      "correct": 0,
+      "why_ar": "put يبقى put.",
+      "rule_ar": "put/put/put.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[0]",
+      "indexInSource": 6,
+      "question_en": "He ___ five kilometres yesterday.",
+      "options": [
+        "ran",
+        "runned",
+        "run"
+      ],
+      "correct": 0,
+      "why_ar": "run → ran.",
+      "rule_ar": "run/ran/run.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[1]",
+      "indexInSource": 0,
+      "question_en": "She ___ her friend a birthday gift.",
+      "options": [
+        "brought",
+        "bringed",
+        "bring"
+      ],
+      "correct": 0,
+      "why_ar": "bring → brought.",
+      "rule_ar": "bring/brought.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[1]",
+      "indexInSource": 1,
+      "question_en": "They ___ a new wall in the garden.",
+      "options": [
+        "built",
+        "builded",
+        "build"
+      ],
+      "correct": 0,
+      "why_ar": "build → built.",
+      "rule_ar": "build/built.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[1]",
+      "indexInSource": 2,
+      "question_en": "I ___ new shoes online.",
+      "options": [
+        "bought",
+        "buyed",
+        "buy"
+      ],
+      "correct": 0,
+      "why_ar": "buy → bought.",
+      "rule_ar": "buy/bought.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[1]",
+      "indexInSource": 3,
+      "question_en": "We ___ cold on the trip.",
+      "options": [
+        "felt",
+        "feeled",
+        "feel"
+      ],
+      "correct": 0,
+      "why_ar": "feel → felt.",
+      "rule_ar": "feel/felt.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[1]",
+      "indexInSource": 4,
+      "question_en": "I ___ my keys in my bag.",
+      "options": [
+        "found",
+        "finded",
+        "find"
+      ],
+      "correct": 0,
+      "why_ar": "find → found.",
+      "rule_ar": "find/found.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[1]",
+      "indexInSource": 5,
+      "question_en": "He ___ a message from his coach.",
+      "options": [
+        "got",
+        "getted",
+        "get"
+      ],
+      "correct": 0,
+      "why_ar": "get → got.",
+      "rule_ar": "get/got.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[1]",
+      "indexInSource": 6,
+      "question_en": "She ___ breakfast at 7 a.m.",
+      "options": [
+        "had",
+        "haved",
+        "has"
+      ],
+      "correct": 0,
+      "why_ar": "have → had.",
+      "rule_ar": "have/had.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[1]",
+      "indexInSource": 7,
+      "question_en": "I ___ the bell ring.",
+      "options": [
+        "heard",
+        "heared",
+        "hear"
+      ],
+      "correct": 0,
+      "why_ar": "hear → heard.",
+      "rule_ar": "hear/heard.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[1]",
+      "indexInSource": 8,
+      "question_en": "We ___ quiet during the exam.",
+      "options": [
+        "kept",
+        "keeped",
+        "keep"
+      ],
+      "correct": 0,
+      "why_ar": "keep → kept.",
+      "rule_ar": "keep/kept.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[2]",
+      "indexInSource": 0,
+      "question_en": "The bus ___ before I arrived.",
+      "options": [
+        "left",
+        "leaved",
+        "leave"
+      ],
+      "correct": 0,
+      "why_ar": "leave → left.",
+      "rule_ar": "leave/left.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[2]",
+      "indexInSource": 1,
+      "question_en": "We ___ many new words.",
+      "options": [
+        "learned",
+        "learn",
+        "learning"
+      ],
+      "correct": 0,
+      "why_ar": "learn → learned.",
+      "rule_ar": "learn/learned.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[2]",
+      "indexInSource": 2,
+      "question_en": "She ___ juice for everyone.",
+      "options": [
+        "made",
+        "maked",
+        "make"
+      ],
+      "correct": 0,
+      "why_ar": "make → made.",
+      "rule_ar": "make/made.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[3]",
+      "indexInSource": 0,
+      "question_en": "I ___ my cousin at the stadium.",
+      "options": [
+        "met",
+        "meet",
+        "meeted"
+      ],
+      "correct": 0,
+      "why_ar": "meet → met.",
+      "rule_ar": "meet/met.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[3]",
+      "indexInSource": 1,
+      "question_en": "He ___ by card.",
+      "options": [
+        "paid",
+        "payed",
+        "pay"
+      ],
+      "correct": 0,
+      "why_ar": "pay → paid.",
+      "rule_ar": "pay/paid.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[3]",
+      "indexInSource": 2,
+      "question_en": "She ___ nothing about it.",
+      "options": [
+        "said",
+        "sayed",
+        "say"
+      ],
+      "correct": 0,
+      "why_ar": "say → said.",
+      "rule_ar": "say/said.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[3]",
+      "indexInSource": 3,
+      "question_en": "The shop ___ out of milk.",
+      "options": [
+        "sold",
+        "selled",
+        "sell"
+      ],
+      "correct": 0,
+      "why_ar": "sell → sold.",
+      "rule_ar": "sell/sold.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[3]",
+      "indexInSource": 4,
+      "question_en": "I ___ the form yesterday afternoon.",
+      "options": [
+        "sent",
+        "send",
+        "sended"
+      ],
+      "correct": 0,
+      "why_ar": "الماضي → sent.",
+      "rule_ar": "send/sent.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[3]",
+      "indexInSource": 5,
+      "question_en": "The cat ___ under the chair.",
+      "options": [
+        "sat",
+        "sitted",
+        "sit"
+      ],
+      "correct": 0,
+      "why_ar": "sit → sat.",
+      "rule_ar": "sit/sat.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[3]",
+      "indexInSource": 6,
+      "question_en": "They ___ well last night.",
+      "options": [
+        "slept",
+        "sleeped",
+        "sleep"
+      ],
+      "correct": 0,
+      "why_ar": "sleep → slept.",
+      "rule_ar": "sleep/slept.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[3]",
+      "indexInSource": 7,
+      "question_en": "He ___ all his pocket money.",
+      "options": [
+        "spent",
+        "spended",
+        "spend"
+      ],
+      "correct": 0,
+      "why_ar": "spend → spent.",
+      "rule_ar": "spend/spent.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[3]",
+      "indexInSource": 8,
+      "question_en": "Mr Omar ___ us new vocabulary.",
+      "options": [
+        "taught",
+        "teached",
+        "teach"
+      ],
+      "correct": 0,
+      "why_ar": "teach → taught.",
+      "rule_ar": "teach/taught.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[4]",
+      "indexInSource": 0,
+      "question_en": "She ___ me the secret.",
+      "options": [
+        "told",
+        "telled",
+        "tell"
+      ],
+      "correct": 0,
+      "why_ar": "tell → told.",
+      "rule_ar": "tell/told.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[4]",
+      "indexInSource": 1,
+      "question_en": "I ___ it was a good idea.",
+      "options": [
+        "thought",
+        "thinked",
+        "think"
+      ],
+      "correct": 0,
+      "why_ar": "think → thought.",
+      "rule_ar": "think/thought.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[4]",
+      "indexInSource": 2,
+      "question_en": "We ___ the teacher clearly.",
+      "options": [
+        "understood",
+        "understanded",
+        "understand"
+      ],
+      "correct": 0,
+      "why_ar": "understand → understood.",
+      "rule_ar": "understand/understood.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[5]",
+      "indexInSource": 0,
+      "question_en": "They ___ at home yesterday evening.",
+      "options": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correct": 0,
+      "why_ar": "they + were.",
+      "rule_ar": "be → was/were.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[5]",
+      "indexInSource": 1,
+      "question_en": "The concert ___ at 7.",
+      "options": [
+        "began",
+        "begined",
+        "begin"
+      ],
+      "correct": 0,
+      "why_ar": "begin → began.",
+      "rule_ar": "begin/began.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[5]",
+      "indexInSource": 2,
+      "question_en": "She ___ the cheaper ticket.",
+      "options": [
+        "chose",
+        "choose",
+        "choosed"
+      ],
+      "correct": 0,
+      "why_ar": "choose → chose.",
+      "rule_ar": "choose/chose.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[5]",
+      "indexInSource": 3,
+      "question_en": "We ___ our homework together.",
+      "options": [
+        "did",
+        "done",
+        "do"
+      ],
+      "correct": 0,
+      "why_ar": "do → did.",
+      "rule_ar": "do/did.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[5]",
+      "indexInSource": 4,
+      "question_en": "He ___ too much juice.",
+      "options": [
+        "drank",
+        "drinked",
+        "drink"
+      ],
+      "correct": 0,
+      "why_ar": "drink → drank.",
+      "rule_ar": "drink/drank.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[5]",
+      "indexInSource": 5,
+      "question_en": "They ___ dinner early.",
+      "options": [
+        "ate",
+        "eated",
+        "eat"
+      ],
+      "correct": 0,
+      "why_ar": "eat → ate.",
+      "rule_ar": "eat/ate.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[5]",
+      "indexInSource": 6,
+      "question_en": "The phone ___ on the floor.",
+      "options": [
+        "fell",
+        "falled",
+        "fall"
+      ],
+      "correct": 0,
+      "why_ar": "fall → fell.",
+      "rule_ar": "fall/fell.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[5]",
+      "indexInSource": 7,
+      "question_en": "Birds ___ south in winter.",
+      "options": [
+        "flew",
+        "flyed",
+        "fly"
+      ],
+      "correct": 0,
+      "why_ar": "fly → flew.",
+      "rule_ar": "fly/flew.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[5]",
+      "indexInSource": 8,
+      "question_en": "I ___ his phone number.",
+      "options": [
+        "forgot",
+        "forgetted",
+        "forget"
+      ],
+      "correct": 0,
+      "why_ar": "forget → forgot.",
+      "rule_ar": "forget/forgot.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[6]",
+      "indexInSource": 0,
+      "question_en": "She ___ him a notebook.",
+      "options": [
+        "gave",
+        "gived",
+        "give"
+      ],
+      "correct": 0,
+      "why_ar": "give → gave.",
+      "rule_ar": "give/gave.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[6]",
+      "indexInSource": 1,
+      "question_en": "We ___ to London last month.",
+      "options": [
+        "went",
+        "goed",
+        "go"
+      ],
+      "correct": 0,
+      "why_ar": "go → went.",
+      "rule_ar": "go/went.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[6]",
+      "indexInSource": 2,
+      "question_en": "The trees ___ fast.",
+      "options": [
+        "grew",
+        "growed",
+        "grow"
+      ],
+      "correct": 0,
+      "why_ar": "grow → grew.",
+      "rule_ar": "grow/grew.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[6]",
+      "indexInSource": 3,
+      "question_en": "I ___ him from primary school.",
+      "options": [
+        "knew",
+        "knowed",
+        "know"
+      ],
+      "correct": 0,
+      "why_ar": "know → knew.",
+      "rule_ar": "know/knew.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[6]",
+      "indexInSource": 4,
+      "question_en": "They ___ the new gallery.",
+      "options": [
+        "saw",
+        "seed",
+        "see"
+      ],
+      "correct": 0,
+      "why_ar": "see → saw.",
+      "rule_ar": "see/saw.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[6]",
+      "indexInSource": 5,
+      "question_en": "He ___ about the exam.",
+      "options": [
+        "spoke",
+        "speaked",
+        "speak"
+      ],
+      "correct": 0,
+      "why_ar": "speak → spoke.",
+      "rule_ar": "speak/spoke.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[6]",
+      "indexInSource": 6,
+      "question_en": "She ___ across the river.",
+      "options": [
+        "swam",
+        "swimmed",
+        "swim"
+      ],
+      "correct": 0,
+      "why_ar": "swim → swam.",
+      "rule_ar": "swim/swam.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[6]",
+      "indexInSource": 7,
+      "question_en": "Who ___ this photo?",
+      "options": [
+        "took",
+        "taked",
+        "take"
+      ],
+      "correct": 0,
+      "why_ar": "take → took.",
+      "rule_ar": "take/took.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[6]",
+      "indexInSource": 8,
+      "question_en": "I ___ up early today.",
+      "options": [
+        "woke",
+        "waked",
+        "wake"
+      ],
+      "correct": 0,
+      "why_ar": "wake → woke.",
+      "rule_ar": "wake/woke.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[6]",
+      "indexInSource": 9,
+      "question_en": "She ___ a blue coat.",
+      "options": [
+        "wore",
+        "weared",
+        "wear"
+      ],
+      "correct": 0,
+      "why_ar": "wear → wore.",
+      "rule_ar": "wear/wore.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizStages[6]",
+      "indexInSource": 10,
+      "question_en": "He ___ three paragraphs.",
+      "options": [
+        "wrote",
+        "writed",
+        "write"
+      ],
+      "correct": 0,
+      "why_ar": "write → wrote.",
+      "rule_ar": "write/wrote.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizComprehensive",
+      "indexInSource": 0,
+      "question_en": "Yesterday we ___ to the museum.",
+      "options": [
+        "went",
+        "goed",
+        "gone"
+      ],
+      "correct": 0,
+      "why_ar": "الماضي البسيط → went (ليست gone هنا).",
+      "rule_ar": "go → went.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizComprehensive",
+      "indexInSource": 1,
+      "question_en": "She ___ breakfast at seven.",
+      "options": [
+        "ate",
+        "eated",
+        "eaten"
+      ],
+      "correct": 0,
+      "why_ar": "الماضي البسيط → ate.",
+      "rule_ar": "eat → ate.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizComprehensive",
+      "indexInSource": 2,
+      "question_en": "What ___ you do last weekend?",
+      "options": [
+        "did",
+        "do",
+        "does"
+      ],
+      "correct": 0,
+      "why_ar": "سؤال ماضٍ للفعل المعنوي → did.",
+      "rule_ar": "What did you do?",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizComprehensive",
+      "indexInSource": 3,
+      "question_en": "He ___ his keys under the sofa.",
+      "options": [
+        "found",
+        "finded",
+        "find"
+      ],
+      "correct": 0,
+      "why_ar": "find → found.",
+      "rule_ar": "find/found.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizComprehensive",
+      "indexInSource": 4,
+      "question_en": "They ___ us the last tickets.",
+      "options": [
+        "sold",
+        "selled",
+        "sell"
+      ],
+      "correct": 0,
+      "why_ar": "sell → sold.",
+      "rule_ar": "sell/sold.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizComprehensive",
+      "indexInSource": 5,
+      "question_en": "We ___ the notice on the door.",
+      "options": [
+        "read",
+        "readed",
+        "reads"
+      ],
+      "correct": 0,
+      "why_ar": "شكل الماضي مثل المصدر: read.",
+      "rule_ar": "read/read.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizComprehensive",
+      "indexInSource": 6,
+      "question_en": "She ___ him a birthday card.",
+      "options": [
+        "gave",
+        "gived",
+        "give"
+      ],
+      "correct": 0,
+      "why_ar": "give → gave.",
+      "rule_ar": "give/gave.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizComprehensive",
+      "indexInSource": 7,
+      "question_en": "I ___ nervous before the exam.",
+      "options": [
+        "felt",
+        "feeled",
+        "feel"
+      ],
+      "correct": 0,
+      "why_ar": "feel → felt.",
+      "rule_ar": "feel/felt.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizComprehensive",
+      "indexInSource": 8,
+      "question_en": "The baby ___ off the bed.",
+      "options": [
+        "fell",
+        "falled",
+        "fall"
+      ],
+      "correct": 0,
+      "why_ar": "fall → fell.",
+      "rule_ar": "fall/fell.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizComprehensive",
+      "indexInSource": 9,
+      "question_en": "Who ___ of this game?",
+      "options": [
+        "thought",
+        "thinked",
+        "think"
+      ],
+      "correct": 0,
+      "why_ar": "think → thought.",
+      "rule_ar": "think/thought.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizComprehensive",
+      "indexInSource": 10,
+      "question_en": "He ___ all his money on games.",
+      "options": [
+        "spent",
+        "spended",
+        "spend"
+      ],
+      "correct": 0,
+      "why_ar": "spend → spent.",
+      "rule_ar": "spend/spent.",
+      "categoryId": "standalone-irregular-verbs"
+    },
+    {
+      "lessonId": "past-simple-irregular-verbs",
+      "source": "quizComprehensive",
+      "indexInSource": 11,
+      "question_en": "They ___ the famous tower.",
+      "options": [
+        "saw",
+        "seed",
+        "see"
+      ],
+      "correct": 0,
+      "why_ar": "see → saw.",
+      "rule_ar": "see/saw.",
+      "categoryId": "standalone-irregular-verbs"
+    }
+  ],
+  "unit-1-foundations": [
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "She ___ a nurse.",
+      "options": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "مع he/she/it يأتي is.",
+      "rule_ar": "Verb be: third person singular → is.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "They ___ at home now.",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "they جمع → are.",
+      "rule_ar": "Plural pronouns → are.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "___ you from Egypt?",
+      "options": [
+        "Are",
+        "Is",
+        "Do"
+      ],
+      "correct": 0,
+      "why_ar": "أسئلة be مع you تبدأ بـ Are.",
+      "rule_ar": "Are you …? for origin / state.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "I ___ tired today.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "correct": 0,
+      "why_ar": "المتحدث I يأخذ am.",
+      "rule_ar": "I + am.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "It ___ a small mistake.",
+      "options": [
+        "isn't",
+        "aren't",
+        "don't"
+      ],
+      "correct": 0,
+      "why_ar": "نفي it → isn't (أو it's not).",
+      "rule_ar": "Negative of is → isn't.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "We ___ ready for the test.",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "we → are.",
+      "rule_ar": "We + are.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "___ he your brother?",
+      "options": [
+        "Is",
+        "Are",
+        "Does"
+      ],
+      "correct": 0,
+      "why_ar": "سؤال بحالة أو هوية لشخص → Is he…?",
+      "rule_ar": "Is + he/she/it …?",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "The keys ___ on the table.",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "keys جمع مذكر → are.",
+      "rule_ar": "Plural subject → are.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "___ there any milk?",
+      "options": [
+        "Is",
+        "Are",
+        "Do"
+      ],
+      "correct": 0,
+      "why_ar": "milk غير معدود في هذا النمط الشائع → Is there…?",
+      "rule_ar": "There is + uncountable noun.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "You ___ amazing!",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "you دائمًا مع are في اللغة المعيارية.",
+      "rule_ar": "You + are.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 10,
+      "question_en": "___ I late for class?",
+      "options": [
+        "Am",
+        "Are",
+        "Is"
+      ],
+      "correct": 0,
+      "why_ar": "مع I في السؤال يبدأ بـ Am.",
+      "rule_ar": "Am I …?",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 11,
+      "question_en": "Mathematics ___ difficult for many learners.",
+      "options": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "Mathematics اسم مادة يُعامل كمفرد → is.",
+      "rule_ar": "Singular subject → is.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 12,
+      "question_en": "Those ___ my gloves.",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "those جمع → are.",
+      "rule_ar": "Those + plural → are.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 13,
+      "question_en": "He ___ not at school today.",
+      "options": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "he + is.",
+      "rule_ar": "He + is + not.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 14,
+      "question_en": "___ we allowed to use phones here?",
+      "options": [
+        "Are",
+        "Is",
+        "Do"
+      ],
+      "correct": 0,
+      "why_ar": "we جمع → Are we…?",
+      "rule_ar": "Are we …?",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 15,
+      "question_en": "My hands ___ cold.",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "hands جمع → are.",
+      "rule_ar": "Plural noun → are.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 16,
+      "question_en": "___ it true that you moved?",
+      "options": [
+        "Is",
+        "Are",
+        "Does"
+      ],
+      "correct": 0,
+      "why_ar": "It + fact → Is it…?",
+      "rule_ar": "Is it true …?",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 17,
+      "question_en": "There ___ many reasons for this.",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "many reasons جمع → there are.",
+      "rule_ar": "There are + plural.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 18,
+      "question_en": "You ___ very helpful — thanks!",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "you + are.",
+      "rule_ar": "You are + adjective.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 19,
+      "question_en": "She ___ an engineer.",
+      "options": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "she + is + noun.",
+      "rule_ar": "She is + noun.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 20,
+      "question_en": "They ___ not interested in the offer.",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "they + are + not.",
+      "rule_ar": "They are not.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 21,
+      "question_en": "___ your parents teachers?",
+      "options": [
+        "Are",
+        "Is",
+        "Do"
+      ],
+      "correct": 0,
+      "why_ar": "parents جمع → Are your parents…?",
+      "rule_ar": "Are + plural subject.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 22,
+      "question_en": "The weather ___ nice today.",
+      "options": [
+        "is",
+        "are",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "weather غير معدود → is.",
+      "rule_ar": "Weather + is.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "grammar-be-am-is-are",
+      "source": "quiz",
+      "indexInSource": 23,
+      "question_en": "___ she feeling OK? (grammar focus: be)",
+      "options": [
+        "Is",
+        "Are",
+        "Does"
+      ],
+      "correct": 0,
+      "why_ar": "فعل be للحالة → Is she…?",
+      "rule_ar": "Is + she + …?",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "Anna forgot ___ keys on the bus.",
+      "options": [
+        "her",
+        "she",
+        "hers"
+      ],
+      "correct": 0,
+      "why_ar": "اسم شيء بعد الصفة الملكية → her.",
+      "rule_ar": "Possessive adjective before noun.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "This is ___ house, not ours.",
+      "options": [
+        "they're",
+        "their",
+        "there"
+      ],
+      "correct": 1,
+      "why_ar": "ملكية الجمع → their.",
+      "rule_ar": "their + noun.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "The cat drank ___ water.",
+      "options": [
+        "it's",
+        "its",
+        "it"
+      ],
+      "correct": 1,
+      "why_ar": "ضمير ملكية للحيوان → its.",
+      "rule_ar": "its + noun.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "___ father works in a hospital.",
+      "options": [
+        "We",
+        "Our",
+        "Us"
+      ],
+      "correct": 1,
+      "why_ar": "قبل اسم → صفة ملكية.",
+      "rule_ar": "Our + noun.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "Is this ___ pen? — Yes, it's mine.",
+      "options": [
+        "you",
+        "your",
+        "you're"
+      ],
+      "correct": 1,
+      "why_ar": "your pen.",
+      "rule_ar": "Possessive adjective.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "The students forgot ___ books.",
+      "options": [
+        "his",
+        "their",
+        "its"
+      ],
+      "correct": 1,
+      "why_ar": "students جمع → their.",
+      "rule_ar": "Plural possessive.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "That's ___ classroom (Paul).",
+      "options": [
+        "Pauls'",
+        "Paul's",
+        "Pauls"
+      ],
+      "correct": 1,
+      "why_ar": "ملكية شخص → 's.",
+      "rule_ar": "Possessive ’s.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "___ bag is heavier: yours or mine?",
+      "options": [
+        "Who's",
+        "Whose",
+        "Who"
+      ],
+      "correct": 1,
+      "why_ar": "سؤال عن الملكية → Whose (كلمة استفهام).",
+      "rule_ar": "Whose + noun.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "They love ___ new apartment.",
+      "options": [
+        "there",
+        "their",
+        "they're"
+      ],
+      "correct": 1,
+      "why_ar": "their apartment.",
+      "rule_ar": "Possessive their.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "Ahmad ___ sister is a doctor.",
+      "options": [
+        "'s",
+        "s'",
+        "s's"
+      ],
+      "correct": 0,
+      "why_ar": "اسم مفرد + ’s.",
+      "rule_ar": "Noun + ’s.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 10,
+      "question_en": "I lost ___ wallet.",
+      "options": [
+        "my",
+        "mine",
+        "me"
+      ],
+      "correct": 0,
+      "why_ar": "قبل اسم → صفة ملكية my.",
+      "rule_ar": "my + noun.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 11,
+      "question_en": "Can we borrow ___ car?",
+      "options": [
+        "your",
+        "you're",
+        "you"
+      ],
+      "correct": 0,
+      "why_ar": "your car.",
+      "rule_ar": "Possessive adjective.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 12,
+      "question_en": "The dog hurt ___ paw.",
+      "options": [
+        "its",
+        "it's",
+        "it"
+      ],
+      "correct": 0,
+      "why_ar": "ملكية للحيوان → its.",
+      "rule_ar": "its + body part.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 13,
+      "question_en": "Is this ___ umbrella?",
+      "options": [
+        "your",
+        "you're",
+        "you"
+      ],
+      "correct": 0,
+      "why_ar": "قبل اسم → your.",
+      "rule_ar": "your + noun.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 14,
+      "question_en": "Those seats are ___. (they belong to us)",
+      "options": [
+        "ours",
+        "our",
+        "we"
+      ],
+      "correct": 0,
+      "why_ar": "ضمير ملكية منفصل بدون اسم بعده.",
+      "rule_ar": "Possessive pronoun ours.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 15,
+      "question_en": "___ dictionary is this?",
+      "options": [
+        "Who's",
+        "Whose",
+        "Who"
+      ],
+      "correct": 1,
+      "why_ar": "Whose = لمن.",
+      "rule_ar": "Whose + noun?",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 16,
+      "question_en": "She spoke to ___ teacher after class.",
+      "options": [
+        "her",
+        "she",
+        "hers"
+      ],
+      "correct": 0,
+      "why_ar": "her teacher.",
+      "rule_ar": "her + noun.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 17,
+      "question_en": "We painted ___ bedroom white.",
+      "options": [
+        "our",
+        "we",
+        "hours"
+      ],
+      "correct": 0,
+      "why_ar": "our bedroom.",
+      "rule_ar": "our + noun.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 18,
+      "question_en": "___ not my coat — pick the contraction for «it is».",
+      "options": [
+        "It's",
+        "Its",
+        "Its'"
+      ],
+      "correct": 0,
+      "why_ar": "It's = it is.",
+      "rule_ar": "it's vs its.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 19,
+      "question_en": "Whose keys ___ these?",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "keys جمع → are.",
+      "rule_ar": "Whose + noun + be.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 20,
+      "question_en": "___ phone keeps ringing.",
+      "options": [
+        "Mary's",
+        "Marys",
+        "Marys'"
+      ],
+      "correct": 0,
+      "why_ar": "Mary's phone.",
+      "rule_ar": "Singular name + ’s.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "possessive-adjectives-s",
+      "source": "quiz",
+      "indexInSource": 21,
+      "question_en": "They sold ___ old bikes.",
+      "options": [
+        "their",
+        "they're",
+        "there"
+      ],
+      "correct": 0,
+      "why_ar": "their bikes.",
+      "rule_ar": "their + plural noun.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "coordinating-conjunctions-and-or-but",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "I bought bread ___ butter at the store.",
+      "options": [
+        "and",
+        "but",
+        "or"
+      ],
+      "correct": 0,
+      "why_ar": "إضافة غرضين متشابهين في القائمة → and.",
+      "rule_ar": "and links similar items.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "coordinating-conjunctions-and-or-but",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "Do you want the red one ___ the blue one?",
+      "options": [
+        "and",
+        "or",
+        "but"
+      ],
+      "correct": 1,
+      "why_ar": "اختيار بين بديلين → or.",
+      "rule_ar": "or for alternatives.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "coordinating-conjunctions-and-or-but",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "It's cheap ___ it's good quality.",
+      "options": [
+        "and",
+        "but",
+        "or"
+      ],
+      "correct": 0,
+      "why_ar": "إضافة صفتين متوافقتين → and.",
+      "rule_ar": "and for addition.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "coordinating-conjunctions-and-or-but",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "She wanted to stay, ___ she had to leave.",
+      "options": [
+        "and",
+        "but",
+        "or"
+      ],
+      "correct": 1,
+      "why_ar": "رغبة مقابل إجبار → تباين → but.",
+      "rule_ar": "but links contrasting clauses.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "coordinating-conjunctions-and-or-but",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "He's rich ___ unhappy.",
+      "options": [
+        "and",
+        "but",
+        "or"
+      ],
+      "correct": 1,
+      "why_ar": "تعارض بين غني وحزين → but.",
+      "rule_ar": "but for contrast.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "coordinating-conjunctions-and-or-but",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "Walk straight ___ turn left at the bank.",
+      "options": [
+        "and",
+        "or",
+        "but"
+      ],
+      "correct": 0,
+      "why_ar": "تتابع خطوات → and.",
+      "rule_ar": "Sequential instructions with and.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "coordinating-conjunctions-and-or-but",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "We can meet today ___ tomorrow.",
+      "options": [
+        "and",
+        "or",
+        "but"
+      ],
+      "correct": 1,
+      "why_ar": "خياران زمنيان → or.",
+      "rule_ar": "or between options.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "coordinating-conjunctions-and-or-but",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "She likes maths ___ finds physics difficult.",
+      "options": [
+        "and",
+        "but",
+        "or"
+      ],
+      "correct": 1,
+      "why_ar": "إعجاب مقابل صعوبة → contrast → but.",
+      "rule_ar": "but.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "coordinating-conjunctions-and-or-but",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "Do you travel by bus ___ by train?",
+      "options": [
+        "and",
+        "or",
+        "but"
+      ],
+      "correct": 1,
+      "why_ar": "وسيلتان بديلتان → or.",
+      "rule_ar": "or in questions of choice.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "coordinating-conjunctions-and-or-but",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "I'd love to go, ___ I'm too busy.",
+      "options": [
+        "and",
+        "but",
+        "or"
+      ],
+      "correct": 1,
+      "why_ar": "رغبة مقابل عائق → but.",
+      "rule_ar": "but for contrast.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "there-is-there-are",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "There ___ two pens on the floor.",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "two pens جمع → there are.",
+      "rule_ar": "There are + plural.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "there-is-there-are",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "There ___ a problem with the Wi‑Fi.",
+      "options": [
+        "is",
+        "are",
+        "be"
+      ],
+      "correct": 0,
+      "why_ar": "a problem مفرد → there is.",
+      "rule_ar": "There is + singular.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "there-is-there-are",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "___ there any sugar?",
+      "options": [
+        "Is",
+        "Are",
+        "Do"
+      ],
+      "correct": 0,
+      "why_ar": "sugar غير معدود هنا → Is there…?",
+      "rule_ar": "Is there + uncountable.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "there-is-there-are",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "There ___ some chairs in the room.",
+      "options": [
+        "are",
+        "is",
+        "has"
+      ],
+      "correct": 0,
+      "why_ar": "chairs جمع.",
+      "rule_ar": "There are.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "there-is-there-are",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "There ___ not enough time.",
+      "options": [
+        "is",
+        "are",
+        "were"
+      ],
+      "correct": 0,
+      "why_ar": "time غير معدود → is.",
+      "rule_ar": "There isn't + uncountable.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "there-is-there-are",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "___ there many students?",
+      "options": [
+        "Are",
+        "Is",
+        "Do"
+      ],
+      "correct": 0,
+      "why_ar": "many students جمع → Are there…?",
+      "rule_ar": "Are there + plural?",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "there-is-there-are",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "There ___ a cat and two dogs in the yard.",
+      "options": [
+        "is",
+        "are",
+        "have"
+      ],
+      "correct": 0,
+      "why_ar": "الاتفاق غالبًا مع أول اسم (a cat) في اللغة غير الرسمية؛ المعيار التعليمي يركز there is مع أول عنصر مفرد.",
+      "rule_ar": "There is + first item singular (proximity agreement).",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "there-is-there-are",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "There ___ no apples left.",
+      "options": [
+        "are",
+        "is",
+        "were"
+      ],
+      "correct": 0,
+      "why_ar": "apples جمع → are.",
+      "rule_ar": "There are + plural subject.",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "there-is-there-are",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "___ there a bank near here?",
+      "options": [
+        "Is",
+        "Are",
+        "Does"
+      ],
+      "correct": 0,
+      "why_ar": "a bank مفرد.",
+      "rule_ar": "Is there a…?",
+      "categoryId": "unit-1-foundations"
+    },
+    {
+      "lessonId": "there-is-there-are",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "There ___ lots of people outside.",
+      "options": [
+        "are",
+        "is",
+        "was"
+      ],
+      "correct": 0,
+      "why_ar": "people جمع → are.",
+      "rule_ar": "There are + plural.",
+      "categoryId": "unit-1-foundations"
+    }
+  ],
+  "unit-2-nouns-place-tense": [
+    {
+      "lessonId": "present-simple",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "He ___ English every morning.",
+      "options": [
+        "study",
+        "studies",
+        "studying"
+      ],
+      "correct": 1,
+      "why_ar": "he/she/it + فعل + s.",
+      "rule_ar": "Present simple third person + s.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "present-simple",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "They ___ football on Fridays.",
+      "options": [
+        "plays",
+        "play",
+        "playing"
+      ],
+      "correct": 1,
+      "why_ar": "they جمع بدون s على الفعل.",
+      "rule_ar": "Plural subject + base verb.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "present-simple",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "___ she like coffee?",
+      "options": [
+        "Do",
+        "Does",
+        "Is"
+      ],
+      "correct": 1,
+      "why_ar": "Does مع الصف الثالث للسؤال عن فعل معنوي.",
+      "rule_ar": "Does + she + base verb?",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "present-simple",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "I don't ___ early on Sundays.",
+      "options": [
+        "get up",
+        "gets up",
+        "getting up"
+      ],
+      "correct": 0,
+      "why_ar": "بعد don't يأتي المصدر.",
+      "rule_ar": "don't + base verb.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "present-simple",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "The sun ___ in the east.",
+      "options": [
+        "rise",
+        "rises",
+        "rising"
+      ],
+      "correct": 1,
+      "why_ar": "حقيقة عامة؛ the sun مفرد → rises.",
+      "rule_ar": "Facts: third person + s.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "present-simple",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "___ you play the piano?",
+      "options": [
+        "Do",
+        "Does",
+        "Are"
+      ],
+      "correct": 0,
+      "why_ar": "you مع Do في الأسئلة للأفعال المعنوية.",
+      "rule_ar": "Do you + verb?",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "present-simple",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "She ___ not watch TV at night.",
+      "options": [
+        "do",
+        "does",
+        "is"
+      ],
+      "correct": 1,
+      "why_ar": "نفي الصف الثالث → doesn't.",
+      "rule_ar": "doesn't + base verb.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "present-simple",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "We ___ dinner at 7 pm usually.",
+      "options": [
+        "have",
+        "has",
+        "having"
+      ],
+      "correct": 1,
+      "why_ar": "we + مصدر.",
+      "rule_ar": "Present simple plural.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "present-simple",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "___ it rain here often?",
+      "options": [
+        "Do",
+        "Does",
+        "Is"
+      ],
+      "correct": 1,
+      "why_ar": "Does مع it للفعل المعنوي rain.",
+      "rule_ar": "Does + subject + verb?",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "present-simple",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "Birds ___ south in winter.",
+      "options": [
+        "fly",
+        "flies",
+        "flying"
+      ],
+      "correct": 0,
+      "why_ar": "birds جمع → fly.",
+      "rule_ar": "Plural → base verb form.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "prepositions-of-place",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "The lamp is ___ the ceiling.",
+      "options": [
+        "on",
+        "above",
+        "in"
+      ],
+      "correct": 1,
+      "why_ar": "الثريا «فوق» الغرفة نحو السقف → above.",
+      "rule_ar": "above for higher position.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "prepositions-of-place",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "There's a spider ___ the bed.",
+      "options": [
+        "on",
+        "under",
+        "at"
+      ],
+      "correct": 1,
+      "why_ar": "شائع تحت السرير → under.",
+      "rule_ar": "under.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "prepositions-of-place",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "She lives ___ the third floor.",
+      "options": [
+        "in",
+        "on",
+        "at"
+      ],
+      "correct": 1,
+      "why_ar": "on + floor.",
+      "rule_ar": "on the floor level.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "prepositions-of-place",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "The bank is ___ the post office and the cafe.",
+      "options": [
+        "between",
+        "under",
+        "on"
+      ],
+      "correct": 0,
+      "why_ar": "بين مبنيين → between.",
+      "rule_ar": "between.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "prepositions-of-place",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "Put the glasses ___ the cupboard.",
+      "options": [
+        "in",
+        "on",
+        "over"
+      ],
+      "correct": 0,
+      "why_ar": "داخل الخزانة → in.",
+      "rule_ar": "in.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "prepositions-of-place",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "He stood ___ me in the queue.",
+      "options": [
+        "behind",
+        "between",
+        "next"
+      ],
+      "correct": 0,
+      "why_ar": "ورائي في الطابور → behind.",
+      "rule_ar": "behind.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "prepositions-of-place",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "There's a hotel ___ the river.",
+      "options": [
+        "opposite",
+        "under",
+        "in"
+      ],
+      "correct": 0,
+      "why_ar": "مقابل النهر → opposite.",
+      "rule_ar": "opposite.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "prepositions-of-place",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "Your shoes are ___ the door.",
+      "options": [
+        "next to",
+        "between",
+        "among"
+      ],
+      "correct": 0,
+      "why_ar": "بجانب الباب.",
+      "rule_ar": "next to.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "prepositions-of-place",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "The cat jumped ___ the table.",
+      "options": [
+        "onto",
+        "into",
+        "at"
+      ],
+      "correct": 0,
+      "why_ar": "حركة إلى فوق السطح → onto (في هذا السياق التعليمي).",
+      "rule_ar": "Movement to surface — onto.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "prepositions-of-place",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "Sign your name ___ the dotted line.",
+      "options": [
+        "on",
+        "in",
+        "under"
+      ],
+      "correct": 0,
+      "why_ar": "على الخط المنقط.",
+      "rule_ar": "on.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "plural-nouns",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "one box, two ___",
+      "options": [
+        "boxs",
+        "boxes",
+        "boxies"
+      ],
+      "correct": 1,
+      "why_ar": "ينتهي بـ x → es.",
+      "rule_ar": "+es after x.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "plural-nouns",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "one baby, many ___",
+      "options": [
+        "babys",
+        "babies",
+        "baby"
+      ],
+      "correct": 1,
+      "why_ar": "consonant + y → ies.",
+      "rule_ar": "y → ies.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "plural-nouns",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "two ___ (knife)",
+      "options": [
+        "knifes",
+        "knives",
+        "knife"
+      ],
+      "correct": 1,
+      "why_ar": "f → ves.",
+      "rule_ar": "knives.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "plural-nouns",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "one man, two ___",
+      "options": [
+        "mans",
+        "men",
+        "man"
+      ],
+      "correct": 1,
+      "why_ar": "شاذ.",
+      "rule_ar": "irregular plural men.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "plural-nouns",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "several ___ (child)",
+      "options": [
+        "childs",
+        "children",
+        "childrens"
+      ],
+      "correct": 1,
+      "why_ar": "children.",
+      "rule_ar": "irregular.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "plural-nouns",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "two ___ (tomato)",
+      "options": [
+        "tomatos",
+        "tomatoes",
+        "tomato"
+      ],
+      "correct": 1,
+      "why_ar": "consonant + o غالبًا es.",
+      "rule_ar": "tomatoes.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "plural-nouns",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "many ___ (sheep)",
+      "options": [
+        "sheeps",
+        "sheep",
+        "sheepes"
+      ],
+      "correct": 1,
+      "why_ar": "نفس الشكل.",
+      "rule_ar": "sheep unchanged.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "plural-nouns",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "two ___ (quiz)",
+      "options": [
+        "quizs",
+        "quizzes",
+        "quize"
+      ],
+      "correct": 1,
+      "why_ar": "double z + es.",
+      "rule_ar": "quizzes.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "plural-nouns",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "The ___ are on sale (city).",
+      "options": [
+        "citys",
+        "cities",
+        "city"
+      ],
+      "correct": 1,
+      "why_ar": "city → cities.",
+      "rule_ar": "consonant + y.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "plural-nouns",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "two ___ (photo)",
+      "options": [
+        "photos",
+        "photoes",
+        "photoses"
+      ],
+      "correct": 0,
+      "why_ar": "استثناء شائع → photos.",
+      "rule_ar": "photo → photos.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "demonstratives-this-that-these-those",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "___ shoes here are mine; ___ ones over there are yours.",
+      "options": [
+        "This / that",
+        "These / those",
+        "That / these"
+      ],
+      "correct": 1,
+      "why_ar": "أحذية جمع قريبة وبعيدة → these / those.",
+      "rule_ar": "these near, those far.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "demonstratives-this-that-these-those",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "Look at ___ bird in the tree!",
+      "options": [
+        "this",
+        "these",
+        "those"
+      ],
+      "correct": 0,
+      "why_ar": "bird مفرد قريب → this.",
+      "rule_ar": "this + singular.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "demonstratives-this-that-these-those",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "___ students in the back row, please stand.",
+      "options": [
+        "That",
+        "Those",
+        "This"
+      ],
+      "correct": 1,
+      "why_ar": "students جمع وبعيد نسبيًا → Those.",
+      "rule_ar": "those + plural.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "demonstratives-this-that-these-those",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "I prefer ___ coat (near me).",
+      "options": [
+        "this",
+        "these",
+        "those"
+      ],
+      "correct": 0,
+      "why_ar": "معطف واحد قريب.",
+      "rule_ar": "this.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "demonstratives-this-that-these-those",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "___ was a great concert we saw last year.",
+      "options": [
+        "That",
+        "These",
+        "Those"
+      ],
+      "correct": 0,
+      "why_ar": "حديث عن تجربة في الماضي البعيد نسبيًا → That.",
+      "rule_ar": "that for distant idea/time.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "demonstratives-this-that-these-those",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "Are ___ your keys on the table?",
+      "options": [
+        "this",
+        "these",
+        "that"
+      ],
+      "correct": 1,
+      "why_ar": "keys جمع → these.",
+      "rule_ar": "these.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "demonstratives-this-that-these-those",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "I don't like ___ colours.",
+      "options": [
+        "that",
+        "those",
+        "this"
+      ],
+      "correct": 1,
+      "why_ar": "colours جمع وبعد → those.",
+      "rule_ar": "those.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "demonstratives-this-that-these-those",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "Give me ___ book on the shelf (you point).",
+      "options": [
+        "that",
+        "these",
+        "those"
+      ],
+      "correct": 0,
+      "why_ar": "كتاب واحد تُشير إليه بعيدًا → that.",
+      "rule_ar": "that.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "demonstratives-this-that-these-those",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "___ days we're very busy.",
+      "options": [
+        "This",
+        "These",
+        "Those"
+      ],
+      "correct": 1,
+      "why_ar": "days جمع وزمن قريب → These.",
+      "rule_ar": "these days.",
+      "categoryId": "unit-2-nouns-place-tense"
+    },
+    {
+      "lessonId": "demonstratives-this-that-these-those",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "Who are ___ people?",
+      "options": [
+        "this",
+        "that",
+        "those"
+      ],
+      "correct": 2,
+      "why_ar": "people جمع وبُعد → those.",
+      "rule_ar": "those people.",
+      "categoryId": "unit-2-nouns-place-tense"
+    }
+  ],
+  "unit-3-writing-routines": [
+    {
+      "lessonId": "capital-letters",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "Which sentence is written correctly?",
+      "options": [
+        "i love english.",
+        "I love English.",
+        "i Love english."
+      ],
+      "correct": 1,
+      "why_ar": "بداية الجملة واسم اللغة بحرف كبير.",
+      "rule_ar": "Sentence + proper noun capitalization.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "capital-letters",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "Choose the correct day:",
+      "options": [
+        "monday",
+        "Monday",
+        "MONDAY"
+      ],
+      "correct": 1,
+      "why_ar": "أيام الأسبوع بحرف كبير في الكتابة الرسمية.",
+      "rule_ar": "Capitalize days.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "capital-letters",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "She is ___ .",
+      "options": [
+        "turkish",
+        "Turkish",
+        "tUrKiSh"
+      ],
+      "correct": 1,
+      "why_ar": "الجنسية كصفة بحرف كبير.",
+      "rule_ar": "Nationalities.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "capital-letters",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "We visited ___ last summer.",
+      "options": [
+        "spain",
+        "Spain",
+        "SPAIN"
+      ],
+      "correct": 1,
+      "why_ar": "أسماء البلدان.",
+      "rule_ar": "Country names.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "capital-letters",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "___ reads books every evening.",
+      "options": [
+        "my brother",
+        "My brother",
+        "my Brother"
+      ],
+      "correct": 1,
+      "why_ar": "بداية الجملة.",
+      "rule_ar": "Sentence-initial capital.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "capital-letters",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "The book ___ is famous.",
+      "options": [
+        "the hobbit",
+        "The Hobbit",
+        "the Hobbit"
+      ],
+      "correct": 1,
+      "why_ar": "عنوان عمل معروف.",
+      "rule_ar": "Title case.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "capital-letters",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "Correct form:",
+      "options": [
+        "dr. Sami",
+        "Dr. Sami",
+        "DR sami"
+      ],
+      "correct": 1,
+      "why_ar": "Dr. مع اسم.",
+      "rule_ar": "Titles.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "capital-letters",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "She speaks ___ .",
+      "options": [
+        "english and french",
+        "English and French",
+        "english And French"
+      ],
+      "correct": 1,
+      "why_ar": "أسماء اللغات.",
+      "rule_ar": "Language names.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "capital-letters",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "___ anniversary is in June.",
+      "options": [
+        "our school's",
+        "Our school's",
+        "our School's"
+      ],
+      "correct": 1,
+      "why_ar": "بداية الجملة.",
+      "rule_ar": "Sentence start.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "capital-letters",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "Which needs capitals in essays?",
+      "options": [
+        "every noun",
+        "proper nouns & sentence starts",
+        "all verbs"
+      ],
+      "correct": 1,
+      "why_ar": "الأسماء الخاصة وبداية الجملة.",
+      "rule_ar": "Capitalization rules.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "like-love-noun-ing",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "I like ___ .",
+      "options": [
+        "dance",
+        "dancing",
+        "dances"
+      ],
+      "correct": 1,
+      "why_ar": "like + gerund.",
+      "rule_ar": "like + -ing.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "like-love-noun-ing",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "She likes ___ to music.",
+      "options": [
+        "listen",
+        "listening",
+        "listens"
+      ],
+      "correct": 1,
+      "why_ar": "likes + gerund.",
+      "rule_ar": "likes + -ing.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "like-love-noun-ing",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "We love ___ stories.",
+      "options": [
+        "read",
+        "reading",
+        "reads"
+      ],
+      "correct": 1,
+      "why_ar": "love + gerund.",
+      "rule_ar": "love + -ing.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "like-love-noun-ing",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "He ___ cartoons.",
+      "options": [
+        "like",
+        "likes",
+        "liking"
+      ],
+      "correct": 1,
+      "why_ar": "he + likes.",
+      "rule_ar": "Third person -s.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "like-love-noun-ing",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "They don't like ___ TV late.",
+      "options": [
+        "watch",
+        "watching",
+        "watches"
+      ],
+      "correct": 1,
+      "why_ar": "don't like + gerund.",
+      "rule_ar": "negative + -ing.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "like-love-noun-ing",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "Do you like ___ ?",
+      "options": [
+        "run",
+        "running",
+        "runs"
+      ],
+      "correct": 1,
+      "why_ar": "Do you like + gerund.",
+      "rule_ar": "question.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "like-love-noun-ing",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "My brother likes ___ games.",
+      "options": [
+        "play",
+        "playing",
+        "plays"
+      ],
+      "correct": 1,
+      "why_ar": "likes + gerund.",
+      "rule_ar": "like + -ing.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "like-love-noun-ing",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "Birds enjoy ___ nuts.",
+      "options": [
+        "eat",
+        "eating",
+        "eats"
+      ],
+      "correct": 1,
+      "why_ar": "enjoy + gerund شائع.",
+      "rule_ar": "enjoy + -ing.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "like-love-noun-ing",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "___ your sister like pizza?",
+      "options": [
+        "Do",
+        "Does",
+        "Is"
+      ],
+      "correct": 1,
+      "why_ar": "Does للفعل المعنوي like.",
+      "rule_ar": "Does … like?",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "like-love-noun-ing",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "She ___ classical music.",
+      "options": [
+        "love",
+        "loves",
+        "loving"
+      ],
+      "correct": 1,
+      "why_ar": "loves مع she.",
+      "rule_ar": "Third person -s.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "adverbs-of-frequency",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "I ___ go to bed before 10 pm.",
+      "options": [
+        "always",
+        "never",
+        "sometimes"
+      ],
+      "correct": 0,
+      "why_ar": "عادة ثابتة.",
+      "rule_ar": "always.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "adverbs-of-frequency",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "She ___ eats meat. (vegetarian)",
+      "options": [
+        "always",
+        "never",
+        "usually"
+      ],
+      "correct": 1,
+      "why_ar": "لا تأكل لحمًا.",
+      "rule_ar": "never.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "adverbs-of-frequency",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "They are ___ late.",
+      "options": [
+        "often",
+        "play often",
+        "late often"
+      ],
+      "correct": 0,
+      "why_ar": "بعد be يأتي ظرف التكرار.",
+      "rule_ar": "be + frequency.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "adverbs-of-frequency",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "He ___ plays football on Sundays.",
+      "options": [
+        "usual",
+        "usually",
+        "usuals"
+      ],
+      "correct": 1,
+      "why_ar": "usually قبل الفعل.",
+      "rule_ar": "usually.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "adverbs-of-frequency",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "I ___ see snow — once a year.",
+      "options": [
+        "always",
+        "hardly ever",
+        "never"
+      ],
+      "correct": 1,
+      "why_ar": "نادرًا جدًا.",
+      "rule_ar": "hardly ever.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "adverbs-of-frequency",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "We ___ watch films.",
+      "options": [
+        "sometimes",
+        "sometime",
+        "some times"
+      ],
+      "correct": 0,
+      "why_ar": "sometimes = أحيانًا.",
+      "rule_ar": "sometimes.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "adverbs-of-frequency",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "___ do you swim?",
+      "options": [
+        "How often",
+        "How long",
+        "How much"
+      ],
+      "correct": 0,
+      "why_ar": "سؤال عن عدد المرات.",
+      "rule_ar": "How often.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "adverbs-of-frequency",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "She ___ arrives late — she's punctual.",
+      "options": [
+        "never",
+        "always",
+        "often"
+      ],
+      "correct": 0,
+      "why_ar": "منضبطة → لا تتأخر.",
+      "rule_ar": "never arrives late.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "adverbs-of-frequency",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "He is ___ tired after work.",
+      "options": [
+        "always",
+        "usual",
+        "oftenly"
+      ],
+      "correct": 0,
+      "why_ar": "بعد be؛ always نوع الشكوى.",
+      "rule_ar": "frequency after be.",
+      "categoryId": "unit-3-writing-routines"
+    },
+    {
+      "lessonId": "adverbs-of-frequency",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "I ___ forget my keys. (careless habit)",
+      "options": [
+        "always",
+        "never",
+        "hardly ever"
+      ],
+      "correct": 0,
+      "why_ar": "عادة سلبية متكررة.",
+      "rule_ar": "always for repeated habit.",
+      "categoryId": "unit-3-writing-routines"
+    }
+  ],
+  "unit-4-ability-quantity": [
+    {
+      "lessonId": "can-cant-ability",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "I ___ swim very well.",
+      "options": [
+        "can",
+        "cans",
+        "can to"
+      ],
+      "correct": 0,
+      "why_ar": "can + مصدر.",
+      "rule_ar": "can + base verb.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "can-cant-ability",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "___ you play the guitar?",
+      "options": [
+        "Can",
+        "Do",
+        "Are"
+      ],
+      "correct": 0,
+      "why_ar": "سؤال عن القدرة.",
+      "rule_ar": "Can you …?",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "can-cant-ability",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "She ___ drive — she's only 12.",
+      "options": [
+        "can't",
+        "doesn't can",
+        "not can"
+      ],
+      "correct": 0,
+      "why_ar": "العمر يمنع القيادة.",
+      "rule_ar": "can't.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "can-cant-ability",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "Birds ___ fly.",
+      "options": [
+        "can",
+        "cans",
+        "canning"
+      ],
+      "correct": 0,
+      "why_ar": "قدرة عامة.",
+      "rule_ar": "can.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "can-cant-ability",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "He ___ lift this box; it's too heavy.",
+      "options": [
+        "can't",
+        "can",
+        "doesn't"
+      ],
+      "correct": 0,
+      "why_ar": "لا يستطيع.",
+      "rule_ar": "can't for inability.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "can-cant-ability",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "___ we leave now?",
+      "options": [
+        "Can",
+        "Are",
+        "Do"
+      ],
+      "correct": 0,
+      "why_ar": "طلب إذن/إمكان.",
+      "rule_ar": "Can we …?",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "can-cant-ability",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "They ___ speak three languages.",
+      "options": [
+        "can",
+        "know can",
+        "cans"
+      ],
+      "correct": 0,
+      "why_ar": "can ثابت لجميع الضمائر.",
+      "rule_ar": "can all persons.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "can-cant-ability",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "You ___ smoke here. It's forbidden.",
+      "options": [
+        "can't",
+        "can",
+        "don't"
+      ],
+      "correct": 0,
+      "why_ar": "منع.",
+      "rule_ar": "can't.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "can-cant-ability",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "My grandma ___ use a smartphone easily.",
+      "options": [
+        "can't",
+        "doesn't",
+        "isn't"
+      ],
+      "correct": 0,
+      "why_ar": "عدم القدرة.",
+      "rule_ar": "can't.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "can-cant-ability",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "___ I borrow your pen?",
+      "options": [
+        "Can",
+        "Does",
+        "Is"
+      ],
+      "correct": 0,
+      "why_ar": "طلب مهذّب.",
+      "rule_ar": "Can I …?",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "countable-uncountable-some-any",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "I'd like ___ apple.",
+      "options": [
+        "a",
+        "an",
+        "—"
+      ],
+      "correct": 1,
+      "why_ar": "apple يبدأ بصوت علة.",
+      "rule_ar": "an + vowel sound.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "countable-uncountable-some-any",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "There isn't ___ milk.",
+      "options": [
+        "any",
+        "some",
+        "a"
+      ],
+      "correct": 0,
+      "why_ar": "نفي + غير معدود→ any.",
+      "rule_ar": "isn't + any.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "countable-uncountable-some-any",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "We need ___ chairs for the party.",
+      "options": [
+        "some",
+        "much",
+        "any"
+      ],
+      "correct": 0,
+      "why_ar": "إيجاب + جمع.",
+      "rule_ar": "some + plural.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "countable-uncountable-some-any",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "___ umbrella is mine.",
+      "options": [
+        "A",
+        "An",
+        "—"
+      ],
+      "correct": 1,
+      "why_ar": "umbrella صوت علة.",
+      "rule_ar": "an.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "countable-uncountable-some-any",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "Do you have ___ brothers?",
+      "options": [
+        "any",
+        "some",
+        "much"
+      ],
+      "correct": 0,
+      "why_ar": "سؤال عام عن وجود → any شائع.",
+      "rule_ar": "any in questions.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "countable-uncountable-some-any",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "Water is ___ .",
+      "options": [
+        "uncountable",
+        "a countable noun",
+        "many"
+      ],
+      "correct": 0,
+      "why_ar": "الماء غير معدود في المعنى العام.",
+      "rule_ar": "uncountable.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "countable-uncountable-some-any",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "Can I have ___ sugar?",
+      "options": [
+        "some",
+        "many",
+        "a"
+      ],
+      "correct": 0,
+      "why_ar": "طلب مهذب في الكلام.",
+      "rule_ar": "some.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "countable-uncountable-some-any",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "She doesn't eat ___ nuts. (allergy)",
+      "options": [
+        "any",
+        "some",
+        "a"
+      ],
+      "correct": 0,
+      "why_ar": "نفي → any.",
+      "rule_ar": "negative + any.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "countable-uncountable-some-any",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "There's ___ cat in the garden.",
+      "options": [
+        "a",
+        "an",
+        "some"
+      ],
+      "correct": 0,
+      "why_ar": "مفرد معدود.",
+      "rule_ar": "a cat.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "countable-uncountable-some-any",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "How ___ oranges do you want?",
+      "options": [
+        "many",
+        "much",
+        "any"
+      ],
+      "correct": 0,
+      "why_ar": "oranges جمع معدود→ How many لاحقًا؛ هنا many ضمن الخيارات للتمييز عن much.",
+      "rule_ar": "many for count.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "a-lot-much-many",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "How ___ students are there?",
+      "options": [
+        "many",
+        "much",
+        "a lot"
+      ],
+      "correct": 0,
+      "why_ar": "students جمع معدود.",
+      "rule_ar": "How many.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "a-lot-much-many",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "We don't have ___ rice.",
+      "options": [
+        "much",
+        "many",
+        "a lot"
+      ],
+      "correct": 0,
+      "why_ar": "rice غير معدود.",
+      "rule_ar": "much + uncountable.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "a-lot-much-many",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "She has ___ cousins.",
+      "options": [
+        "many",
+        "much",
+        "a lot of much"
+      ],
+      "correct": 0,
+      "why_ar": "cousins جمع.",
+      "rule_ar": "many.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "a-lot-much-many",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "There isn't ___ water in the bottle.",
+      "options": [
+        "much",
+        "many",
+        "a few"
+      ],
+      "correct": 0,
+      "why_ar": "water غير معدود في النفي.",
+      "rule_ar": "much.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "a-lot-much-many",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "They bought ___ snacks.",
+      "options": [
+        "a lot of",
+        "much",
+        "many of"
+      ],
+      "correct": 0,
+      "why_ar": "إيجاب وجمع.",
+      "rule_ar": "a lot of.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "a-lot-much-many",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "___ people came to the party.",
+      "options": [
+        "A lot of",
+        "Much",
+        "A much"
+      ],
+      "correct": 0,
+      "why_ar": "people جمع.",
+      "rule_ar": "A lot of.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "a-lot-much-many",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "I spend ___ time on homework.",
+      "options": [
+        "a lot of",
+        "many",
+        "several"
+      ],
+      "correct": 0,
+      "why_ar": "time غير معدود.",
+      "rule_ar": "a lot of.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "a-lot-much-many",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "We need ___ sugar for the cake.",
+      "options": [
+        "much",
+        "many",
+        "few"
+      ],
+      "correct": 0,
+      "why_ar": "sugar غير معدود.",
+      "rule_ar": "much + uncountable.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "a-lot-much-many",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "There are ___ books on the shelf.",
+      "options": [
+        "many",
+        "much",
+        "any much"
+      ],
+      "correct": 0,
+      "why_ar": "books جمع.",
+      "rule_ar": "many.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "a-lot-much-many",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "He doesn't read ___ novels.",
+      "options": [
+        "many",
+        "much",
+        "a lot"
+      ],
+      "correct": 0,
+      "why_ar": "novels جمع معدود.",
+      "rule_ar": "many.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "how-much-how-many",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "___ apples do you want?",
+      "options": [
+        "How many",
+        "How much",
+        "How long"
+      ],
+      "correct": 0,
+      "why_ar": "apples جمع.",
+      "rule_ar": "How many.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "how-much-how-many",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "___ milk do we need?",
+      "options": [
+        "How much",
+        "How many",
+        "How"
+      ],
+      "correct": 0,
+      "why_ar": "milk غير معدود.",
+      "rule_ar": "How much.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "how-much-how-many",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "___ books are in your bag?",
+      "options": [
+        "How many",
+        "How much",
+        "How"
+      ],
+      "correct": 0,
+      "why_ar": "books جمع.",
+      "rule_ar": "How many.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "how-much-how-many",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "___ money did you spend?",
+      "options": [
+        "How much",
+        "How many",
+        "How often"
+      ],
+      "correct": 0,
+      "why_ar": "money غير معدود.",
+      "rule_ar": "How much.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "how-much-how-many",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "___ times did you call?",
+      "options": [
+        "How many",
+        "How much",
+        "How long"
+      ],
+      "correct": 0,
+      "why_ar": "times قابل للعدّ.",
+      "rule_ar": "How many times.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "how-much-how-many",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "___ students passed the test?",
+      "options": [
+        "How many",
+        "How much",
+        "How"
+      ],
+      "correct": 0,
+      "why_ar": "students جمع.",
+      "rule_ar": "How many.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "how-much-how-many",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "___ rice should I cook?",
+      "options": [
+        "How much",
+        "How many",
+        "How"
+      ],
+      "correct": 0,
+      "why_ar": "rice غير معدود.",
+      "rule_ar": "How much.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "how-much-how-many",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "___ is this T‑shirt?",
+      "options": [
+        "How much",
+        "How many",
+        "How"
+      ],
+      "correct": 0,
+      "why_ar": "سعر.",
+      "rule_ar": "How much for price.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "how-much-how-many",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "___ languages do you speak?",
+      "options": [
+        "How many",
+        "How much",
+        "How"
+      ],
+      "correct": 0,
+      "why_ar": "languages جمع.",
+      "rule_ar": "How many.",
+      "categoryId": "unit-4-ability-quantity"
+    },
+    {
+      "lessonId": "how-much-how-many",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "___ water is in the pool?",
+      "options": [
+        "How much",
+        "How many",
+        "How"
+      ],
+      "correct": 0,
+      "why_ar": "water غير معدود.",
+      "rule_ar": "How much.",
+      "categoryId": "unit-4-ability-quantity"
+    }
+  ],
+  "unit-5-past": [
+    {
+      "lessonId": "was-were-past-be",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "I ___ at home yesterday.",
+      "options": [
+        "was",
+        "were",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "I + was.",
+      "rule_ar": "I was.",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "was-were-past-be",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "They ___ excited about the trip.",
+      "options": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correct": 0,
+      "why_ar": "they + were.",
+      "rule_ar": "they were.",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "was-were-past-be",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "___ you at the meeting?",
+      "options": [
+        "Were",
+        "Was",
+        "Did"
+      ],
+      "correct": 0,
+      "why_ar": "you + were في السؤال.",
+      "rule_ar": "Were you?",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "was-were-past-be",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "She ___ a nurse last year.",
+      "options": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correct": 0,
+      "why_ar": "she + was.",
+      "rule_ar": "she was.",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "was-were-past-be",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "There ___ three cats in the garden.",
+      "options": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correct": 0,
+      "why_ar": "three cats جمع.",
+      "rule_ar": "there were.",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "was-were-past-be",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "It ___ cold this morning.",
+      "options": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correct": 0,
+      "why_ar": "it + was.",
+      "rule_ar": "it was.",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "was-were-past-be",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "We ___ not ready then.",
+      "options": [
+        "were",
+        "was",
+        "did"
+      ],
+      "correct": 0,
+      "why_ar": "we + were.",
+      "rule_ar": "we were not.",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "was-were-past-be",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "___ he your teacher?",
+      "options": [
+        "Was",
+        "Were",
+        "Did"
+      ],
+      "correct": 0,
+      "why_ar": "he + was.",
+      "rule_ar": "Was he?",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "was-were-past-be",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "My friends ___ late.",
+      "options": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correct": 0,
+      "why_ar": "friends جمع.",
+      "rule_ar": "were.",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "was-were-past-be",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "Yesterday I ___ tired.",
+      "options": [
+        "was",
+        "were",
+        "be"
+      ],
+      "correct": 0,
+      "why_ar": "I + was.",
+      "rule_ar": "past simple be.",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "past-simple-regular-verbs",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "She ___ in Rome for two years.",
+      "options": [
+        "lived",
+        "live",
+        "living"
+      ],
+      "correct": 0,
+      "why_ar": "ماضٍ منتظم بـ ed.",
+      "rule_ar": "regular past -ed.",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "past-simple-regular-verbs",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "They ___ a new car last month.",
+      "options": [
+        "wanted",
+        "want",
+        "wanting"
+      ],
+      "correct": 0,
+      "why_ar": "wanted.",
+      "rule_ar": "past simple affirmative.",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "past-simple-regular-verbs",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "He ___ football on TV yesterday.",
+      "options": [
+        "watched",
+        "watch",
+        "watches"
+      ],
+      "correct": 0,
+      "why_ar": "watched.",
+      "rule_ar": "-ed past.",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "past-simple-regular-verbs",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "I ___ enjoy the film. (negative)",
+      "options": [
+        "didn't",
+        "don't",
+        "wasn't"
+      ],
+      "correct": 0,
+      "why_ar": "فعل معنوي في الماضي المنفي → didn't.",
+      "rule_ar": "didn't + base.",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "past-simple-regular-verbs",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "We ___ stay home. (negative)",
+      "options": [
+        "didn't",
+        "don't",
+        "not"
+      ],
+      "correct": 0,
+      "why_ar": "didn't + stay.",
+      "rule_ar": "didn't + base verb.",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "past-simple-regular-verbs",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "___ she work yesterday?",
+      "options": [
+        "Did",
+        "Does",
+        "Was"
+      ],
+      "correct": 0,
+      "why_ar": "فعل معنوي في السؤال → Did.",
+      "rule_ar": "Did + subject + base?",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "past-simple-regular-verbs",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "Did you ___ him?",
+      "options": [
+        "phone",
+        "phoned",
+        "phoning"
+      ],
+      "correct": 0,
+      "why_ar": "بعد Did المصدر.",
+      "rule_ar": "base verb after Did.",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "past-simple-regular-verbs",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "He didn't ___ the answer.",
+      "options": [
+        "know",
+        "knew",
+        "knowed"
+      ],
+      "correct": 0,
+      "why_ar": "didn't + know.",
+      "rule_ar": "base after didn't.",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "past-simple-regular-verbs",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "You ___ in Italy. (affirmative past)",
+      "options": [
+        "lived",
+        "live",
+        "are lived"
+      ],
+      "correct": 0,
+      "why_ar": "lived.",
+      "rule_ar": "past -ed.",
+      "categoryId": "unit-5-past"
+    },
+    {
+      "lessonId": "past-simple-regular-verbs",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "After didn't the main verb is always the ___ form.",
+      "options": [
+        "base / infinitive without to",
+        "past -ed",
+        "ing"
+      ],
+      "correct": 0,
+      "why_ar": "المصدر بدون to.",
+      "rule_ar": "didn't + base.",
+      "categoryId": "unit-5-past"
+    }
+  ],
+  "unit-6-compare-link-aspect": [
+    {
+      "lessonId": "comparative-superlative-adjectives",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "The horse is ___ than the dog.",
+      "options": [
+        "bigger",
+        "more big",
+        "biggest"
+      ],
+      "correct": 0,
+      "why_ar": "مقارنة ثنائية → comparative.",
+      "rule_ar": "bigger than.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "comparative-superlative-adjectives",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "This is ___ animal in the zoo.",
+      "options": [
+        "the heaviest",
+        "heavier",
+        "heavyest"
+      ],
+      "correct": 0,
+      "why_ar": "التفضيل ضمن المجموعة → the + superlative.",
+      "rule_ar": "the heaviest.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "comparative-superlative-adjectives",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "She is ___ girl in our class.",
+      "options": [
+        "the happiest",
+        "happier",
+        "happiest"
+      ],
+      "correct": 0,
+      "why_ar": "the + superlative.",
+      "rule_ar": "the happiest.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "comparative-superlative-adjectives",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "London is ___ than my town.",
+      "options": [
+        "more famous",
+        "famousest",
+        "more fame"
+      ],
+      "correct": 0,
+      "why_ar": "صفة طويلة → more famous.",
+      "rule_ar": "more + long adjective.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "comparative-superlative-adjectives",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "good → better → ___",
+      "options": [
+        "the best",
+        "bestest",
+        "goodest"
+      ],
+      "correct": 0,
+      "why_ar": "استثناء good/best.",
+      "rule_ar": "the best.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "comparative-superlative-adjectives",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "bad → worse → ___",
+      "options": [
+        "the worst",
+        "worstest",
+        "most bad"
+      ],
+      "correct": 0,
+      "why_ar": "bad/worse/worst.",
+      "rule_ar": "the worst.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "comparative-superlative-adjectives",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "It's ___ today than yesterday.",
+      "options": [
+        "hotter",
+        "more hot",
+        "hot more"
+      ],
+      "correct": 0,
+      "why_ar": "CVC يضاعف الحرف.",
+      "rule_ar": "hotter.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "comparative-superlative-adjectives",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "This exercise is ___ than the last one.",
+      "options": [
+        "easier",
+        "more easy",
+        "easyer"
+      ],
+      "correct": 0,
+      "why_ar": "y → ier.",
+      "rule_ar": "easier.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "comparative-superlative-adjectives",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "He is ___ runner in the race.",
+      "options": [
+        "the fastest",
+        "the faster",
+        "most fast"
+      ],
+      "correct": 0,
+      "why_ar": "سباق = مجموعة.",
+      "rule_ar": "the fastest.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "comparative-superlative-adjectives",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "An elephant is ___ than a mouse.",
+      "options": [
+        "heavier",
+        "more heavy",
+        "heavyer"
+      ],
+      "correct": 0,
+      "why_ar": "consonant + y → ier.",
+      "rule_ar": "heavier.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "so-and-because",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "It started raining ___ we went inside.",
+      "options": [
+        "so",
+        "because",
+        "although"
+      ],
+      "correct": 0,
+      "why_ar": "الذهاب للداخل نتيجة للمطر.",
+      "rule_ar": "so for result.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "so-and-because",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "We stayed home ___ the weather was bad.",
+      "options": [
+        "because",
+        "so",
+        "but"
+      ],
+      "correct": 0,
+      "why_ar": "السبب بعد because.",
+      "rule_ar": "because + reason.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "so-and-because",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "I was tired ___ I went to bed early.",
+      "options": [
+        "so",
+        "because",
+        "but"
+      ],
+      "correct": 0,
+      "why_ar": "النوم مبكرًا نتيجة للتعب.",
+      "rule_ar": "so.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "so-and-because",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "___ I was ill, I missed school.",
+      "options": [
+        "Because",
+        "So",
+        "And"
+      ],
+      "correct": 0,
+      "why_ar": "المرض سبب الغياب.",
+      "rule_ar": "Because at start.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "so-and-because",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "Which introduces a reason?",
+      "options": [
+        "because",
+        "so",
+        "then"
+      ],
+      "correct": 0,
+      "why_ar": "because = السبب.",
+      "rule_ar": "because.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "so-and-because",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "Which often introduces a result?",
+      "options": [
+        "so",
+        "because",
+        "why"
+      ],
+      "correct": 0,
+      "why_ar": "so للنتيجة.",
+      "rule_ar": "so.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "so-and-because",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "She opened the window ___ it was hot.",
+      "options": [
+        "because",
+        "so",
+        "or"
+      ],
+      "correct": 0,
+      "why_ar": "الحر سبب.",
+      "rule_ar": "because.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "so-and-because",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "He forgot his keys ___ he went back.",
+      "options": [
+        "so",
+        "because",
+        "but"
+      ],
+      "correct": 0,
+      "why_ar": "العودة نتيجة.",
+      "rule_ar": "so.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "so-and-because",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "___ did you leave? — ___ I was tired.",
+      "options": [
+        "Why / Because",
+        "Because / So",
+        "When / So"
+      ],
+      "correct": 0,
+      "why_ar": "Why + Because.",
+      "rule_ar": "question Why.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "so-and-because",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "They cancelled the match ___ the pitch was wet.",
+      "options": [
+        "because",
+        "so",
+        "therefore,"
+      ],
+      "correct": 0,
+      "why_ar": "الملعب مبلل = سبب.",
+      "rule_ar": "because.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "present-continuous-tense",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "Look! The children ___ .",
+      "options": [
+        "are playing",
+        "play",
+        "plays"
+      ],
+      "correct": 0,
+      "why_ar": "Look! = حدث الآن.",
+      "rule_ar": "present continuous.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "present-continuous-tense",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "She ___ TV at the moment.",
+      "options": [
+        "is watching",
+        "watches",
+        "watch"
+      ],
+      "correct": 0,
+      "why_ar": "at the moment → continuous.",
+      "rule_ar": "is + -ing.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "present-continuous-tense",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "___ you listening to me?",
+      "options": [
+        "Are",
+        "Do",
+        "Is"
+      ],
+      "correct": 0,
+      "why_ar": "Are you + -ing?",
+      "rule_ar": "Are + subject + -ing?",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "present-continuous-tense",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "We ___ not waiting anymore.",
+      "options": [
+        "are",
+        "is",
+        "do"
+      ],
+      "correct": 0,
+      "why_ar": "are not waiting.",
+      "rule_ar": "negative continuous.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "present-continuous-tense",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "I ___ to music right now.",
+      "options": [
+        "am listening",
+        "listen",
+        "listening"
+      ],
+      "correct": 0,
+      "why_ar": "I am listening.",
+      "rule_ar": "am + -ing.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "present-continuous-tense",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "He ___ football now.",
+      "options": [
+        "is playing",
+        "plays",
+        "play"
+      ],
+      "correct": 0,
+      "why_ar": "الآن → continuous.",
+      "rule_ar": "now → continuous.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "present-continuous-tense",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "They ___ lunch at the moment.",
+      "options": [
+        "are having",
+        "have",
+        "having"
+      ],
+      "correct": 0,
+      "why_ar": "at the moment → are having.",
+      "rule_ar": "present continuous.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "present-continuous-tense",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "___ she sleeping?",
+      "options": [
+        "Is",
+        "Does",
+        "Are"
+      ],
+      "correct": 0,
+      "why_ar": "Is she + verb-ing?",
+      "rule_ar": "Is + she.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "present-continuous-tense",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "You ___ on the stage.",
+      "options": [
+        "are dancing",
+        "dance",
+        "are dance"
+      ],
+      "correct": 0,
+      "why_ar": "You are dancing.",
+      "rule_ar": "affirmative continuous.",
+      "categoryId": "unit-6-compare-link-aspect"
+    },
+    {
+      "lessonId": "present-continuous-tense",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "He ___ not working today.",
+      "options": [
+        "is",
+        "are",
+        "does"
+      ],
+      "correct": 0,
+      "why_ar": "is not working.",
+      "rule_ar": "negative continuous.",
+      "categoryId": "unit-6-compare-link-aspect"
+    }
+  ],
+  "unit-7-future-purpose-senses": [
+    {
+      "lessonId": "be-going-to-future-plans",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "I ___ going to call you later.",
+      "options": [
+        "am",
+        "is",
+        "are"
+      ],
+      "correct": 0,
+      "why_ar": "I + am.",
+      "rule_ar": "I am going to.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "be-going-to-future-plans",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "She ___ going to apply for the job.",
+      "options": [
+        "is",
+        "am",
+        "are"
+      ],
+      "correct": 0,
+      "why_ar": "she + is.",
+      "rule_ar": "is going to.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "be-going-to-future-plans",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "We ___ not going to wait.",
+      "options": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correct": 0,
+      "why_ar": "we + are.",
+      "rule_ar": "negative going to.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "be-going-to-future-plans",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "___ they going to stay?",
+      "options": [
+        "Are",
+        "Do",
+        "Will"
+      ],
+      "correct": 0,
+      "why_ar": "Are + subject + going to.",
+      "rule_ar": "question form.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "be-going-to-future-plans",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "Yes, I ___ . (going to context)",
+      "options": [
+        "am",
+        "will",
+        "do"
+      ],
+      "correct": 0,
+      "why_ar": "short answer with be.",
+      "rule_ar": "Yes, I am.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "be-going-to-future-plans",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "No, he ___ . (negative short)",
+      "options": [
+        "isn't",
+        "won't",
+        "doesn't"
+      ],
+      "correct": 0,
+      "why_ar": "No, he isn't.",
+      "rule_ar": "short negative.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "be-going-to-future-plans",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "What ___ you going to do?",
+      "options": [
+        "are",
+        "is",
+        "do"
+      ],
+      "correct": 0,
+      "why_ar": "What are you going to…?",
+      "rule_ar": "WH + going to.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "be-going-to-future-plans",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "He ___ going to watch the match.",
+      "options": [
+        "is",
+        "are",
+        "be"
+      ],
+      "correct": 0,
+      "why_ar": "is going to.",
+      "rule_ar": "third person.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "be-going-to-future-plans",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "___ I going to need a ticket?",
+      "options": [
+        "Am",
+        "Are",
+        "Do"
+      ],
+      "correct": 0,
+      "why_ar": "Am I going to…?",
+      "rule_ar": "Am I.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "be-going-to-future-plans",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "They ___ going to travel next week.",
+      "options": [
+        "are",
+        "is",
+        "will"
+      ],
+      "correct": 0,
+      "why_ar": "they + are.",
+      "rule_ar": "plural subject.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "infinitive-of-purpose",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "She saved money ___ buy a laptop.",
+      "options": [
+        "to",
+        "for",
+        "so"
+      ],
+      "correct": 0,
+      "why_ar": "غرض الإدخار.",
+      "rule_ar": "to + base.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "infinitive-of-purpose",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "He changed seats ___ see her.",
+      "options": [
+        "not to",
+        "to not",
+        "don't to"
+      ],
+      "correct": 0,
+      "why_ar": "نفي الغرض → not to.",
+      "rule_ar": "not to.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "infinitive-of-purpose",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "___ improve your English, read every day.",
+      "options": [
+        "To",
+        "For",
+        "So"
+      ],
+      "correct": 0,
+      "why_ar": "جملة تبدأ بمصدر غرض.",
+      "rule_ar": "To + verb at start.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "infinitive-of-purpose",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "They left early ___ catch the train.",
+      "options": [
+        "to",
+        "for",
+        "so"
+      ],
+      "correct": 0,
+      "why_ar": "الغرض من المغادرة.",
+      "rule_ar": "to + base.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "infinitive-of-purpose",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "We use 'to + verb' to show ___ .",
+      "options": [
+        "purpose",
+        "past time",
+        "plural"
+      ],
+      "correct": 0,
+      "why_ar": "الغرض.",
+      "rule_ar": "purpose.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "infinitive-of-purpose",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "He whispered ___ wake the baby.",
+      "options": [
+        "not to",
+        "to not",
+        "don't"
+      ],
+      "correct": 0,
+      "why_ar": "لا يوقظ الرضيع.",
+      "rule_ar": "not to + verb.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "infinitive-of-purpose",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "She went to the library ___ .",
+      "options": [
+        "to revise",
+        "revise",
+        "revising"
+      ],
+      "correct": 0,
+      "why_ar": "to + مصدر.",
+      "rule_ar": "to revise.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "infinitive-of-purpose",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "«To» in this lesson often means the same as ___ .",
+      "options": [
+        "in order to",
+        "because",
+        "so"
+      ],
+      "correct": 0,
+      "why_ar": "in order to.",
+      "rule_ar": "synonym.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "infinitive-of-purpose",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "I opened the window ___ fresh air. (get)",
+      "options": [
+        "to get",
+        "getting",
+        "get"
+      ],
+      "correct": 0,
+      "why_ar": "to get.",
+      "rule_ar": "purpose.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "infinitive-of-purpose",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "Negative infinitive of purpose uses ___ .",
+      "options": [
+        "not to",
+        "don't to",
+        "not"
+      ],
+      "correct": 0,
+      "why_ar": "not to + verb.",
+      "rule_ar": "not to.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "sense-verbs-opinions",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "You ___ tired. You should rest.",
+      "options": [
+        "look",
+        "look like",
+        "looks"
+      ],
+      "correct": 0,
+      "why_ar": "you + look + صفة.",
+      "rule_ar": "look + adjective.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "sense-verbs-opinions",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "This cake ___ delicious.",
+      "options": [
+        "tastes",
+        "taste",
+        "is tasting"
+      ],
+      "correct": 0,
+      "why_ar": "this cake + tastes.",
+      "rule_ar": "taste linking.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "sense-verbs-opinions",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "The music ___ too loud.",
+      "options": [
+        "sounds",
+        "sound",
+        "is sounding"
+      ],
+      "correct": 0,
+      "why_ar": "sounds + adjective.",
+      "rule_ar": "sound.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "sense-verbs-opinions",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "It ___ like rain.",
+      "options": [
+        "smells",
+        "smell",
+        "is smelling"
+      ],
+      "correct": 0,
+      "why_ar": "smells like…",
+      "rule_ar": "smell + like.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "sense-verbs-opinions",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "I ___ happy about the news.",
+      "options": [
+        "feel",
+        "feel like",
+        "am feeling"
+      ],
+      "correct": 0,
+      "why_ar": "feel + emotion.",
+      "rule_ar": "feel.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "sense-verbs-opinions",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "She ___ nervous before exams.",
+      "options": [
+        "feels",
+        "feel",
+        "is feel"
+      ],
+      "correct": 0,
+      "why_ar": "she feels.",
+      "rule_ar": "third person.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "sense-verbs-opinions",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "These tomatoes ___ fresh.",
+      "options": [
+        "feel",
+        "feel like",
+        "are feeling"
+      ],
+      "correct": 0,
+      "why_ar": "لمس/انطباع.",
+      "rule_ar": "feel + adj.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "sense-verbs-opinions",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "His excuse ___ weak.",
+      "options": [
+        "sounds",
+        "hears",
+        "listens"
+      ],
+      "correct": 0,
+      "why_ar": "يبدو ضعيفًا.",
+      "rule_ar": "sound.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "sense-verbs-opinions",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "Sense verbs often link subject + ___ .",
+      "options": [
+        "adjective",
+        "adverb",
+        "noun only"
+      ],
+      "correct": 0,
+      "why_ar": "صفة.",
+      "rule_ar": "linking verb.",
+      "categoryId": "unit-7-future-purpose-senses"
+    },
+    {
+      "lessonId": "sense-verbs-opinions",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "Which is a sense verb?",
+      "options": [
+        "taste",
+        "run",
+        "write"
+      ],
+      "correct": 0,
+      "why_ar": "taste للطعم/التذوق.",
+      "rule_ar": "sense verbs.",
+      "categoryId": "unit-7-future-purpose-senses"
+    }
+  ],
+  "unit-8-perfect-modals-articles": [
+    {
+      "lessonId": "present-perfect-tense",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "She ___ finished the report.",
+      "options": [
+        "has",
+        "have",
+        "is"
+      ],
+      "correct": 0,
+      "why_ar": "she + has + V3.",
+      "rule_ar": "has + past participle.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "present-perfect-tense",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "They ___ not arrived yet.",
+      "options": [
+        "have",
+        "has",
+        "did"
+      ],
+      "correct": 0,
+      "why_ar": "they + have.",
+      "rule_ar": "present perfect negative.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "present-perfect-tense",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "___ you seen this film?",
+      "options": [
+        "Have",
+        "Did",
+        "Are"
+      ],
+      "correct": 0,
+      "why_ar": "Have you + V3?",
+      "rule_ar": "Have + subject.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "present-perfect-tense",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "He has ___ the keys.",
+      "options": [
+        "lost",
+        "lose",
+        "losing"
+      ],
+      "correct": 0,
+      "why_ar": "lost = V3.",
+      "rule_ar": "past participle.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "present-perfect-tense",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "We have ___ here since 2020.",
+      "options": [
+        "lived",
+        "live",
+        "living"
+      ],
+      "correct": 0,
+      "why_ar": "have lived.",
+      "rule_ar": "since + present perfect.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "present-perfect-tense",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "I ___ never tried sushi.",
+      "options": [
+        "have",
+        "has",
+        "did"
+      ],
+      "correct": 0,
+      "why_ar": "I have never.",
+      "rule_ar": "never + present perfect.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "present-perfect-tense",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "___ she gone home?",
+      "options": [
+        "Has",
+        "Does",
+        "Is"
+      ],
+      "correct": 0,
+      "why_ar": "Has she + gone.",
+      "rule_ar": "Has + subject + V3.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "present-perfect-tense",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "They have ___ the match.",
+      "options": [
+        "watched",
+        "watch",
+        "watching"
+      ],
+      "correct": 0,
+      "why_ar": "have watched.",
+      "rule_ar": "V3.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "present-perfect-tense",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "Present perfect uses ___ + past participle.",
+      "options": [
+        "have/has",
+        "did",
+        "was"
+      ],
+      "correct": 0,
+      "why_ar": "have/has.",
+      "rule_ar": "structure.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "present-perfect-tense",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "Which is correct?",
+      "options": [
+        "I have seen it",
+        "I seen it",
+        "I have see it"
+      ],
+      "correct": 0,
+      "why_ar": "have + seen.",
+      "rule_ar": "have + V3.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "past-simple-vs-present-perfect",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "I ___ to Paris in 2019.",
+      "options": [
+        "went",
+        "have gone",
+        "have been"
+      ],
+      "correct": 0,
+      "why_ar": "سنة محددة → past simple.",
+      "rule_ar": "past simple + date.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "past-simple-vs-present-perfect",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "I ___ Paris twice. (no exact dates)",
+      "options": [
+        "have visited",
+        "visited",
+        "visit"
+      ],
+      "correct": 0,
+      "why_ar": "خبرة بعدد مرات غير محدد الزمن.",
+      "rule_ar": "present perfect.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "past-simple-vs-present-perfect",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "She ___ that film last night.",
+      "options": [
+        "watched",
+        "has watched",
+        "has watch"
+      ],
+      "correct": 0,
+      "why_ar": "last night = ماضٍ محدد.",
+      "rule_ar": "past simple.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "past-simple-vs-present-perfect",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "___ you ever eaten sushi?",
+      "options": [
+        "Have",
+        "Did",
+        "Were"
+      ],
+      "correct": 0,
+      "why_ar": "ever → present perfect غالبًا.",
+      "rule_ar": "Have you ever.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "past-simple-vs-present-perfect",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "They lived there ___ 2005 to 2008.",
+      "options": [
+        "from",
+        "since",
+        "for"
+      ],
+      "correct": 0,
+      "why_ar": "from … to … مدة منتهية.",
+      "rule_ar": "past period.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "past-simple-vs-present-perfect",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "He ___ here since Monday. (still relevant)",
+      "options": [
+        "has been",
+        "was",
+        "is"
+      ],
+      "correct": 0,
+      "why_ar": "since → present perfect.",
+      "rule_ar": "since + present perfect.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "past-simple-vs-present-perfect",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "Which needs past simple?",
+      "options": [
+        "I saw it yesterday",
+        "I have seen it"
+      ],
+      "correct": 0,
+      "why_ar": "yesterday.",
+      "rule_ar": "finished time marker.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "past-simple-vs-present-perfect",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "Which expresses experience without a time?",
+      "options": [
+        "I have tried it",
+        "I tried it yesterday"
+      ],
+      "correct": 0,
+      "why_ar": "have tried بدون وقت.",
+      "rule_ar": "indefinite past.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "past-simple-vs-present-perfect",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "We ___ the homework. It's done now.",
+      "options": [
+        "have finished",
+        "finished",
+        "finish"
+      ],
+      "correct": 0,
+      "why_ar": "نتيجة الآن.",
+      "rule_ar": "present perfect result.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "past-simple-vs-present-perfect",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "___ did you leave? — At 5 pm.",
+      "options": [
+        "When",
+        "How long",
+        "How often"
+      ],
+      "correct": 0,
+      "why_ar": "وقت محدد في الإجابة.",
+      "rule_ar": "When + past simple.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "have-to-dont-have-to",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "You ___ drive slower than the speed limit.",
+      "options": [
+        "have to",
+        "don't have to",
+        "shouldn't to"
+      ],
+      "correct": 0,
+      "why_ar": "قانون طريق.",
+      "rule_ar": "have to.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "have-to-dont-have-to",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "She ___ wear a coat — it's optional.",
+      "options": [
+        "doesn't have to",
+        "has to",
+        "must"
+      ],
+      "correct": 0,
+      "why_ar": "اختياري = لا إلزام.",
+      "rule_ar": "doesn't have to.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "have-to-dont-have-to",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "He ___ to finish tonight? (question)",
+      "options": [
+        "Does he have",
+        "Has he",
+        "Is he"
+      ],
+      "correct": 0,
+      "why_ar": "Does he have to.",
+      "rule_ar": "Does + have to.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "have-to-dont-have-to",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "They ___ clean the house every week.",
+      "options": [
+        "have to",
+        "don't have to",
+        "having to"
+      ],
+      "correct": 0,
+      "why_ar": "التزام.",
+      "rule_ar": "have to.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "have-to-dont-have-to",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "We ___ pay — the event is free.",
+      "options": [
+        "don't have to",
+        "have to",
+        "must"
+      ],
+      "correct": 0,
+      "why_ar": "مجاني → لا حاجة للدفع.",
+      "rule_ar": "don't have to.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "have-to-dont-have-to",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "My brother ___ drink milk before bed. (rule at home)",
+      "options": [
+        "has to",
+        "don't have to",
+        "having"
+      ],
+      "correct": 0,
+      "why_ar": "has to للمفرد الثالث.",
+      "rule_ar": "has to.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "have-to-dont-have-to",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "___ you have to leave now?",
+      "options": [
+        "Do",
+        "Does",
+        "Are"
+      ],
+      "correct": 0,
+      "why_ar": "Do you have to.",
+      "rule_ar": "Do you have to.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "have-to-dont-have-to",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "'Don't have to' means it is ___ .",
+      "options": [
+        "not necessary",
+        "forbidden",
+        "obligatory"
+      ],
+      "correct": 0,
+      "why_ar": "غير لازم.",
+      "rule_ar": "no obligation.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "have-to-dont-have-to",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "You ___ work overtime — it wasn't compulsory.",
+      "options": [
+        "didn't have to",
+        "hadn't to",
+        "mustn't"
+      ],
+      "correct": 0,
+      "why_ar": "لم يكن إلزامًا.",
+      "rule_ar": "didn't have to.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "have-to-dont-have-to",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "___ she have to wear a tie?",
+      "options": [
+        "Does",
+        "Has",
+        "Is"
+      ],
+      "correct": 0,
+      "why_ar": "Does she have to.",
+      "rule_ar": "Does + have to.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "should-shouldnt-advice",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "You look ill. You ___ see a doctor.",
+      "options": [
+        "should",
+        "must to",
+        "have"
+      ],
+      "correct": 0,
+      "why_ar": "نصيحة.",
+      "rule_ar": "should + base.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "should-shouldnt-advice",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "Students ___ cheat in exams.",
+      "options": [
+        "shouldn't",
+        "should",
+        "don't"
+      ],
+      "correct": 0,
+      "why_ar": "لا ينبغي الغش.",
+      "rule_ar": "shouldn't.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "should-shouldnt-advice",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "___ I call him now?",
+      "options": [
+        "Should",
+        "Do",
+        "Must"
+      ],
+      "correct": 0,
+      "why_ar": "Should I…?",
+      "rule_ar": "asking advice.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "should-shouldnt-advice",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "She ___ waste water.",
+      "options": [
+        "shouldn't",
+        "shouldn't to",
+        "not should"
+      ],
+      "correct": 0,
+      "why_ar": "shouldn't + verb.",
+      "rule_ar": "shouldn't.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "should-shouldnt-advice",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "We ___ arrive on time; it's polite.",
+      "options": [
+        "should",
+        "must to",
+        "having to"
+      ],
+      "correct": 0,
+      "why_ar": "نصيحة أخلاقية.",
+      "rule_ar": "should.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "should-shouldnt-advice",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "___ you eat more vegetables?",
+      "options": [
+        "Should",
+        "Must",
+        "Have"
+      ],
+      "correct": 0,
+      "why_ar": "Should you…?",
+      "rule_ar": "should question.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "should-shouldnt-advice",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "He ___ stay up all night before an exam.",
+      "options": [
+        "shouldn't",
+        "should",
+        "must"
+      ],
+      "correct": 0,
+      "why_ar": "نصيحة سلبية.",
+      "rule_ar": "shouldn't.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "should-shouldnt-advice",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "Should takes the ___ form of the verb.",
+      "options": [
+        "base",
+        "past",
+        "ing"
+      ],
+      "correct": 0,
+      "why_ar": "مصدر بدون to.",
+      "rule_ar": "should + base.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "should-shouldnt-advice",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "Advice about what is right or wrong often uses ___ .",
+      "options": [
+        "should",
+        "have to",
+        "will"
+      ],
+      "correct": 0,
+      "why_ar": "should.",
+      "rule_ar": "advice.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "should-shouldnt-advice",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "You ___ apologize if you were rude.",
+      "options": [
+        "should",
+        "don't have to",
+        "can't"
+      ],
+      "correct": 0,
+      "why_ar": "من اللائق الاعتذار.",
+      "rule_ar": "should.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "will-future-tense",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "I ___ be ready in five minutes.",
+      "options": [
+        "will",
+        "will to",
+        "wills"
+      ],
+      "correct": 0,
+      "why_ar": "will + base.",
+      "rule_ar": "will + base.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "will-future-tense",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "___ you tell us the truth?",
+      "options": [
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "correct": 0,
+      "why_ar": "Will you…?",
+      "rule_ar": "question will.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "will-future-tense",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "She ___ arrive on time.",
+      "options": [
+        "won't",
+        "willn't",
+        "don't"
+      ],
+      "correct": 0,
+      "why_ar": "won't = will not.",
+      "rule_ar": "won't.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "will-future-tense",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "Yes, I ___ .",
+      "options": [
+        "will",
+        "won't",
+        "do"
+      ],
+      "correct": 0,
+      "why_ar": "short answer positive.",
+      "rule_ar": "Yes, I will.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "will-future-tense",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "No, he ___ .",
+      "options": [
+        "won't",
+        "willn't",
+        "isn't"
+      ],
+      "correct": 0,
+      "why_ar": "No, he won't.",
+      "rule_ar": "short negative.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "will-future-tense",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "___ will he visit us?",
+      "options": [
+        "When",
+        "Where",
+        "Will"
+      ],
+      "correct": 0,
+      "why_ar": "When will he…?",
+      "rule_ar": "WH + will.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "will-future-tense",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "They ___ help you soon.",
+      "options": [
+        "will",
+        "are will",
+        "willing"
+      ],
+      "correct": 0,
+      "why_ar": "they will.",
+      "rule_ar": "future.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "will-future-tense",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "The contraction of 'I will' is ___ .",
+      "options": [
+        "I'll",
+        "Im",
+        "I willn't"
+      ],
+      "correct": 0,
+      "why_ar": "I'll.",
+      "rule_ar": "contractions.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "will-future-tense",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "He ___ visit us on Friday. (statement)",
+      "options": [
+        "will",
+        "wills",
+        "is will"
+      ],
+      "correct": 0,
+      "why_ar": "will visit.",
+      "rule_ar": "will.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "will-future-tense",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "___ see you later. (we)",
+      "options": [
+        "We'll",
+        "We willn't",
+        "We"
+      ],
+      "correct": 0,
+      "why_ar": "اختصار we will.",
+      "rule_ar": "We'll.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "articles-definite-zero",
+      "source": "quiz",
+      "indexInSource": 0,
+      "question_en": "___ sun rises in the east.",
+      "options": [
+        "The",
+        "A",
+        "—"
+      ],
+      "correct": 0,
+      "why_ar": "شمس وحيدة في سياقنا.",
+      "rule_ar": "unique → the.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "articles-definite-zero",
+      "source": "quiz",
+      "indexInSource": 1,
+      "question_en": "___ religion is important. (general idea — wrong with 'the')",
+      "options": [
+        "— / no article",
+        "The",
+        "A"
+      ],
+      "correct": 0,
+      "why_ar": "عموم دين كمفهوم.",
+      "rule_ar": "zero article general.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "articles-definite-zero",
+      "source": "quiz",
+      "indexInSource": 2,
+      "question_en": "Pass me ___ book on the table.",
+      "options": [
+        "the",
+        "a",
+        "—"
+      ],
+      "correct": 0,
+      "why_ar": "معروف أي كتاب.",
+      "rule_ar": "the specific.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "articles-definite-zero",
+      "source": "quiz",
+      "indexInSource": 3,
+      "question_en": "She lives in ___ .",
+      "options": [
+        "Jeddah",
+        "the Jeddah",
+        "a Jeddah"
+      ],
+      "correct": 0,
+      "why_ar": "مدينة بدون the غالبًا.",
+      "rule_ar": "city name.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "articles-definite-zero",
+      "source": "quiz",
+      "indexInSource": 4,
+      "question_en": "We studied ___ water cycle in class.",
+      "options": [
+        "the",
+        "a",
+        "—"
+      ],
+      "correct": 0,
+      "why_ar": "مفهوم محدد في المنهج.",
+      "rule_ar": "the for defined topic.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "articles-definite-zero",
+      "source": "quiz",
+      "indexInSource": 5,
+      "question_en": "___ Mississippi River is long.",
+      "options": [
+        "The",
+        "A",
+        "—"
+      ],
+      "correct": 0,
+      "why_ar": "أنهار مع the غالبًا.",
+      "rule_ar": "river names.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "articles-definite-zero",
+      "source": "quiz",
+      "indexInSource": 6,
+      "question_en": "I need ___ advice.",
+      "options": [
+        "— / some",
+        "an",
+        "the"
+      ],
+      "correct": 0,
+      "why_ar": "advice غير معدود عام.",
+      "rule_ar": "uncountable zero/some.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "articles-definite-zero",
+      "source": "quiz",
+      "indexInSource": 7,
+      "question_en": "He's ___ university student.",
+      "options": [
+        "a",
+        "an",
+        "the"
+      ],
+      "correct": 0,
+      "why_ar": "a قبل صوت ساكن university /juː/.",
+      "rule_ar": "a university.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "articles-definite-zero",
+      "source": "quiz",
+      "indexInSource": 8,
+      "question_en": "Zero article is common with ___ when meaning 'in general'.",
+      "options": [
+        "plural count nouns / uncountables",
+        "only singular",
+        "always names"
+      ],
+      "correct": 0,
+      "why_ar": "عموم الجمع والغير المعدود.",
+      "rule_ar": "general meaning.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    },
+    {
+      "lessonId": "articles-definite-zero",
+      "source": "quiz",
+      "indexInSource": 9,
+      "question_en": "Which usually takes 'the'?",
+      "options": [
+        "the only moon we mean from context",
+        "cats in general",
+        "French food in general"
+      ],
+      "correct": 0,
+      "why_ar": "when uniquely identified.",
+      "rule_ar": "the for unique/specific.",
+      "categoryId": "unit-8-perfect-modals-articles"
+    }
+  ]
+}

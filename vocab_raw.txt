@@ -1,0 +1,262 @@
+people - الناس
+person - شخص
+man - رجل
+woman - امرأة
+boy - ولد
+girl - بنت
+name - اسم
+first name - الاسم الأول
+surname - اسم العائلة
+family - عائلة
+friend - صديق
+job - وظيفة
+occupation - مهنة
+home - منزل
+house - بيت
+married - متزوج
+single - أعزب
+funny - مضحك
+nice - لطيف
+old - كبير في السن / قديم
+young - شاب / صغير
+explorer - مستكشف
+football player - لاعب كرة قدم
+swimmer - سباح
+holiday - إجازة
+Kenya - كينيا
+Italy - إيطاليا
+London - لندن
+possessions - ممتلكات
+room - غرفة
+bedroom - غرفة نوم
+kitchen - مطبخ
+hall - صالة
+table - طاولة
+chair - كرسي
+sofa - كنبة
+bed - سرير
+TV - تلفاز
+bag - حقيبة
+wall - جدار
+mirror - مرآة
+shelf - رف
+wardrobe - خزانة
+carpet - سجادة
+rug - بساط
+curtains - ستائر
+desk - مكتب
+poster - ملصق
+calendar - تقويم
+cushion - وسادة
+basket - سلة
+yard - فناء
+place - مكان
+places - أماكن
+school - مدرسة
+bank - بنك
+street - شارع
+city - مدينة
+town - بلدة
+park - حديقة
+shop - متجر
+road - طريق
+hospital - مستشفى
+airport - مطار
+station - محطة
+office - مكتب
+restaurant - مطعم
+zone - منطقة
+no-car zone - منطقة بدون سيارات
+population - عدد السكان
+free time - وقت الفراغ
+play - يلعب
+watch - يشاهد
+like - يحب
+love - يعشق
+go - يذهب
+music - موسيقى
+sport - رياضة
+dance - يرقص
+hobby - هواية
+cinema - سينما
+ride - يركب
+horse - حصان
+walk - يمشي
+identical twins - توأم متطابق
+activity - نشاط
+food - طعام
+drink - شراب
+water - ماء
+milk - حليب
+rice - رز
+bread - خبز
+fish - سمك
+chicken - دجاج
+egg - بيضة
+meat - لحم
+pasta - معكرونة
+onion - بصل
+carrot - جزر
+flour - دقيق
+market - سوق
+sauce - صلصة
+boil - يغلي
+bake - يخبز
+fry - يقلي
+peel - يقشر
+stir - يحرك
+yesterday - أمس
+last week - الأسبوع الماضي
+last month - الشهر الماضي
+was - كان
+were - كانوا / كنتم
+went - ذهب
+came - أتى
+saw - رأى
+met - قابل
+did - فعل
+famous - مشهور
+president - رئيس
+artist - فنان
+museum - متحف
+note - ورقة نقدية
+face - وجه
+journey - رحلة
+travel - يسافر / سفر
+bus - حافلة
+car - سيارة
+train - قطار
+plane - طائرة
+bike - دراجة
+mountain - جبل
+animal - حيوان
+turtle - سلحفاة
+frog - ضفدع
+saiga - سايغا
+route - مسار
+appearance - المظهر
+clothes - ملابس
+shirt - قميص
+dress - فستان
+shoes - أحذية
+trousers - بنطال
+hair - شعر
+body - جسم
+beautiful - جميل
+tall - طويل
+short - قصير
+thin - نحيف
+stylish - أنيق
+fashionable - عصري
+entertainment - الترفيه
+film - فيلم
+movie - فيلم
+show - عرض
+festival - مهرجان
+comedy - كوميدي
+action - أكشن
+horror - رعب
+cartoon - كرتون
+zombie - زومبي
+prince - أمير
+queen - ملكة
+learn - يتعلم
+study - يدرس
+teacher - معلم
+student - طالب
+lesson - درس
+book - كتاب
+science - علوم
+robot - روبوت
+subject - مادة
+solution - حل
+invisible - غير مرئي
+tourism - السياحة
+tourist - سائح
+hotel - فندق
+visa - تأشيرة
+passport - جواز سفر
+credit card - بطاقة ائتمان
+driving license - رخصة قيادة
+earth - الأرض
+climate - مناخ
+weather - طقس
+rain - مطر
+hot - حار
+cold - بارد
+future - مستقبل
+climate change - تغير المناخ
+temperature - درجة الحرارة
+wind - رياح
+region - منطقة
+natural - طبيعي
+be - يكون
+have - يملك
+come - يأتي
+eat - يأكل
+work - يعمل
+buy - يشتري
+sell - يبيع
+meet - يقابل
+help - يساعد
+good - جيد
+bad - سيء
+big - كبير
+small - صغير
+expensive - غالي
+cheap - رخيص
+fast - سريع
+slow - بطيء
+busy - مشغول
+complete - أكمل
+choose - اختر
+match - صِل
+answer - أجب
+read - اقرأ
+write - اكتب
+describe - صف
+fill in - املأ الفراغ
+correct - صحح
+true - صح
+false - خطأ
+present simple - المضارع البسيط
+present continuous - المضارع المستمر
+past simple - الماضي البسيط
+present perfect - المضارع التام
+will - سوف
+going to - سوف / ينوي
+can - يستطيع
+can't - لا يستطيع
+should - ينبغي
+shouldn't - لا ينبغي
+comparative - المقارنة
+superlative - التفضيل
+articles - أدوات التعريف والتنكير
+countable - قابل للعد
+uncountable - غير قابل للعد
+there is - يوجد للمفرد
+there are - يوجد للجمع
+possessive adjectives - صفات الملكية
+pronouns - الضمائر
+and - و
+but - لكن
+so - لذلك
+because - لأن
+in - في
+on - على
+under - تحت
+behind - خلف
+between - بين
+next to - بجانب
+in front of - أمام
+from - من
+to - إلى
+with - مع
+at - عند / في
+where - أين
+what - ماذا / ما
+when - متى
+why - لماذا
+how - كيف
+who - من
+which - أيّ

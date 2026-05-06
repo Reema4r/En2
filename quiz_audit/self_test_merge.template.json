@@ -1,0 +1,14 @@
+{
+  "_comment_ar": "ضع أسئلة الاختبار الذاتي الجديدة هنا بالإنجليزي فقط. عند الدمج مع الموقع: احتفظ بالحقول العربية (why_ar, rule_ar) من النسخة الحالية في التطبيق إن وُجدت.",
+  "_comment_en": "Put NEW self-test items (English only). On merge: keep Arabic explanations from the site when deduplicating.",
+  "items": [
+    {
+      "question_en": "",
+      "options": ["", "", ""],
+      "correct": 0,
+      "match_lesson_hint": "optional slug e.g. past-simple-irregular-verbs",
+      "why_ar_keep_from_site_if_duplicate": "",
+      "rule_ar_keep_from_site_if_duplicate": ""
+    }
+  ]
+}

@@ -1,0 +1,947 @@
+[
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[0]",
+    "indexInSource": 0,
+    "question_en": "She ___ very tired after work.",
+    "options": [
+      "became",
+      "becomed",
+      "become"
+    ],
+    "correct": 0,
+    "why_ar": "become → became في الماضي.",
+    "rule_ar": "become/became.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[0]",
+    "indexInSource": 1,
+    "question_en": "They ___ home late yesterday.",
+    "options": [
+      "came",
+      "come",
+      "comes"
+    ],
+    "correct": 0,
+    "why_ar": "come → came.",
+    "rule_ar": "come/came.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[0]",
+    "indexInSource": 2,
+    "question_en": "The ticket ___ only five pounds.",
+    "options": [
+      "cost",
+      "costed",
+      "costs"
+    ],
+    "correct": 0,
+    "why_ar": "cost يبقى cost.",
+    "rule_ar": "cost/cost/cost.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[0]",
+    "indexInSource": 3,
+    "question_en": "He ___ his ankle in the match.",
+    "options": [
+      "hurt",
+      "hurted",
+      "hurts"
+    ],
+    "correct": 0,
+    "why_ar": "hurt يبقى hurt.",
+    "rule_ar": "hurt/hurt/hurt.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[0]",
+    "indexInSource": 4,
+    "question_en": "My dad ___ me use his laptop.",
+    "options": [
+      "let",
+      "lets",
+      "letted"
+    ],
+    "correct": 0,
+    "why_ar": "let يبقى let.",
+    "rule_ar": "let/let/let.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[0]",
+    "indexInSource": 5,
+    "question_en": "She ___ the keys on the table.",
+    "options": [
+      "put",
+      "putted",
+      "puts"
+    ],
+    "correct": 0,
+    "why_ar": "put يبقى put.",
+    "rule_ar": "put/put/put.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[0]",
+    "indexInSource": 6,
+    "question_en": "He ___ five kilometres yesterday.",
+    "options": [
+      "ran",
+      "runned",
+      "run"
+    ],
+    "correct": 0,
+    "why_ar": "run → ran.",
+    "rule_ar": "run/ran/run.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[1]",
+    "indexInSource": 0,
+    "question_en": "She ___ her friend a birthday gift.",
+    "options": [
+      "brought",
+      "bringed",
+      "bring"
+    ],
+    "correct": 0,
+    "why_ar": "bring → brought.",
+    "rule_ar": "bring/brought.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[1]",
+    "indexInSource": 1,
+    "question_en": "They ___ a new wall in the garden.",
+    "options": [
+      "built",
+      "builded",
+      "build"
+    ],
+    "correct": 0,
+    "why_ar": "build → built.",
+    "rule_ar": "build/built.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[1]",
+    "indexInSource": 2,
+    "question_en": "I ___ new shoes online.",
+    "options": [
+      "bought",
+      "buyed",
+      "buy"
+    ],
+    "correct": 0,
+    "why_ar": "buy → bought.",
+    "rule_ar": "buy/bought.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[1]",
+    "indexInSource": 3,
+    "question_en": "We ___ cold on the trip.",
+    "options": [
+      "felt",
+      "feeled",
+      "feel"
+    ],
+    "correct": 0,
+    "why_ar": "feel → felt.",
+    "rule_ar": "feel/felt.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[1]",
+    "indexInSource": 4,
+    "question_en": "I ___ my keys in my bag.",
+    "options": [
+      "found",
+      "finded",
+      "find"
+    ],
+    "correct": 0,
+    "why_ar": "find → found.",
+    "rule_ar": "find/found.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[1]",
+    "indexInSource": 5,
+    "question_en": "He ___ a message from his coach.",
+    "options": [
+      "got",
+      "getted",
+      "get"
+    ],
+    "correct": 0,
+    "why_ar": "get → got.",
+    "rule_ar": "get/got.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[1]",
+    "indexInSource": 6,
+    "question_en": "She ___ breakfast at 7 a.m.",
+    "options": [
+      "had",
+      "haved",
+      "has"
+    ],
+    "correct": 0,
+    "why_ar": "have → had.",
+    "rule_ar": "have/had.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[1]",
+    "indexInSource": 7,
+    "question_en": "I ___ the bell ring.",
+    "options": [
+      "heard",
+      "heared",
+      "hear"
+    ],
+    "correct": 0,
+    "why_ar": "hear → heard.",
+    "rule_ar": "hear/heard.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[1]",
+    "indexInSource": 8,
+    "question_en": "We ___ quiet during the exam.",
+    "options": [
+      "kept",
+      "keeped",
+      "keep"
+    ],
+    "correct": 0,
+    "why_ar": "keep → kept.",
+    "rule_ar": "keep/kept.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[2]",
+    "indexInSource": 0,
+    "question_en": "The bus ___ before I arrived.",
+    "options": [
+      "left",
+      "leaved",
+      "leave"
+    ],
+    "correct": 0,
+    "why_ar": "leave → left.",
+    "rule_ar": "leave/left.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[2]",
+    "indexInSource": 1,
+    "question_en": "We ___ many new words.",
+    "options": [
+      "learned",
+      "learn",
+      "learning"
+    ],
+    "correct": 0,
+    "why_ar": "learn → learned.",
+    "rule_ar": "learn/learned.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[2]",
+    "indexInSource": 2,
+    "question_en": "She ___ juice for everyone.",
+    "options": [
+      "made",
+      "maked",
+      "make"
+    ],
+    "correct": 0,
+    "why_ar": "make → made.",
+    "rule_ar": "make/made.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[3]",
+    "indexInSource": 0,
+    "question_en": "I ___ my cousin at the stadium.",
+    "options": [
+      "met",
+      "meet",
+      "meeted"
+    ],
+    "correct": 0,
+    "why_ar": "meet → met.",
+    "rule_ar": "meet/met.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[3]",
+    "indexInSource": 1,
+    "question_en": "He ___ by card.",
+    "options": [
+      "paid",
+      "payed",
+      "pay"
+    ],
+    "correct": 0,
+    "why_ar": "pay → paid.",
+    "rule_ar": "pay/paid.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[3]",
+    "indexInSource": 2,
+    "question_en": "She ___ nothing about it.",
+    "options": [
+      "said",
+      "sayed",
+      "say"
+    ],
+    "correct": 0,
+    "why_ar": "say → said.",
+    "rule_ar": "say/said.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[3]",
+    "indexInSource": 3,
+    "question_en": "The shop ___ out of milk.",
+    "options": [
+      "sold",
+      "selled",
+      "sell"
+    ],
+    "correct": 0,
+    "why_ar": "sell → sold.",
+    "rule_ar": "sell/sold.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[3]",
+    "indexInSource": 4,
+    "question_en": "I ___ the form yesterday afternoon.",
+    "options": [
+      "sent",
+      "send",
+      "sended"
+    ],
+    "correct": 0,
+    "why_ar": "الماضي → sent.",
+    "rule_ar": "send/sent.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[3]",
+    "indexInSource": 5,
+    "question_en": "The cat ___ under the chair.",
+    "options": [
+      "sat",
+      "sitted",
+      "sit"
+    ],
+    "correct": 0,
+    "why_ar": "sit → sat.",
+    "rule_ar": "sit/sat.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[3]",
+    "indexInSource": 6,
+    "question_en": "They ___ well last night.",
+    "options": [
+      "slept",
+      "sleeped",
+      "sleep"
+    ],
+    "correct": 0,
+    "why_ar": "sleep → slept.",
+    "rule_ar": "sleep/slept.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[3]",
+    "indexInSource": 7,
+    "question_en": "He ___ all his pocket money.",
+    "options": [
+      "spent",
+      "spended",
+      "spend"
+    ],
+    "correct": 0,
+    "why_ar": "spend → spent.",
+    "rule_ar": "spend/spent.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[3]",
+    "indexInSource": 8,
+    "question_en": "Mr Omar ___ us new vocabulary.",
+    "options": [
+      "taught",
+      "teached",
+      "teach"
+    ],
+    "correct": 0,
+    "why_ar": "teach → taught.",
+    "rule_ar": "teach/taught.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[4]",
+    "indexInSource": 0,
+    "question_en": "She ___ me the secret.",
+    "options": [
+      "told",
+      "telled",
+      "tell"
+    ],
+    "correct": 0,
+    "why_ar": "tell → told.",
+    "rule_ar": "tell/told.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[4]",
+    "indexInSource": 1,
+    "question_en": "I ___ it was a good idea.",
+    "options": [
+      "thought",
+      "thinked",
+      "think"
+    ],
+    "correct": 0,
+    "why_ar": "think → thought.",
+    "rule_ar": "think/thought.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[4]",
+    "indexInSource": 2,
+    "question_en": "We ___ the teacher clearly.",
+    "options": [
+      "understood",
+      "understanded",
+      "understand"
+    ],
+    "correct": 0,
+    "why_ar": "understand → understood.",
+    "rule_ar": "understand/understood.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[5]",
+    "indexInSource": 0,
+    "question_en": "They ___ at home yesterday evening.",
+    "options": [
+      "were",
+      "was",
+      "are"
+    ],
+    "correct": 0,
+    "why_ar": "they + were.",
+    "rule_ar": "be → was/were.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[5]",
+    "indexInSource": 1,
+    "question_en": "The concert ___ at 7.",
+    "options": [
+      "began",
+      "begined",
+      "begin"
+    ],
+    "correct": 0,
+    "why_ar": "begin → began.",
+    "rule_ar": "begin/began.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[5]",
+    "indexInSource": 2,
+    "question_en": "She ___ the cheaper ticket.",
+    "options": [
+      "chose",
+      "choose",
+      "choosed"
+    ],
+    "correct": 0,
+    "why_ar": "choose → chose.",
+    "rule_ar": "choose/chose.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[5]",
+    "indexInSource": 3,
+    "question_en": "We ___ our homework together.",
+    "options": [
+      "did",
+      "done",
+      "do"
+    ],
+    "correct": 0,
+    "why_ar": "do → did.",
+    "rule_ar": "do/did.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[5]",
+    "indexInSource": 4,
+    "question_en": "He ___ too much juice.",
+    "options": [
+      "drank",
+      "drinked",
+      "drink"
+    ],
+    "correct": 0,
+    "why_ar": "drink → drank.",
+    "rule_ar": "drink/drank.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[5]",
+    "indexInSource": 5,
+    "question_en": "They ___ dinner early.",
+    "options": [
+      "ate",
+      "eated",
+      "eat"
+    ],
+    "correct": 0,
+    "why_ar": "eat → ate.",
+    "rule_ar": "eat/ate.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[5]",
+    "indexInSource": 6,
+    "question_en": "The phone ___ on the floor.",
+    "options": [
+      "fell",
+      "falled",
+      "fall"
+    ],
+    "correct": 0,
+    "why_ar": "fall → fell.",
+    "rule_ar": "fall/fell.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[5]",
+    "indexInSource": 7,
+    "question_en": "Birds ___ south in winter.",
+    "options": [
+      "flew",
+      "flyed",
+      "fly"
+    ],
+    "correct": 0,
+    "why_ar": "fly → flew.",
+    "rule_ar": "fly/flew.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[5]",
+    "indexInSource": 8,
+    "question_en": "I ___ his phone number.",
+    "options": [
+      "forgot",
+      "forgetted",
+      "forget"
+    ],
+    "correct": 0,
+    "why_ar": "forget → forgot.",
+    "rule_ar": "forget/forgot.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[6]",
+    "indexInSource": 0,
+    "question_en": "She ___ him a notebook.",
+    "options": [
+      "gave",
+      "gived",
+      "give"
+    ],
+    "correct": 0,
+    "why_ar": "give → gave.",
+    "rule_ar": "give/gave.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[6]",
+    "indexInSource": 1,
+    "question_en": "We ___ to London last month.",
+    "options": [
+      "went",
+      "goed",
+      "go"
+    ],
+    "correct": 0,
+    "why_ar": "go → went.",
+    "rule_ar": "go/went.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[6]",
+    "indexInSource": 2,
+    "question_en": "The trees ___ fast.",
+    "options": [
+      "grew",
+      "growed",
+      "grow"
+    ],
+    "correct": 0,
+    "why_ar": "grow → grew.",
+    "rule_ar": "grow/grew.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[6]",
+    "indexInSource": 3,
+    "question_en": "I ___ him from primary school.",
+    "options": [
+      "knew",
+      "knowed",
+      "know"
+    ],
+    "correct": 0,
+    "why_ar": "know → knew.",
+    "rule_ar": "know/knew.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[6]",
+    "indexInSource": 4,
+    "question_en": "They ___ the new gallery.",
+    "options": [
+      "saw",
+      "seed",
+      "see"
+    ],
+    "correct": 0,
+    "why_ar": "see → saw.",
+    "rule_ar": "see/saw.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[6]",
+    "indexInSource": 5,
+    "question_en": "He ___ about the exam.",
+    "options": [
+      "spoke",
+      "speaked",
+      "speak"
+    ],
+    "correct": 0,
+    "why_ar": "speak → spoke.",
+    "rule_ar": "speak/spoke.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[6]",
+    "indexInSource": 6,
+    "question_en": "She ___ across the river.",
+    "options": [
+      "swam",
+      "swimmed",
+      "swim"
+    ],
+    "correct": 0,
+    "why_ar": "swim → swam.",
+    "rule_ar": "swim/swam.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[6]",
+    "indexInSource": 7,
+    "question_en": "Who ___ this photo?",
+    "options": [
+      "took",
+      "taked",
+      "take"
+    ],
+    "correct": 0,
+    "why_ar": "take → took.",
+    "rule_ar": "take/took.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[6]",
+    "indexInSource": 8,
+    "question_en": "I ___ up early today.",
+    "options": [
+      "woke",
+      "waked",
+      "wake"
+    ],
+    "correct": 0,
+    "why_ar": "wake → woke.",
+    "rule_ar": "wake/woke.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[6]",
+    "indexInSource": 9,
+    "question_en": "She ___ a blue coat.",
+    "options": [
+      "wore",
+      "weared",
+      "wear"
+    ],
+    "correct": 0,
+    "why_ar": "wear → wore.",
+    "rule_ar": "wear/wore.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizStages[6]",
+    "indexInSource": 10,
+    "question_en": "He ___ three paragraphs.",
+    "options": [
+      "wrote",
+      "writed",
+      "write"
+    ],
+    "correct": 0,
+    "why_ar": "write → wrote.",
+    "rule_ar": "write/wrote.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizComprehensive",
+    "indexInSource": 0,
+    "question_en": "Yesterday we ___ to the museum.",
+    "options": [
+      "went",
+      "goed",
+      "gone"
+    ],
+    "correct": 0,
+    "why_ar": "الماضي البسيط → went (ليست gone هنا).",
+    "rule_ar": "go → went.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizComprehensive",
+    "indexInSource": 1,
+    "question_en": "She ___ breakfast at seven.",
+    "options": [
+      "ate",
+      "eated",
+      "eaten"
+    ],
+    "correct": 0,
+    "why_ar": "الماضي البسيط → ate.",
+    "rule_ar": "eat → ate.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizComprehensive",
+    "indexInSource": 2,
+    "question_en": "What ___ you do last weekend?",
+    "options": [
+      "did",
+      "do",
+      "does"
+    ],
+    "correct": 0,
+    "why_ar": "سؤال ماضٍ للفعل المعنوي → did.",
+    "rule_ar": "What did you do?",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizComprehensive",
+    "indexInSource": 3,
+    "question_en": "He ___ his keys under the sofa.",
+    "options": [
+      "found",
+      "finded",
+      "find"
+    ],
+    "correct": 0,
+    "why_ar": "find → found.",
+    "rule_ar": "find/found.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizComprehensive",
+    "indexInSource": 4,
+    "question_en": "They ___ us the last tickets.",
+    "options": [
+      "sold",
+      "selled",
+      "sell"
+    ],
+    "correct": 0,
+    "why_ar": "sell → sold.",
+    "rule_ar": "sell/sold.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizComprehensive",
+    "indexInSource": 5,
+    "question_en": "We ___ the notice on the door.",
+    "options": [
+      "read",
+      "readed",
+      "reads"
+    ],
+    "correct": 0,
+    "why_ar": "شكل الماضي مثل المصدر: read.",
+    "rule_ar": "read/read.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizComprehensive",
+    "indexInSource": 6,
+    "question_en": "She ___ him a birthday card.",
+    "options": [
+      "gave",
+      "gived",
+      "give"
+    ],
+    "correct": 0,
+    "why_ar": "give → gave.",
+    "rule_ar": "give/gave.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizComprehensive",
+    "indexInSource": 7,
+    "question_en": "I ___ nervous before the exam.",
+    "options": [
+      "felt",
+      "feeled",
+      "feel"
+    ],
+    "correct": 0,
+    "why_ar": "feel → felt.",
+    "rule_ar": "feel/felt.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizComprehensive",
+    "indexInSource": 8,
+    "question_en": "The baby ___ off the bed.",
+    "options": [
+      "fell",
+      "falled",
+      "fall"
+    ],
+    "correct": 0,
+    "why_ar": "fall → fell.",
+    "rule_ar": "fall/fell.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizComprehensive",
+    "indexInSource": 9,
+    "question_en": "Who ___ of this game?",
+    "options": [
+      "thought",
+      "thinked",
+      "think"
+    ],
+    "correct": 0,
+    "why_ar": "think → thought.",
+    "rule_ar": "think/thought.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizComprehensive",
+    "indexInSource": 10,
+    "question_en": "He ___ all his money on games.",
+    "options": [
+      "spent",
+      "spended",
+      "spend"
+    ],
+    "correct": 0,
+    "why_ar": "spend → spent.",
+    "rule_ar": "spend/spent.",
+    "categoryId": "standalone-irregular-verbs"
+  },
+  {
+    "lessonId": "past-simple-irregular-verbs",
+    "source": "quizComprehensive",
+    "indexInSource": 11,
+    "question_en": "They ___ the famous tower.",
+    "options": [
+      "saw",
+      "seed",
+      "see"
+    ],
+    "correct": 0,
+    "why_ar": "see → saw.",
+    "rule_ar": "see/saw.",
+    "categoryId": "standalone-irregular-verbs"
+  }
+]
