@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <meta name="color-scheme" content="dark light"/>
 <title>English Mastery — منصة الاختبارات</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 :root {
   --navy:#0f172a;
@@ -16,8 +19,11 @@
   --warn:#f59e0b;
   --r:20px;
   --r2:14px;
-  --font: -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Tajawal,Cairo,sans-serif;
+  /* Prefer clear Arabic first, then system UI */
+  --font: Tajawal,Cairo,"Noto Sans Arabic","Noto Kufi Arabic",-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,system-ui,sans-serif;
   --mono: ui-monospace,SFMono-Regular,Menlo,monospace;
+  /* Modern UI sans for English verbs (irregular verbs tables / quiz) */
+  --irr-en: "Manrope","Plus Jakarta Sans","DM Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   /* Fluid layout tokens (mobile-first) */
   --page-pad: clamp(12px, 3.5vw, 22px);
   --page-pad-lg: clamp(18px, 4vw, 28px);
@@ -356,6 +362,44 @@ html[dir="ltr"] .qrow:hover { transform:translateX(2px); }
   overflow-wrap:anywhere;
   word-wrap:break-word;
 }
+/* Premium glass cards (Grammar lessons) */
+.glass-card {
+  background: color-mix(in srgb, var(--surface2) 74%, transparent);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border:1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  box-shadow: 0 22px 60px rgba(0,0,0,.14);
+}
+.gram-sec-title {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin:0 0 10px;
+  font-size:15px;
+  font-weight:950;
+  letter-spacing:-.01em;
+}
+.gram-sec-title .warn {
+  font-size:13px;
+  color:#ef4444;
+  font-weight:900;
+  margin-inline-start:6px;
+}
+.gram-sec-kicker {
+  margin:0 0 10px;
+  color:var(--muted);
+  font-size:13px;
+  font-weight:700;
+  line-height:1.55;
+}
+.gram-mini-tabs {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:10px 0 14px;
+}
+.gram-mini-tabs .pill { padding:10px 16px; font-weight:750; }
 .qhead { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; align-items:flex-start; margin-bottom:16px; }
 .qnum { font-size:13px; font-weight:700; color:var(--muted); }
 .qnum-title { font-size:15px; font-weight:800; color:var(--text); margin-bottom:4px; }
@@ -436,6 +480,11 @@ html[dir="ltr"] .qrow:hover { transform:translateX(2px); }
 .w-token:hover { background: color-mix(in srgb, var(--gold) 12%, transparent); }
 
 .opts { display:flex; flex-direction:column; gap:10px; }
+.opts .opt {
+  direction:ltr;
+  text-align:left;
+}
+.opts .opt .txt { direction:ltr; }
 .opt {
   display:flex; gap:12px; align-items:flex-start; text-align:start;
   padding:14px 16px; border-radius:16px; border:1px solid var(--border);
@@ -801,8 +850,10 @@ html[dir="rtl"] .quiz-page-head-end .quiz-meta-pills {
 }
 
 .page-back { display:flex; align-items:center; gap:10px; margin-bottom:22px; flex-wrap:wrap; }
+.page-back { position:relative; z-index:5; pointer-events:auto; }
 .btn-back {
   gap:6px;
+  touch-action: manipulation;
 }
 .btn-back-ic {
   display:inline-flex;
@@ -1256,6 +1307,8 @@ html[dir="rtl"] .quiz-learn-layout {
   font-weight:650;
   color:var(--muted);
   line-height:1.45;
+  font-family: var(--irr-en);
+  letter-spacing: -0.01em;
 }
 .gram-lesson-lead-card {
   padding:16px 18px;
@@ -1610,6 +1663,139 @@ table.gram-pronoun-table td:last-child {
   margin:12px 0;
   border-radius:var(--r2);
   border:1px solid var(--border);
+}
+.table-responsive .irr-group-table {
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  margin:0;
+}
+.table-responsive .irr-group-table th,
+.table-responsive .irr-group-table td {
+  padding:12px 14px;
+  text-align:start; /* important: avoid centered look */
+  vertical-align:top;
+}
+.table-responsive .irr-group-table thead th {
+  background: color-mix(in srgb, var(--navy) 55%, var(--surface));
+  color: var(--gold);
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: .02em;
+}
+.table-responsive .irr-group-table tbody td {
+  border-top: 1px solid var(--border);
+}
+.table-responsive .irr-group-table tbody tr:nth-child(even) td {
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+}
+.table-responsive .irr-group-table tbody tr:hover td {
+  background: color-mix(in srgb, var(--surface2) 94%, transparent);
+}
+.table-responsive .irr-group-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+@media (max-width:640px) {
+  /* On mobile: turn table rows into clean cards */
+  .table-responsive .irr-group-table thead { display:none; }
+  .table-responsive .irr-group-table,
+  .table-responsive .irr-group-table tbody,
+  .table-responsive .irr-group-table tr,
+  .table-responsive .irr-group-table td { display:block; width:100%; }
+  .table-responsive .irr-group-table tr {
+    border-top: 1px solid var(--border);
+    padding: 10px 10px;
+  }
+  .table-responsive .irr-group-table td {
+    border-top: none;
+    padding: 8px 10px;
+  }
+}
+
+/* Irregular verbs premium UI */
+.irr-dash { padding: 14px; border-radius: calc(var(--r) + 2px); border:1px solid var(--border); background:color-mix(in srgb, var(--surface2) 78%, transparent); box-shadow: var(--shadow); }
+.irr-dash-head { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+.irr-stage-grid { margin-top:12px; display:grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 170px), 1fr)); gap:10px; }
+.irr-stage { text-align:start; cursor:pointer; padding:12px 12px; border-radius:16px; border:1px solid var(--border); background:color-mix(in srgb, var(--surface) 82%, transparent); transition: transform .15s ease, background .2s ease, border-color .2s ease; }
+.irr-stage:hover { transform: translateY(-2px); background:color-mix(in srgb, var(--surface2) 92%, transparent); }
+.irr-stage.on { border-color: color-mix(in srgb, var(--gold) 55%, var(--border)); background: linear-gradient(145deg, color-mix(in srgb, var(--gold) 10%, transparent), color-mix(in srgb, var(--surface2) 88%, transparent)); }
+.irr-stage-k { font-weight:950; letter-spacing:-.01em; }
+.irr-stage-v { margin-top:6px; font-weight:900; color:var(--text); }
+
+.irr-stage-panel { margin-top:12px; }
+.irr-vgrid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap:12px; }
+.irr-vcard { padding:14px; border-radius:18px; border:1px solid var(--border); background: color-mix(in srgb, var(--surface2) 84%, transparent); box-shadow:0 8px 26px rgba(0,0,0,.12); }
+.irr-vtop { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }
+.irr-v1 { font-family:var(--mono); font-weight:950; font-size:16px; letter-spacing:-.02em; }
+.irr-var { margin-top:4px; color:var(--muted); font-weight:650; font-size:12px; }
+.irr-fav { flex-shrink:0; width:40px; height:40px; border-radius:14px; border:1px solid var(--border); background:color-mix(in srgb, var(--surface) 82%, transparent); font-size:18px; line-height:1; cursor:pointer; }
+.irr-fav.on { border-color: color-mix(in srgb, var(--gold) 55%, var(--border)); color: var(--gold); background: linear-gradient(145deg, color-mix(in srgb, var(--gold) 14%, transparent), color-mix(in srgb, var(--surface2) 88%, transparent)); }
+.irr-reveal { width:100%; margin-top:12px; display:flex; gap:8px; flex-wrap:wrap; align-items:center; justify-content:flex-start; border:none; background:transparent; padding:0; cursor:pointer; }
+.irr-reveal:focus-visible { outline:2px solid color-mix(in srgb, var(--gold) 60%, transparent); outline-offset:3px; border-radius:12px; }
+@media (max-width:640px) {
+  .irr-vgrid { grid-template-columns:1fr; }
+}
+
+/* Irregular verbs: table-first premium */
+.table-responsive .irr-prem-table{
+  width:100%;
+  min-width:560px;
+  border-collapse:separate;
+  border-spacing:0;
+  margin:0;
+}
+.table-responsive .irr-prem-table th,
+.table-responsive .irr-prem-table td{
+  padding:14px 16px;
+  text-align:start;
+  vertical-align:middle;
+  font-size:16px; /* bigger, clearer */
+  font-weight:750;
+}
+.table-responsive .irr-prem-table th[dir="ltr"],
+.table-responsive .irr-prem-table td[dir="ltr"]{
+  font-family:var(--irr-en);
+  font-variant-numeric:tabular-nums;
+  letter-spacing:-0.02em;
+}
+.table-responsive .irr-prem-table thead th{
+  position:sticky;
+  top:0;
+  z-index:1;
+  background:color-mix(in srgb, var(--navy) 62%, var(--surface));
+  color:var(--gold);
+  font-weight:950;
+  letter-spacing:.02em;
+}
+.table-responsive .irr-prem-table tbody tr:nth-child(even) td{
+  background:color-mix(in srgb, var(--surface) 82%, transparent);
+}
+.table-responsive .irr-prem-table tbody tr:hover td{
+  background:color-mix(in srgb, var(--surface2) 94%, transparent);
+}
+@media (max-width:640px){
+  .table-responsive .irr-prem-table{
+    min-width:480px;
+  }
+  .table-responsive .irr-prem-table th,
+  .table-responsive .irr-prem-table td{
+    padding:12px 12px;
+    font-size:15px;
+  }
+}
+
+/* Irregular verbs quiz: English in modern sans */
+#irrPaneQuiz #irrStem,
+#irrPaneQuiz #irrOpts .btn {
+  font-family: var(--irr-en);
+  letter-spacing: -0.02em;
+}
+#irrPaneQuiz #irrStemAr {
+  font-family: var(--font);
+  font-weight: 750;
+  color: var(--muted);
 }
 .table-responsive table.gram-table {
   margin:0;
@@ -2143,6 +2329,7 @@ table.gram-pronoun-table td:last-child {
   </nav>
 </div>
 <div class="toast-wrap" id="toasts"></div>
+<script src="grammar2_content.js"></script>
 <script>
 const QUESTION_BANK = [{"id":"Q1-01","quiz":"Quiz 1","question_en":"I have a big smart ........... I put it in my living room.","options":["TV","air conditioner","sofa"],"correct":0,"arabic_explanation":"الجملة تصف جهازًا ذكيًا كبيرًا يُوضع عادة في غرفة المعيشة، وهذا يصف التلفاز أكثر من الأثاث أو التكييف.","why_answer_ar":"TV يتناسب مع وصف smart وغرفة المعيشة كمكان للترفيه.","grammar_rule_ar":"استخدم أسماء الأشياء المنزلية حسب السياق: أجهزة مقابل أثاث.","vocabulary":"TV = تلفاز | smart = ذكي | living room = غرفة المعيشة","common_mistake_ar":"الخلط بين sofa (أريكة) وبين جهاز إلكتروني.","example_sentence_en":"We bought a big smart TV for the living room.","needs_review":false},{"id":"Q1-02","quiz":"Quiz 1","question_en":"My bag went missing a few months ago. Yesterday, I found it ........... the bedroom cabinet when I was deep-cleaning.","options":["opposite","on","behind"],"correct":2,"arabic_explanation":"وجدت الحقيبة خلف خزانة غرفة النوم؛ behind تدل على موضع الإخفاء أو الوضع الخلفي.","why_answer_ar":"السياق يفيد أن المكان غير ظاهر مباشرة أثناء التنظيف العميق.","grammar_rule_ar":"حروف الجر للمكان: behind = خلف، on = على، opposite = مقابل.","vocabulary":"bedroom = غرفة نوم | cabinet = خزانة | deep-cleaning = تنظيف عميق","common_mistake_ar":"استخدام on فقط لأي سطح دون التفكير في إخفاء الشيء.","example_sentence_en":"The keys fell behind the cabinet.","needs_review":false},{"id":"Q1-03","quiz":"Quiz 1","question_en":"Ahmad Saleh works in a hospital. His ........... is a doctor.","options":["occupation","surname","relationship"],"correct":0,"arabic_explanation":"الطبيب يصف المهنة وليس اسم العائلة ولا صلة القرابة.","why_answer_ar":"occupation تعني المهنة وهي ما يحتاجه السؤال.","grammar_rule_ar":"occupation / job / profession للحديث عن العمل.","vocabulary":"hospital = مستشفى | occupation = مهنة | doctor = طبيب","common_mistake_ar":"خلط surname (اسم العائلة) مع المهنة.","example_sentence_en":"Her occupation is nursing.","needs_review":false},{"id":"Q1-04","quiz":"Quiz 1","question_en":"I like pizza ........... hamburgers, but I don't like pasta.","options":["but","or","and"],"correct":2,"arabic_explanation":"نربط بين نوعين من الطعام المتشابهين في الإعجاب باستخدام and قبل but.","why_answer_ar":"الجملة الثانية تبدأ بـ but، والأولى تذكر إعجابًا بأكثر من شيء مرتبط.","grammar_rule_ar":"and لجمع عناصر متوافقة؛ but لمعارضة لاحقة.","vocabulary":"pizza = بيتزا | hamburgers = همبرغر | pasta = معكرونة","common_mistake_ar":"استخدام or عندما لا يوجد اختيار بل إعجاب بكليهما.","example_sentence_en":"I like tea and coffee, but I don't like soda.","needs_review":false},{"id":"Q1-05","quiz":"Quiz 1","question_en":"I ........... 3 languages: Arabic, English and Turkish.","options":["talk","have","speak"],"correct":2,"arabic_explanation":"نقول speak مع اللغات عند الحديث عن القدرة على التحدث بها.","why_answer_ar":"التركيب speak + languages ثابت في الإنجليزية.","grammar_rule_ar":"speak a language / talk to someone — فرق شائع.","vocabulary":"languages = لغات","common_mistake_ar":"استخدام talk بدون to بشكل خاطئ مع اللغات.","example_sentence_en":"She speaks French fluently.","needs_review":false},{"id":"Q1-06","quiz":"Quiz 1","question_en":"Jeddah is famous for ........... beautiful beaches.","options":["their","it's","its"],"correct":2,"arabic_explanation":"its (بدون فتحة) ضمير ملكية لشيء أو مكان؛ هنا لجدة.","why_answer_ar":"it's = it is / it has وليست ضمير ملكية.","grammar_rule_ar":"its مقابل it's: ملكية مقابل اختصار.","vocabulary":"famous for = مشهور بـ | beaches = شواطئ","common_mistake_ar":"كتابة it's بدل its قبل اسم.","example_sentence_en":"The city is known for its history.","needs_review":false},{"id":"Q1-07","quiz":"Quiz 1","question_en":"Our car is ........... It was made in Germany.","options":["Italian","British","German"],"correct":2,"arabic_explanation":"صنع في ألمانيا فيعني أن السيارة ألمانية الجنسية/النوع.","why_answer_ar":"German صفة تتوافق مع made in Germany.","grammar_rule_ar":"صفات الجنسية بأحرف كبيرة عند استخدامها كصفة.","vocabulary":"made in = صُنع في","common_mistake_ar":"اختيار صفة لا تطابق بلد الصنع.","example_sentence_en":"This is a German engineering brand.","needs_review":false},{"id":"Q1-08","quiz":"Quiz 1","question_en":"There ........... many books on my desk.","options":["are","is not","is"],"correct":0,"arabic_explanation":"many books جمع، فيتطلب there are.","why_answer_ar":"الاتفاق بين الفعل والاسم الجمع.","grammar_rule_ar":"There is/are حسب المذكور بعدها مباشرة.","vocabulary":"desk = مكتب","common_mistake_ar":"There is مع جمع.","example_sentence_en":"There are two cups on the table.","needs_review":false},{"id":"Q1-09","quiz":"Quiz 1","question_en":"I have 15 ........... in my fishtank.","options":["fish","fishes","fishs"],"correct":0,"arabic_explanation":"fish غالبًا نفس الشكل للمفرد والجمع عند عدّ الأسماك.","why_answer_ar":"15 تدل على جمع، والشكل المعياري fish.","grammar_rule_ar":"fish — جمع غير منتظم شائع؛ fishes نادر لأنواع مختلفة.","vocabulary":"fishtank = حوض سمك","common_mistake_ar":"إضافة s خطأ fishs.","example_sentence_en":"We saw many fish in the lake.","needs_review":false},{"id":"Q1-10","quiz":"Quiz 1","question_en":"A: Is Salim your cousin? B: No, he is my ........... My mom remarried after my dad passed away.","options":["half-brother","brother","sister"],"correct":0,"arabic_explanation":"إعادة الزواج تفسر أخًا من أحد الأبوين فقط: half-brother.","why_answer_ar":"السياق العائلي يحدد نوع القرابة.","grammar_rule_ar":"مصطلحات العائلة: half- vs step-","vocabulary":"remarried = تزوجت مجددًا | passed away = توفي","common_mistake_ar":"brother العام دون تمييز الأخ غير الأشقاء بالكامل.","example_sentence_en":"She has a half-sister on her father's side.","needs_review":false},{"id":"Q1-11","quiz":"Quiz 1","question_en":"A: Where ........... they from? B: They are from Egypt.","options":["are","is","aren't"],"correct":0,"arabic_explanation":"they جمع، مع are في الأسئلة والإجابات.","why_answer_ar":"Where are they from? تركيب ثابت.","grammar_rule_ar":"أدوات be مع الضمائر: they are.","vocabulary":"from Egypt = من مصر","common_mistake_ar":"is مع they.","example_sentence_en":"Where are you from?","needs_review":false},{"id":"Q1-12","quiz":"Quiz 1","question_en":"These are ........... shoes. Look, they're not in your size.","options":["our","my","your"],"correct":1,"arabic_explanation":"المتحدث يشير لحذائه هو وليس للمخاطب.","why_answer_ar":"الجملة الثانية تفند أنها حذاء المخاطب.","grammar_rule_ar":"صفات الملكية: my / your / our.","vocabulary":"size = مقاس","common_mistake_ar":"your عندما يكون الكلام موجهًا لشخص لكن المعنى يقتضي المتحدث.","example_sentence_en":"These are my gloves, not yours.","needs_review":false},{"id":"Q1-13","quiz":"Quiz 1","question_en":"There is ........... in my driveway.","options":["a car","many car","2 cars"],"correct":0,"arabic_explanation":"There is مع مفرد معدود a car صحيح نحويًا.","why_answer_ar":"many car خطأ؛ 2 cars يتطلب there are.","grammar_rule_ar":"there is + مفرد / there are + جمع.","vocabulary":"driveway = ممر سيارات منزل","common_mistake_ar":"there is مع جمع.","example_sentence_en":"There is a problem with the engine.","needs_review":false},{"id":"Q1-14","quiz":"Quiz 1","question_en":"I live in Jeddah, ........... I am from Dammam.","options":["and","but","or"],"correct":1,"arabic_explanation":"تباين بين مكان السكن والأصل يبرره but.","why_answer_ar":"and لا تعارض؛ or للاختيار.","grammar_rule_ar":"but لربط فكرتين متعارضتين.","vocabulary":"live in = أسكن في | from = من (أصل)","common_mistake_ar":"and رغم وجود تباين معنوي.","example_sentence_en":"She is young, but she is very wise.","needs_review":false},{"id":"Q1-15","quiz":"Quiz 1","question_en":"I can't find the ........... I need to light the candles on the cake.","options":["keys","headphones","lighter"],"correct":2,"arabic_explanation":"إشعال الشموع يحتاج ولاعة lighter.","why_answer_ar":"السياق الوظيفي يحدد الأداة.","grammar_rule_ar":"مفردات منزلية حسب الغرض.","vocabulary":"candles = شموع | cake = كعكة","common_mistake_ar":"اختيار أدوات لا علاقة لها بالنار.","example_sentence_en":"Do you have a lighter or matches?","needs_review":false},{"id":"Q1-16","quiz":"Quiz 1","question_en":"I ........... a journalist. I am a photographer.","options":["not am","'m not","isn't"],"correct":1,"arabic_explanation":"نفي I am بصيغة I'm not.","why_answer_ar":"isn't للجمع/الغائب وليس I.","grammar_rule_ar":"أدوات be مع الضمائر: I'm not / you aren't.","vocabulary":"journalist = صحفي | photographer = مصور","common_mistake_ar":"ترتيب not am غير معياري.","example_sentence_en":"I'm not ready yet.","needs_review":false},{"id":"Q1-17","quiz":"Quiz 1","question_en":"My car is not ........... It was made in 2023.","options":["new","old","expensive"],"correct":1,"arabic_explanation":"صنع حديثًا فيعني ليست قديمة؛ old منطقي بعد النفي.","why_answer_ar":"not old يتوافق مع 2023.","grammar_rule_ar":"صفات وصف حالة الشيء مع الزمن.","vocabulary":"made in 2023 = صُنع في 2023","common_mistake_ar":"new بعد النفي رغم أن الجملة تؤكد الحداثة.","example_sentence_en":"The building is not old; it opened last year.","needs_review":false},{"id":"Q1-18","quiz":"Quiz 1","question_en":"I can't reach ........... books. They are up on that shelf.","options":["those","that","these"],"correct":0,"arabic_explanation":"كتب بعيدة على الرف تشير إليها those.","why_answer_ar":"that لمفرد؛ these للقرب غالبًا.","grammar_rule_ar":"this/these قرب — that/those بعد.","vocabulary":"shelf = رف","common_mistake_ar":"these لأشياء بعيدة.","example_sentence_en":"Those boxes are too high for me.","needs_review":false},{"id":"Q1-19","quiz":"Quiz 1","question_en":"I bought some ........... from the supermarket yesterday.","options":["potatoes","potatos","potato"],"correct":0,"arabic_explanation":"بعض البطاطس جمع صحيح potatoes.","why_answer_ar":"potato → potatoes انتظام شائع.","grammar_rule_ar":"جمع potato بـ -es.","vocabulary":"supermarket = سوبرماركت","common_mistake_ar":"potatos إملاء خاطئ.","example_sentence_en":"We need three potatoes for the soup.","needs_review":false},{"id":"Q1-20","quiz":"Quiz 1","question_en":"A: Are you from Boston? B: No, ........... I'm from Chicago.","options":["I'm not","Imn't","am not"],"correct":0,"arabic_explanation":"نفي are you بـ No, I'm not.","why_answer_ar":"Imn't غير موجود في الإنجليزية المعيارية.","grammar_rule_ar":"اختصار am not → I'm not في الكلام.","vocabulary":"from Boston / Chicago = من بوسطن/شيكاغو","common_mistake_ar":"استخدام am not وحدها دون ضمير في الرد القصير.","example_sentence_en":"A: Are you tired? B: No, I'm not.","needs_review":false},{"id":"Q3-01","quiz":"Quiz 3","question_en":"There isn't ........... milk in the fridge.","options":["a","some","any"],"correct":2,"arabic_explanation":"في النفي مع اسم غير معدود نستخدم any أكثر شيوعًا من some.","why_answer_ar":"isn't + any يوافق المعنى: لا يوجد حليب.","grammar_rule_ar":"some في الإثبات؛ any غالبًا في النفي والأسئلة.","vocabulary":"milk = حليب | fridge = ثلاجة","common_mistake_ar":"استخدام some بعد isn't في نفي عام بسيط عن الكمية.","example_sentence_en":"There isn't any sugar left.","needs_review":false},{"id":"Q3-02","quiz":"Quiz 3","question_en":"I bought ........... apple for breakfast.","options":["a","an","some"],"correct":1,"arabic_explanation":"apple تبدأ بصوت علة فنستخدم an وليس a.","why_answer_ar":"قاعدة a/an حسب الصوت الأول وليس الحرف فقط.","grammar_rule_ar":"a قبل صوت ساكن، an قبل صوت علة.","vocabulary":"breakfast = فطور","common_mistake_ar":"a apple خطأ شائع إملائي/نطق.","example_sentence_en":"I ate an orange this morning.","needs_review":false},{"id":"Q3-03","quiz":"Quiz 3","question_en":"We have ........... friends in London.","options":["many","a","much"],"correct":0,"arabic_explanation":"friends جمع معدود فيستخدم many.","why_answer_ar":"much للغير معدود؛ many للجمع المعدود.","grammar_rule_ar":"many/much تمييز أساسي.","vocabulary":"friends = أصدقاء","common_mistake_ar":"much friends خطأ.","example_sentence_en":"There are many students here.","needs_review":false},{"id":"Q3-04","quiz":"Quiz 3","question_en":"How ........... sugar do you take in your coffee?","options":["a lot of","much","any"],"correct":1,"arabic_explanation":"sugar غير معدود فنسأل How much.","why_answer_ar":"How many للمعدود؛ How much للكميات.","grammar_rule_ar":"How much + اسم غير معدود.","vocabulary":"sugar = سكر | coffee = قهوة","common_mistake_ar":"How many sugar خطأ.","example_sentence_en":"How much water do you need?","needs_review":false},{"id":"Q3-05","quiz":"Quiz 3","question_en":"I need some ........... to make a sandwich.","options":["apples","bread","chairs"],"correct":1,"arabic_explanation":"الساندويتش يحتاج خبز bread.","why_answer_ar":"سياق الطعام يحدد المفردات.","grammar_rule_ar":"some + اسم قابل للعدد أو غير معدود حسب المعنى.","vocabulary":"sandwich = شطيرة","common_mistake_ar":"اختيار أشياء لا تُستخدم عادة في الساندويتش.","example_sentence_en":"Buy some bread from the bakery.","needs_review":false},{"id":"Q3-06","quiz":"Quiz 3","question_en":"There are ........... students in the classroom today.","options":["many","a","much"],"correct":0,"arabic_explanation":"students جمع معدود → many.","why_answer_ar":"There are + جمع.","grammar_rule_ar":"there is/are مع العدد والنوع.","vocabulary":"classroom = صف","common_mistake_ar":"much students خطأ.","example_sentence_en":"There are many chairs in the room.","needs_review":false},{"id":"Q3-07","quiz":"Quiz 3","question_en":"We don't have ........... rice left.","options":["any","some","a"],"correct":0,"arabic_explanation":"في النفي مع rice غير معدود نستخدم any.","why_answer_ar":"don't have any شائع في الكلام اليومي.","grammar_rule_ar":"any في النفي؛ some في الإثبات غالبًا.","vocabulary":"rice = أرز","common_mistake_ar":"some بعد don't have عن غير معدود أحيانًا يُقبل في عروض لكن any الأدق هنا.","example_sentence_en":"We don't have any time.","needs_review":false},{"id":"Q3-08","quiz":"Quiz 3","question_en":"How many ........... do we have?","options":["milk","water","bottles"],"correct":2,"arabic_explanation":"How many يتبعه جمع معدود: bottles.","why_answer_ar":"milk/water غير معدود مباشرة هكذا.","grammar_rule_ar":"How many + جمع.","vocabulary":"bottles = زجاجات","common_mistake_ar":"How many milk خطأ.","example_sentence_en":"How many bottles are there?","needs_review":false},{"id":"Q3-09","quiz":"Quiz 3","question_en":"She needs a ........... of milk.","options":["bar","loaf","glass"],"correct":2,"arabic_explanation":"كمية حليب سائلة قد تُقاس بكأس glass في هذا السياق التعليمي.","why_answer_ar":"وحدات القياس: a glass of milk.","grammar_rule_ar":"of لربط الكمية بالمادة.","vocabulary":"milk = حليب","common_mistake_ar":"bar عادة لشوكولاتة وليس حليب.","example_sentence_en":"Pour a glass of milk, please.","needs_review":false},{"id":"Q3-10","quiz":"Quiz 3","question_en":"I bought two ........... of milk.","options":["slices","pieces","bottles"],"correct":2,"arabic_explanation":"زجاجتان من الحليب bottles of milk.","why_answer_ar":"two + جمع معدود.","grammar_rule_ar":"قطع الحليب السائل بالزجاجة شائع في التعبير.","vocabulary":"bottle = زجاجة","common_mistake_ar":"slices للخبز أو الجبن غالبًا.","example_sentence_en":"Two bottles of water, please.","needs_review":false},{"id":"Q3-11","quiz":"Quiz 3","question_en":"He ate a ........... of chocolate after lunch.","options":["jar","bar","loaf"],"correct":1,"arabic_explanation":"شوكولاتة على شكل قالب bar.","why_answer_ar":"a bar of chocolate تعبير ثابت.","grammar_rule_ar":"وحدات الطعام.","vocabulary":"chocolate = شوكولاتة | lunch = غداء","common_mistake_ar":"loaf للخبز.","example_sentence_en":"I bought a bar of chocolate.","needs_review":false},{"id":"Q3-12","quiz":"Quiz 3","question_en":"........... money do you have?","options":["How many","How lot of","How much"],"correct":2,"arabic_explanation":"money غير معدود → How much.","why_answer_ar":"How lot of غير صحيح.","grammar_rule_ar":"How much للأموال والكميات.","vocabulary":"money = مال","common_mistake_ar":"How many money خطأ.","example_sentence_en":"How much time do we have?","needs_review":false},{"id":"Q3-13","quiz":"Quiz 3","question_en":"She ........... at home yesterday.","options":["are","was","were"],"correct":1,"arabic_explanation":"yesterday + فعل ماضٍ؛ she → was.","why_answer_ar":"was/were في الماضي البسيط.","grammar_rule_ar":"زمن الماضي مع أدوات be.","vocabulary":"yesterday = أمس","common_mistake_ar":"are أمس خطأ.","example_sentence_en":"He was tired yesterday.","needs_review":false},{"id":"Q3-14","quiz":"Quiz 3","question_en":"........... apples are there in the basket?","options":["How some","How much","How many"],"correct":2,"arabic_explanation":"apples جمع معدود → How many.","why_answer_ar":"How much للغير معدود.","grammar_rule_ar":"أسئلة الكمية للمعدود.","vocabulary":"basket = سلة","common_mistake_ar":"How much apples خطأ.","example_sentence_en":"How many chairs do you see?","needs_review":false},{"id":"Q3-15","quiz":"Quiz 3","question_en":"There ........... many people at the concert last week.","options":["is","was","were"],"correct":2,"arabic_explanation":"many people جمع؛ الماضي → were.","why_answer_ar":"there were + جمع في الماضي.","grammar_rule_ar":"there was/were زمن الماضي.","vocabulary":"concert = حفل","common_mistake_ar":"there was many خطأ.","example_sentence_en":"There were many cars outside.","needs_review":false},{"id":"Q3-16","quiz":"Quiz 3","question_en":"........... you at school last Monday?","options":["Are","Was","Were"],"correct":2,"arabic_explanation":"you مع were في الماضي؛ last Monday ماضٍ.","why_answer_ar":"Were you...? سؤال ماضٍ.","grammar_rule_ar":"Are للحاضر؛ Were للماضي مع you.","vocabulary":"last Monday = الاثنين الماضي","common_mistake_ar":"Was you خطأ.","example_sentence_en":"Were they at home last night?","needs_review":false},{"id":"Q3-17","quiz":"Quiz 3","question_en":"They (not play) football yesterday.","options":["didn't play","don't play","didn't played"],"correct":0,"arabic_explanation":"الماضي البسيط المنفي: didn't + مصدر base form.","why_answer_ar":"لا نضاعف ed بعد didn't.","grammar_rule_ar":"do/does للحاضر؛ did للماضي.","vocabulary":"football = كرة قدم","common_mistake_ar":"didn't played خطأ مضاعف.","example_sentence_en":"They didn't watch TV yesterday.","needs_review":false},{"id":"Q3-18","quiz":"Quiz 3","question_en":"She (watch) a movie last night.","options":["watching","watched","watch"],"correct":1,"arabic_explanation":"last night → watched ماضٍ بسيط.","why_answer_ar":"أفعال منتظمة + ed.","grammar_rule_ar":"زمن الماضي مع علامات زمنية.","vocabulary":"movie = فيلم | last night = الليلة الماضية","common_mistake_ar":"watching بدون was/were خطأ هنا.","example_sentence_en":"She called me yesterday.","needs_review":false},{"id":"Q3-19","quiz":"Quiz 3","question_en":"What ........... you do last night?","options":["were","did","do"],"correct":1,"arabic_explanation":"فعل معني في الماضي: What did you do?","why_answer_ar":"did + مصدر للأسئلة في الماضي.","grammar_rule_ar":"ترتيب السؤال في Past Simple.","vocabulary":"last night = الليلة الماضية","common_mistake_ar":"What you do بدون did خطأ.","example_sentence_en":"What did he say?","needs_review":false},{"id":"Q3-20","quiz":"Quiz 3","question_en":"He ........... (go) to the supermarket yesterday morning.","options":["goes","goed","went"],"correct":2,"arabic_explanation":"go → went في الماضي؛ شكل غير منتظم.","why_answer_ar":"أفعال شاذة شائعة: go/went/gone.","grammar_rule_ar":"yesterday morning يفرض الماضي.","vocabulary":"supermarket = سوبرماركت","common_mistake_ar":"goed غير موجود.","example_sentence_en":"She went home early.","needs_review":false},{"id":"Q4-01","quiz":"Quiz 4","question_en":"Lions are ........... than cats.","options":["a. the most dangerous","b. more dangerous","c. dangerous"],"correct":1,"arabic_explanation":"المقارنة بين اثنين تستخدم comparative: more dangerous.","why_answer_ar":"than يدل على مقارنة ثنائية.","grammar_rule_ar":"the most لأكثر من اثنين عادة؛ more + than لاثنين.","vocabulary":"lions = أسود | cats = قطط","common_mistake_ar":"استخدام superlative بدون أكثر من شيء في المقارنة.","example_sentence_en":"Elephants are bigger than dogs.","needs_review":false},{"id":"Q4-02","quiz":"Quiz 4","question_en":"This exercise is ........... than the last one.","options":["a. easier","b. easy","c. difficult"],"correct":0,"arabic_explanation":"than يتطلب صيغة comparative: easier.","why_answer_ar":"easy → easier.","grammar_rule_ar":"مقارنة صفات قصيرة.","vocabulary":"exercise = تمرين","common_mistake_ar":"easy than خطأ.","example_sentence_en":"This route is shorter than that one.","needs_review":false},{"id":"Q4-03","quiz":"Quiz 4","question_en":"They ........... lunch at the moment.","options":["a. are having","b. is having","c. have"],"correct":0,"arabic_explanation":"at the moment = الآن → Present Continuous: are having.","why_answer_ar":"they + are + verb-ing.","grammar_rule_ar":"الحاضر المستمر للحدث الجاري.","vocabulary":"at the moment = في هذه اللحظة","common_mistake_ar":"is having مع they خطأ.","example_sentence_en":"We are studying right now.","needs_review":false},{"id":"Q4-04","quiz":"Quiz 4","question_en":"My parents ........... two cars.","options":["a. having","b. has got","c. have got"],"correct":2,"arabic_explanation":"parents جمع → have got.","why_answer_ar":"have got = امتلاك بريطاني شائع.","grammar_rule_ar":"they → have not has.","vocabulary":"parents = والدان","common_mistake_ar":"has got مع جمع خطأ.","example_sentence_en":"We have got a new apartment.","needs_review":false},{"id":"Q4-05","quiz":"Quiz 4","question_en":"This restaurant is ........... one in the area.","options":["a. the most famous","b. the more famous","c. famous"],"correct":0,"arabic_explanation":"في منطقة (مجموعة) نستخدم superlative: the most famous.","why_answer_ar":"the + most + صفة طويلة.","grammar_rule_ar":"مقارنة تفوق ضمن مجموعة.","vocabulary":"famous = مشهور | area = منطقة","common_mistake_ar":"the more famous بدون than غير مكتمل هنا.","example_sentence_en":"It's the busiest day of the year.","needs_review":false},{"id":"Q4-06","quiz":"Quiz 4","question_en":"She usually ........... to school by bus.","options":["a. go","b. going","c. goes"],"correct":2,"arabic_explanation":"usually + Present Simple؛ she → goes.","why_answer_ar":"he/she/it + فعل + s.","grammar_rule_ar":"عادات وروتين.","vocabulary":"usually = عادة","common_mistake_ar":"go مع she خطأ.","example_sentence_en":"He walks to work every day.","needs_review":false},{"id":"Q4-07","quiz":"Quiz 4","question_en":"Listen! The baby ...........","options":["a. is crying","b. are crying","c. cries"],"correct":0,"arabic_explanation":"Listen! يشير لحدث الآن → is crying.","why_answer_ar":"the baby مفرد → is.","grammar_rule_ar":"الحاضر المستمر مع تنبيه فوري.","vocabulary":"baby = رضيع","common_mistake_ar":"are crying مع مفرد خطأ.","example_sentence_en":"Look! It's raining.","needs_review":false},{"id":"Q4-08","quiz":"Quiz 4","question_en":"We ........... in Los Angeles.","options":["a. live","b. lives","c. living"],"correct":0,"arabic_explanation":"we + فعل مصدر في الحاضر البسيط: live.","why_answer_ar":"lives لضمائر المفرد الثالث.","grammar_rule_ar":"حقيقة عامة أو سكن.","vocabulary":"live = يسكن","common_mistake_ar":"lives مع we خطأ.","example_sentence_en":"They work in a bank.","needs_review":false},{"id":"Q4-09","quiz":"Quiz 4","question_en":"This is me with my sisters. I ........... five sisters.","options":["a. has got","b. have got","c. having got"],"correct":1,"arabic_explanation":"I → have got.","why_answer_ar":"have got مع I/you/we/they.","grammar_rule_ar":"امتلاك/علاقة عائلية.","vocabulary":"sisters = أخوات","common_mistake_ar":"has got مع I خطأ.","example_sentence_en":"I have got blue eyes.","needs_review":false},{"id":"Q4-10","quiz":"Quiz 4","question_en":"They are twins but they aren't identical. Khalid ........... brown eyes.","options":["a. have got","b. has got","c. got"],"correct":1,"arabic_explanation":"Khalid مفرد → has got.","why_answer_ar":"he/she/it has got.","grammar_rule_ar":"صفة جسدية.","vocabulary":"twins = توأم | identical = متطابقان","common_mistake_ar":"have got مع اسم مفرد خطأ.","example_sentence_en":"She has got long hair.","needs_review":false},{"id":"Q4-11","quiz":"Quiz 4","question_en":"I ........... a beard.","options":["a. haven't got","b. not got","c. have not"],"correct":0,"arabic_explanation":"نفي have got مع I: haven't got.","why_answer_ar":"not got بدون have غير معياري هنا.","grammar_rule_ar":"اختصار have not → haven't.","vocabulary":"beard = لحية","common_mistake_ar":"have not a beard تركيب ضعيف مقارنة بـ haven't got.","example_sentence_en":"I haven't got any brothers.","needs_review":false},{"id":"Q4-12","quiz":"Quiz 4","question_en":"Sometimes I drive to the shops and sometimes I ........... the bus.","options":["a. takes","b. taking","c. take"],"correct":2,"arabic_explanation":"I + Present Simple: take.","why_answer_ar":"توازي مع drive.","grammar_rule_ar":"أحيانًا/عادة بسيط.","vocabulary":"take the bus = ركوب الحافلة","common_mistake_ar":"takes مع I خطأ.","example_sentence_en":"I often take the train.","needs_review":false},{"id":"Q4-13","quiz":"Quiz 4","question_en":"The summer in Saudi Arabia is ........... Iceland.","options":["a. hotter","b. hotter than","c. hot than"],"correct":1,"arabic_explanation":"مقارنة بين مكانين تحتاج than بعد comparative.","why_answer_ar":"hotter than.","grammar_rule_ar":"صفة + than.","vocabulary":"summer = صيف","common_mistake_ar":"hotter بدون than ناقص.","example_sentence_en":"Riyadh is warmer than London.","needs_review":false},{"id":"Q4-14","quiz":"Quiz 4","question_en":"I go to work by bus. It's ........... than going by car because I can read a book.","options":["a. bad","b. better","c. good"],"correct":1,"arabic_explanation":"السياق إيجابي للحافلة: better than.","why_answer_ar":"مقارنة صفة.","grammar_rule_ar":"because يفسر السبب.","vocabulary":"better = أفضل","common_mistake_ar":"good than خطأ نحوي.","example_sentence_en":"Walking is healthier than driving.","needs_review":false},{"id":"Q4-15","quiz":"Quiz 4","question_en":"New Year is the ........... holiday in China.","options":["a. important","b. more important","c. most important"],"correct":2,"arabic_explanation":"في الصين بين كل العطل → the most important.","why_answer_ar":"superlative مع the.","grammar_rule_ar":"أكبر عطلة/أهمها.","vocabulary":"holiday = عطلة","common_mistake_ar":"more important بدون than في مجموعة ضمنية.","example_sentence_en":"This is the easiest question.","needs_review":false},{"id":"Q4-16","quiz":"Quiz 4","question_en":"We called a taxi ........... we were late for the meeting.","options":["a. because","b. so","c. by"],"correct":0,"arabic_explanation":"السبب: because نحن تأخرنا.","why_answer_ar":"because + جملة سبب.","grammar_rule_ar":"so للنتيجة؛ because للسبب.","vocabulary":"taxi = سيارة أجرة | late = متأخر","common_mistake_ar":"so هنا يعكس المنطق.","example_sentence_en":"I stayed home because I was sick.","needs_review":false},{"id":"Q4-17","quiz":"Quiz 4","question_en":"I needed some money ........... I looked for a cash machine.","options":["a. so","b. because","c. at"],"correct":0,"arabic_explanation":"الحاجة للمال نتيجة تبحث عن ماكينة: so للنتيجة.","why_answer_ar":"so يربط نتيجة بسبب ضمني.","grammar_rule_ar":"because لو عكس الترتيب المعنوي أحيانًا.","vocabulary":"cash machine = صراف آلي","common_mistake_ar":"because هنا يجعل الترتيب أضعف منطقًا من so.","example_sentence_en":"It started raining, so we went inside.","needs_review":false},{"id":"Q4-18","quiz":"Quiz 4","question_en":"The company ........... any money at the moment.","options":["a. isn't making","b. making","c. aren't making"],"correct":0,"arabic_explanation":"the company مفرد → isn't making.","why_answer_ar":"Present Continuous منفي.","grammar_rule_ar":"at the moment للحاضر.","vocabulary":"company = شركة","common_mistake_ar":"aren't making مع مفرد خطأ.","example_sentence_en":"The shop isn't opening today.","needs_review":false},{"id":"Q4-19","quiz":"Quiz 4","question_en":"Ahmad is ........... from home this morning.","options":["a. working","b. work","c. works"],"correct":0,"arabic_explanation":"is + verb-ing للحدث الجاري صباحًا.","why_answer_ar":"Present Continuous.","grammar_rule_ar":"this morning قد يكون مستمرًا أو مخططًا حسب السياق.","vocabulary":"working from home = العمل عن بُعد من المنزل","common_mistake_ar":"works مع is خطأ مزدوج فعل.","example_sentence_en":"She is studying for her exam.","needs_review":false},{"id":"Q4-20","quiz":"Quiz 4","question_en":"Usually, she ........... to the park during the week.","options":["a. not go","b. don't go","c. doesn't go"],"correct":2,"arabic_explanation":"she + doesn't + مصدر في النفي المعتاد.","why_answer_ar":"Present Simple منفي.","grammar_rule_ar":"usually يفرض الحاضر البسيط.","vocabulary":"during the week = خلال الأسبوع","common_mistake_ar":"don't go مع she خطأ.","example_sentence_en":"He doesn't like coffee.","needs_review":false},{"id":"Q5-01","quiz":"Quiz 5","question_en":"I'm ........... to the cinema tonight.","options":["going","go","goes"],"correct":0,"arabic_explanation":"be going to / plan: I'm going to.","why_answer_ar":"am + going + to + مكان.","grammar_rule_ar":"ترتيب المستقبل القريب.","vocabulary":"cinema = سينما | tonight = الليلة","common_mistake_ar":"go مباشرة بعد I'm هنا غير مكتمل.","example_sentence_en":"I'm going to visit my aunt tomorrow.","needs_review":false},{"id":"Q5-02","quiz":"Quiz 5","question_en":"He has ........... his keys again.","options":["lose","lost","losing"],"correct":1,"arabic_explanation":"Present Perfect: has + past participle → lost.","why_answer_ar":"lose/lost/lost.","grammar_rule_ar":"تجربة/recent past مؤثرة الآن.","vocabulary":"keys = مفاتيح","common_mistake_ar":"has lose خطأ.","example_sentence_en":"I have lost my wallet.","needs_review":false},{"id":"Q5-03","quiz":"Quiz 5","question_en":"We are going to ........... our teacher a gift.","options":["gave","giving","give"],"correct":2,"arabic_explanation":"going to + مصدر: give.","why_answer_ar":"to + base verb بعد be going to.","grammar_rule_ar":"مخطط مستقبل.","vocabulary":"gift = هدية","common_mistake_ar":"giving بدون to صيغة خاطئة هنا.","example_sentence_en":"We are going to buy snacks.","needs_review":false},{"id":"Q5-04","quiz":"Quiz 5","question_en":"He looks tired. He ........... worked hard today.","options":["didn't","has","was"],"correct":1,"arabic_explanation":"تعب ناتج عن عمل: has worked (experience/today).","why_answer_ar":"Present Perfect مع today ممكن للحدث في يوم لم ينتهِ.","grammar_rule_ar":"has + worked.","vocabulary":"look tired = يبدو متعبًا","common_mistake_ar":"was worked غير صحيح.","example_sentence_en":"She has studied a lot this week.","needs_review":false},{"id":"Q5-05","quiz":"Quiz 5","question_en":"They have ........... their homework already.","options":["finished","finishing","finish"],"correct":0,"arabic_explanation":"have + finished participle.","why_answer_ar":"already مع Present Perfect.","grammar_rule_ar":"واجب منجز.","vocabulary":"homework = واجب منزلي","common_mistake_ar":"have finishing خطأ.","example_sentence_en":"We have finished the project.","needs_review":false},{"id":"Q5-06","quiz":"Quiz 5","question_en":"The milk ........... bitter.","options":["looks","sounds","tastes"],"correct":2,"arabic_explanation":"الطعم bitter → tastes.","why_answer_ar":"أفعال الحواس: taste/smell/sound/look.","grammar_rule_ar":"الحليب يُذاق.","vocabulary":"bitter = مر","common_mistake_ar":"sounds للصوت.","example_sentence_en":"This soup tastes salty.","needs_review":false},{"id":"Q5-07","quiz":"Quiz 5","question_en":"My uncle is going to ........... a birthday present for Ahmed.","options":["buy","buying","buys"],"correct":0,"arabic_explanation":"going to + buy.","why_answer_ar":"مخطط شراء.","grammar_rule_ar":"to + مصدر.","vocabulary":"present = هدية | birthday = عيد ميلاد","common_mistake_ar":"buys بعد to خطأ.","example_sentence_en":"I'm going to call you later.","needs_review":false},{"id":"Q5-08","quiz":"Quiz 5","question_en":"Have you ever ........... a horse?","options":["ride","rode","ridden"],"correct":2,"arabic_explanation":"ever + Present Perfect: Have you ever ridden?","why_answer_ar":"ride/rode/ridden.","grammar_rule_ar":"خبرة حياتية.","vocabulary":"horse = حصان","common_mistake_ar":"rode بعد have خطأ.","example_sentence_en":"Have you ever been to Paris?","needs_review":false},{"id":"Q5-09","quiz":"Quiz 5","question_en":"I went to Japan ........... learn Japanese.","options":["to","because","for"],"correct":0,"arabic_explanation":"غرض: to + مصدر learn.","why_answer_ar":"to للغرض بعد go.","grammar_rule_ar":"because يحتاج جملة.","vocabulary":"Japan = اليابان","common_mistake_ar":"for learn أقل شيوعًا من to learn هنا.","example_sentence_en":"She came here to study medicine.","needs_review":false},{"id":"Q5-10","quiz":"Quiz 5","question_en":"This dress ........... beautiful.","options":["smell","looks","hears"],"correct":1,"arabic_explanation":"مظهر: looks beautiful.","why_answer_ar":"look + صفة.","grammar_rule_ar":"الفستان يُرى لا يُسمع.","vocabulary":"dress = فستان","common_mistake_ar":"hears للأصوات.","example_sentence_en":"That idea sounds interesting.","needs_review":false},{"id":"Q5-11","quiz":"Quiz 5","question_en":"She has ........... her bag in the car.","options":["left","leave","leaving"],"correct":0,"arabic_explanation":"has left = تركت (نتيجة الآن).","why_answer_ar":"leave/left/left.","grammar_rule_ar":"Present Perfect للنتيجة.","vocabulary":"bag = حقيبة","common_mistake_ar":"has leave خطأ.","example_sentence_en":"I've left my phone upstairs.","needs_review":false},{"id":"Q5-12","quiz":"Quiz 5","question_en":"I went to the park ........... play football.","options":["to","for","because"],"correct":0,"arabic_explanation":"غرض الزيارة: to play.","why_answer_ar":"to + فعل بعد go.","grammar_rule_ar":"for + اسم غالبًا.","vocabulary":"park = حديقة | football = كرة قدم","common_mistake_ar":"because play غير مكتمل نحويًا.","example_sentence_en":"He came to help us.","needs_review":false},{"id":"Q5-13","quiz":"Quiz 5","question_en":"They ........... a lot of funny jokes.","options":["knowing","know","knows"],"correct":1,"arabic_explanation":"they + know في الحاضر.","why_answer_ar":"jokes نكتًا يعرفونها.","grammar_rule_ar":"Present Simple.","vocabulary":"funny jokes = نكت مضحكة","common_mistake_ar":"knows مع they خطأ.","example_sentence_en":"We know the answer.","needs_review":false},{"id":"Q5-14","quiz":"Quiz 5","question_en":"He's never ........... a famous person.","options":["meet","met","meeting"],"correct":1,"arabic_explanation":"He's never met = Present Perfect.","why_answer_ar":"meet/met/met.","grammar_rule_ar":"never مع have/has.","vocabulary":"famous person = شخص مشهور","common_mistake_ar":"never meet بدون participle خطأ.","example_sentence_en":"I've never tried sushi before.","needs_review":false},{"id":"Q5-15","quiz":"Quiz 5","question_en":"I feel tired because I ........... for hours.","options":["work","worked","have worked"],"correct":2,"arabic_explanation":"for hours + Present Perfect: have worked.","why_answer_ar":"الاستمرار حتى الآن يؤثر على التعب.","grammar_rule_ar":"because يربط السبب.","vocabulary":"for hours = لساعات","common_mistake_ar":"worked بسيط قد يُقبل لكن have worked أدق مع for hours.","example_sentence_en":"She has lived here for ten years.","needs_review":false},{"id":"Q5-16","quiz":"Quiz 5","question_en":"It's going to ........... tomorrow.","options":["rain","rains","raining"],"correct":0,"arabic_explanation":"going to + rain مصدر.","why_answer_ar":"تنبؤ طقس.","grammar_rule_ar":"to + base verb.","vocabulary":"tomorrow = غدًا","common_mistake_ar":"rains بعد to خطأ.","example_sentence_en":"It's going to snow tonight.","needs_review":false},{"id":"Q5-17","quiz":"Quiz 5","question_en":"He made a cake ........... surprise his family.","options":["to","for","because"],"correct":0,"arabic_explanation":"غرض: to surprise.","why_answer_ar":"to + مصدر للغرض.","grammar_rule_ar":"made a cake لغرض.","vocabulary":"surprise = مفاجأة","common_mistake_ar":"for surprise أقل دقة من to.","example_sentence_en":"She whispered to avoid waking the baby.","needs_review":false},{"id":"Q5-18","quiz":"Quiz 5","question_en":"I've never ........... sushi before.","options":["eaten","eat","ate"],"correct":0,"arabic_explanation":"I've never eaten: Present Perfect.","why_answer_ar":"eat/ate/eaten.","grammar_rule_ar":"before مع التجارب.","vocabulary":"sushi = سوشي","common_mistake_ar":"never eat بعد I've خطأ.","example_sentence_en":"They've never visited us.","needs_review":false},{"id":"Q5-19","quiz":"Quiz 5","question_en":"We've ........... our car to the garage.","options":["took","taken","take"],"correct":1,"arabic_explanation":"We've taken: have + taken.","why_answer_ar":"take/took/taken.","grammar_rule_ar":"نقل السيارة للمرآب.","vocabulary":"garage = مرآب/ورشة","common_mistake_ar":"took بعد've خطأ شكلي.","example_sentence_en":"She has taken the bus.","needs_review":false},{"id":"Q5-20","quiz":"Quiz 5","question_en":"They've ........... the room already.","options":["cleaned","clean","cleaning"],"correct":0,"arabic_explanation":"have cleaned participle.","why_answer_ar":"already يناسب التمام.","grammar_rule_ar":"تنظيف منجز.","vocabulary":"cleaned = نظّف","common_mistake_ar":"have cleaning خطأ.","example_sentence_en":"I've cleaned the kitchen.","needs_review":false},{"id":"Q6-01","quiz":"Quiz 6 (Compensatory)","question_en":"You ........... show your passport before you go through security.","options":["A. have to","B. shouldn't","C. has to"],"correct":0,"arabic_explanation":"you + have to للالتزام قبل الأمن.","why_answer_ar":"has to لضمائر مفردة غير you.","grammar_rule_ar":"modal-like obligation: have to.","vocabulary":"passport = جواز سفر | security = أمن","common_mistake_ar":"has to مع you خطأ.","example_sentence_en":"You have to wear a seat belt.","needs_review":false},{"id":"Q6-02","quiz":"Quiz 6 (Compensatory)","question_en":"You ........... take large bottles of liquid on the plane.","options":["A. can","B. shouldn't","C. have to"],"correct":1,"arabic_explanation":"قواعد السفر: لا يُنصح بزجاجات كبيرة؛ shouldn't.","why_answer_ar":"shouldn't للنصيحة/الممنوع.","grammar_rule_ar":"can/have to لا يطابق قاعدة السوائل عادة.","vocabulary":"liquid = سائل | plane = طائرة","common_mistake_ar":"can هنا يعكس التحذير.","example_sentence_en":"You shouldn't run near the pool.","needs_review":false},{"id":"Q6-03","quiz":"Quiz 6 (Compensatory)","question_en":"You ........... bring your camera if you want; photography is optional.","options":["A. can't","B. should","C. don't have to"],"correct":2,"arabic_explanation":"اختياري optional → don't have to.","why_answer_ar":"ليست إلزامية.","grammar_rule_ar":"have to للإلزام؛ don't have to لعدمه.","vocabulary":"camera = كاميرا | optional = اختياري","common_mistake_ar":"should يقلل من حرية الاختيار المعنوية هنا.","example_sentence_en":"You don't have to pay; it's free.","needs_review":false},{"id":"Q6-04","quiz":"Quiz 6 (Compensatory)","question_en":"There's ........... to eat on the plane; please bring your own snack.","options":["A. somebody","B. anywhere","C. nothing"],"correct":2,"arabic_explanation":"اطلب وجبتك؛ لا يوجد أكل → nothing.","why_answer_ar":"there's nothing to eat.","grammar_rule_ar":"somebody شخص؛ anywhere مكان.","vocabulary":"snack = وجبة خفيفة","common_mistake_ar":"anywhere to eat تركيب أضعف للمعنى المطلوب.","example_sentence_en":"There was nothing to drink.","needs_review":false},{"id":"Q6-05","quiz":"Quiz 6 (Compensatory)","question_en":"I met ........... from Brazil on my last trip.","options":["A. anyone","B. somewhere","C. someone"],"correct":2,"arabic_explanation":"شخص غير محدد في إيجابية: someone.","why_answer_ar":"anyone غالبًا في النفي/السؤال.","grammar_rule_ar":"somewhere مكان.","vocabulary":"Brazil = البرازيل | trip = رحلة","common_mistake_ar":"anyone في جملة إيجابية أقل شيوعًا هنا.","example_sentence_en":"Someone called while you were out.","needs_review":false},{"id":"Q6-06","quiz":"Quiz 6 (Compensatory)","question_en":"The Amazon River ........... through Brazil.","options":["A. flows","B. flow","C. to flow"],"correct":0,"arabic_explanation":"the river مفرد → flows.","why_answer_ar":"Present Simple للحقائق الجغرافية.","grammar_rule_ar":"فعل ثالث مفرد s.","vocabulary":"river = نهر","common_mistake_ar":"flow بدون s خطأ.","example_sentence_en":"The Nile runs through several countries.","needs_review":false},{"id":"Q6-07","quiz":"Quiz 6 (Compensatory)","question_en":"........... Sahara Desert is in Africa.","options":["A","The","No Article"],"correct":1,"arabic_explanation":"أسماء جغرافية فريدة: The Sahara.","why_answer_ar":"the مع صحارٍ وممالك بحرية محددة.","grammar_rule_ar":"أدوات التعريف.","vocabulary":"desert = صحراء","common_mistake_ar":"Sahara بدون the أقل معيارية.","example_sentence_en":"The United Kingdom is in Europe.","needs_review":false},{"id":"Q6-08","quiz":"Quiz 6 (Compensatory)","question_en":"Temperatures ........... rise in the next 50 years due to climate change.","options":["A. doesn't have to","B. won't","C. will"],"correct":2,"arabic_explanation":"توقع علمي: will rise.","why_answer_ar":"المستقبل البسيط للتنبؤ.","grammar_rule_ar":"due to بسبب.","vocabulary":"climate change = تغير مناخي","common_mistake_ar":"won't rise يعكس نص التغير المتوقع.","example_sentence_en":"Prices will probably increase.","needs_review":false},{"id":"Q6-09","quiz":"Quiz 6 (Compensatory)","question_en":"When you visit famous places and enjoy the views, you are ...........","options":["A. sightseeing","B. camping","C. backpacking"],"correct":0,"arabic_explanation":"زيارة معالم ومشاهد = sightseeing.","why_answer_ar":"camping خيمة؛ backpacking حقيبة ظهر.","grammar_rule_ar":"مفردات سفر.","vocabulary":"sightseeing = سياحة مشاهدة","common_mistake_ar":"خلط التخييم مع الجولات الحضرية.","example_sentence_en":"We went sightseeing in Rome.","needs_review":false},{"id":"Q6-10","quiz":"Quiz 6 (Compensatory)","question_en":"Money used in a country is called ...........","options":["A. souvenir","B. visa","C. currency"],"correct":2,"arabic_explanation":"العملة الرسمية currency.","why_answer_ar":"souvenir تذكار؛ visa تأشيرة.","grammar_rule_ar":"مصطلحات سفر.","vocabulary":"currency = عملة","common_mistake_ar":"visa ليست المال.","example_sentence_en":"You can exchange currency at the airport.","needs_review":false},{"id":"Q6-11","quiz":"Quiz 6 (Compensatory)","question_en":"The average temperature is 30 ...........","options":["A. kilometers","B. degrees Celsius","C. equator"],"correct":1,"arabic_explanation":"درجة حرارة تقاس بـ degrees Celsius.","why_answer_ar":"kilometers للمسافة؛ equator خط استواء.","grammar_rule_ar":"وحدات قياس.","vocabulary":"temperature = درجة حرارة","common_mistake_ar":"30 kilometers للحرارة بلا معنى.","example_sentence_en":"It's 25 degrees outside.","needs_review":false},{"id":"Q6-12","quiz":"Quiz 6 (Compensatory)","question_en":"An astronomer is a person who ...........","options":["A. studies stars and planets","B. works with weather reports","C. travels to different countries"],"correct":0,"arabic_explanation":"عالم فلك يدرس النجوم والكواكب.","why_answer_ar":"B أقرب لعالم الأرصاد؛ C عام جدًا.","grammar_rule_ar":"تعريفات مهن.","vocabulary":"astronomer = عالم فلك","common_mistake_ar":"خلط astronomer بـ meteorologist.","example_sentence_en":"Astronomers use telescopes.","needs_review":false},{"id":"Q6-13","quiz":"Quiz 6 (Compensatory)","question_en":"Read the text:\nBefore boarding, passengers have to show passports and tickets. You mustn't leave your luggage unattended. You can take one carry-on bag. Food and drink are available after security.\n\n13. What must every passenger do?","options":["A. Leave their bags","B. Show passports","C. Bring no luggage"],"correct":1,"arabic_explanation":"النص: have to show passports.","why_answer_ar":"B يطابق النص حرفيًا.","grammar_rule_ar":"قراءة تفصيلية.","vocabulary":"passenger = راكب | boarding = صعود","common_mistake_ar":"الخلط بين mustn't والإيجاب المطلوب.","example_sentence_en":"Passengers must show ID at the gate.","needs_review":false},{"id":"Q6-14","quiz":"Quiz 6 (Compensatory)","question_en":"Read the text:\nBefore boarding, passengers have to show passports and tickets. You mustn't leave your luggage unattended. You can take one carry-on bag. Food and drink are available after security.\n\n14. What is not allowed?","options":["A. Showing a ticket","B. Taking one carry-on bag","C. Leaving bags alone"],"correct":2,"arabic_explanation":"mustn't leave luggage unattended = لا تترك حقائب دون مراقبة.","why_answer_ar":"C يعادل المعنى.","grammar_rule_ar":"فهم الممنوع من النص.","vocabulary":"unattended = بلا مراقبة","common_mistake_ar":"اختيار المسموح بدل الممنوع.","example_sentence_en":"Do not leave bags unattended.","needs_review":false},{"id":"Q6-15","quiz":"Quiz 6 (Compensatory)","question_en":"Read the text:\nThe Pacific Ocean is the largest in the world. The average depth is about 4,000 m. The Earth's surface is 70 % water. Scientists say the sea level will rise by 30 cm by 2100.\n\n15. How deep is the Pacific Ocean on average?","options":["A. 4,000 m","B. 2100 m","C. 30 cm"],"correct":0,"arabic_explanation":"النص: average depth is about 4,000 m.","why_answer_ar":"A مباشر من القراءة.","grammar_rule_ar":"أرقام من النص.","vocabulary":"depth = عمق | average = متوسط","common_mistake_ar":"خلط عمق المحيط بارتفاع البحر 2100 أو 30 سم.","example_sentence_en":"The trench is extremely deep.","needs_review":false},{"id":"Q6-16","quiz":"Quiz 6 (Compensatory)","question_en":"Read the text:\nThe Pacific Ocean is the largest in the world. The average depth is about 4,000 m. The Earth's surface is 70 % water. Scientists say the sea level will rise by 30 cm by 2100.\n\n16. What do scientists predict?","options":["A. Nothing will change.","B. The ocean will disappear.","C. The sea level will rise."],"correct":2,"arabic_explanation":"النص: sea level will rise by 30 cm.","why_answer_ar":"C يطابق التنبؤ.","grammar_rule_ar":"استنتاج من الجملة الأخيرة.","vocabulary":"sea level = مستوى سطح البحر | predict = يتنبأ","common_mistake_ar":"قراءة سطحية تفوت will rise.","example_sentence_en":"Coastal cities may face flooding.","needs_review":false},{"id":"Q2-01","quiz":"Quiz 2","question_en":"I like to go ........... on the weekends.","options":["camping","exercise","yoga"],"correct":0,"arabic_explanation":"التخييم نشاط شائع مع go + مصدر في التعبير like to go camping.","why_answer_ar":"go camping تعبير ثابت للتخييم.","grammar_rule_ar":"like to go + نشاط (مثل camping).","vocabulary":"camping = تخييم | weekends = عطلة نهاية الأسبوع","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-02","quiz":"Quiz 2","question_en":"My friend Sara loves to ........... football twice a week.","options":["play","do","go"],"correct":0,"arabic_explanation":"مع كرة القدم نستخدم الفعل play وليس go أو do في هذا السياق.","why_answer_ar":"play football = يلعب كرة القدم.","grammar_rule_ar":"play + ريالة جماعية (football, basketball…).","vocabulary":"football = كرة القدم","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-03","quiz":"Quiz 2","question_en":"A. Can you speak Italian? B. ...........","options":["Yes, I can play the piano.","Yes, I can but not very well.","No, I can't but my friend can sing very well."],"correct":1,"arabic_explanation":"الإجابة المباشرة عن القدرة على اللغة مع الإقرار بمستوى متوسط.","why_answer_ar":"تجيب عن السؤال بلغة إيطالية وليس بموهبة أخرى.","grammar_rule_ar":"إجابات can تكون متسقة مع السؤال.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-04","quiz":"Quiz 2","question_en":"Choose the correct sentence:","options":["Sara usually goes to the gym on the weekend.","Sara goes to the gym on the weekend usually.","Sara usually go to the gym on the weekend."],"correct":0,"arabic_explanation":"المضارع البسيط مع الصف الثالث: goes؛ ظرف التكرار usually قبل الفعل الرئيسي غالبًا.","why_answer_ar":"Sara + goes؛ موضع usually الصحيح.","grammar_rule_ar":"usually + فعل مضارع / الصف الثالث بـ s.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-05","quiz":"Quiz 2","question_en":"A turtle ........... fly, but a bird ...........","options":["can't - can","can - can't","can't - can't"],"correct":0,"arabic_explanation":"السلحفاة لا تطير؛ الطائر يستطيع الطيران.","why_answer_ar":"can't للسلحفاة، can للطائر.","grammar_rule_ar":"can/can't للقدرة.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-06","quiz":"Quiz 2","question_en":"She ........... books before going to sleep.","options":["like read","likes reading","likes reads"],"correct":1,"arabic_explanation":"مع she نستخدم likes؛ بعد like/love يمكن gerund reading.","why_answer_ar":"likes + reading.","grammar_rule_ar":"like + gerund (-ing).","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-07","quiz":"Quiz 2","question_en":"An ........... works in an office.","options":["pilot","accountant","sales assistant"],"correct":1,"arabic_explanation":"المحاسب يعمل في مكتب؛ pilot طيار؛ sales assistant في المتجر غالبًا.","why_answer_ar":"accountant = محاسب مقابل السياق.","grammar_rule_ar":"مفردات المهن.","vocabulary":"accountant = محاسب | office = مكتب","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-08","quiz":"Quiz 2","question_en":"She ........... to school by bus every day.","options":["going","go","goes"],"correct":2,"arabic_explanation":"she + المضارع البسيط + s للفعل go.","why_answer_ar":"goes = تصريف الصف الثالث.","grammar_rule_ar":"Present simple: she goes.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-09","quiz":"Quiz 2","question_en":"Choose the sentence with the correct capitalization:","options":["Mona took her son to see dr. saleh at andalusia hospital in Jeddah.","Mona took her son to see Dr. Saleh at Andalusia Hospital in Jeddah.","Mona took her son to see dr. Saleh at Andalusia hospital in jeddah."],"correct":1,"arabic_explanation":"Dr. ولقب، أسماء مستشفيات وأماكن وجدة بحرف كبير.","why_answer_ar":"Dr. Saleh، Andalusia Hospital، Jeddah.","grammar_rule_ar":"أحرف كبيرة للألقاب والأسماء الخاصة.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-10","quiz":"Quiz 2","question_en":"Choose the correct question:","options":["When does she start work?","When she does start work?","When does she work start?"],"correct":0,"arabic_explanation":"سؤال المضارع البسيط: When + does + فاعل + مصدر؟","why_answer_ar":"Does she start.","grammar_rule_ar":"Do/Does + subject + base verb?","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-11","quiz":"Quiz 2","question_en":"When I was a child, I loved going to the ........... to learn about art and history.","options":["museum","library","park"],"correct":0,"arabic_explanation":"المتحف مكان الفن والتاريخ؛ المكتبة للكتب؛ الحديقة عامة.","why_answer_ar":"museum للفن والتاريخ.","grammar_rule_ar":"","vocabulary":"museum = متحف","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-12","quiz":"Quiz 2","question_en":"Two teams play against each other in ...........","options":["cycling","basketball","boxing"],"correct":1,"arabic_explanation":"كرة السلة لعب جماعي بين فريقين؛ الملاكمة والدراجات سياق مختلف.","why_answer_ar":"basketball = فريقان يتنافسان.","grammar_rule_ar":"","vocabulary":"basketball = كرة سلة","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-13","quiz":"Quiz 2","question_en":"My mom and dad ........... watching TV, but my sister ........... listening to music.","options":["love - enjoys","love - enjoy","loves - enjoys"],"correct":1,"arabic_explanation":"الوالدان جمع فعل love؛ الصيغة الثانية وفق مفتاح الاختبار.","why_answer_ar":"توافق الفاعل مع الفعل حسب المنهج المطلوب.","grammar_rule_ar":"like/love + gerund؛ اتفاق الفاعل والفعل.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-14","quiz":"Quiz 2","question_en":"My grandfather is a ........... He lives in a farm.","options":["policeman","pilot","farmer"],"correct":2,"arabic_explanation":"من يعيش في مزرعة غالبًا مزارع.","why_answer_ar":"farmer = مزارع.","grammar_rule_ar":"","vocabulary":"farmer = مزارع | farm = مزرعة","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-15","quiz":"Quiz 2","question_en":"What time ........... you get up in the morning?","options":["does","do","did"],"correct":1,"arabic_explanation":"مع you في المضارع نستخدم do وليس does.","why_answer_ar":"What time do you…?","grammar_rule_ar":"Do you + base verb?","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-16","quiz":"Quiz 2","question_en":"My brother ........... football on weekends. He only plays on Mondays.","options":["does play","do not play","does not play"],"correct":2,"arabic_explanation":"النفي مع he: doesn't / does not + مصدر.","why_answer_ar":"does not play = لا يلعب (في عطلة نهاية الأسبوع).","grammar_rule_ar":"doesn't + base verb.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-17","quiz":"Quiz 2","question_en":"Choose the sentence with the correct capitalization:","options":["Abdullah graduated from king saud university in december, and he studied French.","Abdullah graduated from King Saud University in december, and he studied french.","Abdullah graduated from King Saud University in December, and he studied French."],"correct":2,"arabic_explanation":"اسم الجامعة وشهر ديسمبر ولغة French بحروف كبيرة حيث يجب.","why_answer_ar":"King Saud University، December، French.","grammar_rule_ar":"أسماء جامعات وأشهر ولغات.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-18","quiz":"Quiz 2","question_en":"........... coffee in the morning.","options":["drink","drinking","drinks"],"correct":2,"arabic_explanation":"جملة تبدو وكأن الفاعل هو he/she — الفعل الثالث drinks.","why_answer_ar":"صيغة المفرد الثالث للمضارع.","grammar_rule_ar":"Present simple third person + s.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-19","quiz":"Quiz 2","question_en":"Ahmad ........... arrives to work on time. He is never late.","options":["never","usually","always"],"correct":2,"arabic_explanation":"ليس متأخرًا أبدًا = يصل دائمًا في الوقت.","why_answer_ar":"always = دائمًا.","grammar_rule_ar":"ظروف التكرار.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q2-20","quiz":"Quiz 2","question_en":"I ........... very fast. I am the fastest in my family.","options":["can't swim","can swim","can swims"],"correct":1,"arabic_explanation":"القدرة على السباحة بسرعة؛ can + مصدر بدون s.","why_answer_ar":"can swim صحيح؛ can swims خطأ.","grammar_rule_ar":"can + base verb.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q7-01","quiz":"Quiz 7","question_en":"Read the text:\nThe Patel family lives in Senegal. Mr. Patel is a teacher, and Mrs. Patel is a nurse. They have two children, Aria and Sam. Every day, they have breakfast together. Mr. Patel goes to work, and Mrs. Patel takes Aria and Sam to school. After school, the children play in the garden. On weekends, the family visits the park. They love spending time together.\n\n1. How many children are in the family?","options":["three","ten","two","five"],"correct":2,"arabic_explanation":"النص يذكر أن لدى العائلة طفلين.","why_answer_ar":"كلمة «two children» تؤكد الإجابة.","grammar_rule_ar":"اقرأ القطعة وحدد الإجابة التي يدعمها النص صراحةً.","vocabulary":"children = أطفال | Senegal = السنغال","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q7-02","quiz":"Quiz 7","question_en":"Read the text:\nThe Patel family lives in Senegal. Mr. Patel is a teacher, and Mrs. Patel is a nurse. They have two children, Aria and Sam. Every day, they have breakfast together. Mr. Patel goes to work, and Mrs. Patel takes Aria and Sam to school. After school, the children play in the garden. On weekends, the family visits the park. They love spending time together.\n\n2. The Patel family goes to the park?","options":["every day","on weekdays","on weekends","Sundays"],"correct":2,"arabic_explanation":"النص: «On weekends, the family visits the park».","why_answer_ar":"الزيارة في عطلة نهاية الأسبوع وليس كل يوم.","grammar_rule_ar":"اقرأ القطعة وحدد الإجابة التي يدعمها النص صراحةً.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q7-03","quiz":"Quiz 7","question_en":"Read the text:\nIn the U.K, there is a man named Mr. Davis. He loves old furniture. Every weekend, he looks for old chairs, tables, and cabinets. Mr. Davis cleans the furniture and fixes it. Some pieces are very old, but he makes them look new again. He has many old chairs and tables in his house. People in the town know him well. Sometimes, they give him old furniture, and he is always happy to take it.\n\n1. What does Mr. Davis do on the weekends?","options":["collects furniture","talks to his friends","visits the market","travels with his family"],"correct":0,"arabic_explanation":"في عطلة الأسبوع يبحث عن أثاث قديم ويجمعه.","why_answer_ar":"«looks for old chairs, tables, and cabinets» يعادل جمع/استقطاب الأثاث.","grammar_rule_ar":"اقرأ القطعة وحدد الإجابة التي يدعمها النص صراحةً.","vocabulary":"furniture = أثاث","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q7-04","quiz":"Quiz 7","question_en":"Read the text:\nIn the U.K, there is a man named Mr. Davis. He loves old furniture. Every weekend, he looks for old chairs, tables, and cabinets. Mr. Davis cleans the furniture and fixes it. Some pieces are very old, but he makes them look new again. He has many old chairs and tables in his house. People in the town know him well. Sometimes, they give him old furniture, and he is always happy to take it.\n\n2. The passage is mainly about?","options":["Possessions (things people own)","A town"],"correct":0,"arabic_explanation":"القطعة تركز على الأثاث القديم وجمعه وليس وصف المدينة.","why_answer_ar":"الموضوع هو امتلاك الأثاث وجمعه وليس المدينة.","grammar_rule_ar":"اقرأ القطعة وحدد الإجابة التي يدعمها النص صراحةً.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q7-05","quiz":"Quiz 7","question_en":"Read the text:\nIn their free time, people like to do many fun activities. Some people read books or watch movies. Others enjoy playing sports like soccer or basketball. Many people like to go for walks in the park or ride bikes. Some enjoy cooking or baking delicious food. Friends often meet to chat and have fun together. Some people like to listen to music or play musical instruments. Others may enjoy painting or drawing. Many people also play video games or spend time on the internet. Everyone has different hobbies, and that makes free time special.\n\n1. In their free time, students like to play video games?","options":["Not mentioned","False","True"],"correct":2,"arabic_explanation":"النص يذكر أن كثيرين من الناس يلعبون ألعاب فيديو؛ الطلاب ضمن الناس العاديين في هذا السياق التعليمي.","why_answer_ar":"«Many people also play video games» يدعم صحة الفكرة.","grammar_rule_ar":"اقرأ القطعة وحدد الإجابة التي يدعمها النص صراحةً.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q7-06","quiz":"Quiz 7","question_en":"Read the text:\nIn their free time, people like to do many fun activities. Some people read books or watch movies. Others enjoy playing sports like soccer or basketball. Many people like to go for walks in the park or ride bikes. Some enjoy cooking or baking delicious food. Friends often meet to chat and have fun together. Some people like to listen to music or play musical instruments. Others may enjoy painting or drawing. Many people also play video games or spend time on the internet. Everyone has different hobbies, and that makes free time special.\n\n2. Why is free time special for people?","options":["Free time is boring.","Everyone has different hobbies.","People do the same things."],"correct":1,"arabic_explanation":"الجملة الختامية توضح أن اختلاف الهوايات يجعل وقت الفراغ مميزًا.","why_answer_ar":"يطابق الجملة الأخيرة في القطعة.","grammar_rule_ar":"اقرأ القطعة وحدد الإجابة التي يدعمها النص صراحةً.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q7-07","quiz":"Quiz 7","question_en":"Read the text:\nPeople work in many places. For example, some work in offices. When they work there, they use computers and write emails to send information. Other people work in schools as teachers. They teach students. Some work in hospitals and help sick people. There are also workers in restaurants. They cook food and serve customers. Factories are also places of work where people make products like toys and cars. Each place of work is important!\n\n1. Which of the following sentences is correct about emails?","options":["People do not usually use them at work.","They are a useless communication tool.","They are used to send information."],"correct":2,"arabic_explanation":"في المكتب يُستخدم الحاسوب والبريد لإرسال المعلومات.","why_answer_ar":"النص يذكر «write emails to send information».","grammar_rule_ar":"اقرأ القطعة وحدد الإجابة التي يدعمها النص صراحةً.","vocabulary":"email = بريد إلكتروني","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q7-08","quiz":"Quiz 7","question_en":"Read the text:\nPeople work in many places. For example, some work in offices. When they work there, they use computers and write emails to send information. Other people work in schools as teachers. They teach students. Some work in hospitals and help sick people. There are also workers in restaurants. They cook food and serve customers. Factories are also places of work where people make products like toys and cars. Each place of work is important!\n\n2. What can you conclude from the passage?","options":["The most important job is to work in a factory.","All kinds of workplaces are needed.","There are only five types of jobs."],"correct":1,"arabic_explanation":"الخاتمة: «Each place of work is important».","why_answer_ar":"كل وظيفة ومكان عمل له أهمية.","grammar_rule_ar":"اقرأ القطعة وحدد الإجابة التي يدعمها النص صراحةً.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q7-09","quiz":"Quiz 7","question_en":"Read the text:\nWhen you go to the supermarket, it's important to understand food labels. The cost tells you how much money you need to pay. Check the 'best before' date to know when the food is still good to eat. Look for the amount of fat on the label—some fat is healthy, but too much is not good for you. Natural foods come from plants or animals and have fewer chemicals, while superfoods are especially nutritious, like blueberries and spinach.\n\n1. What does the \"best before\" date on a food label indicate?","options":["When the food is still good to eat.","How much fat is in the food."],"correct":0,"arabic_explanation":"النص يشرح أن التاريخ يبيّن متى يظل الطعام صالحًا.","why_answer_ar":"يطابق عبارة «when the food is still good to eat».","grammar_rule_ar":"اقرأ القطعة وحدد الإجابة التي يدعمها النص صراحةً.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q7-10","quiz":"Quiz 7","question_en":"Read the text:\nWhen you go to the supermarket, it's important to understand food labels. The cost tells you how much money you need to pay. Check the 'best before' date to know when the food is still good to eat. Look for the amount of fat on the label—some fat is healthy, but too much is not good for you. Natural foods come from plants or animals and have fewer chemicals, while superfoods are especially nutritious, like blueberries and spinach.\n\n2. On a label, \"low-fat\" typically means:","options":["The food has less fat than the regular version of that product.","The food is very expensive."],"correct":0,"arabic_explanation":"المعنى المعتاد لـ low-fat هو كمية دهون أقل مقارنة بالمنتج العادي (استنتاج من السياق عن الدهون).","why_answer_ar":"المصطلح يصف مستوى الدهون وليس السعر.","grammar_rule_ar":"اقرأ القطعة وحدد الإجابة التي يدعمها النص صراحةً.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q7-11","quiz":"Quiz 7","question_en":"Read the text:\nBefore boarding, passengers have to show passports and tickets. You mustn't leave your luggage unattended. You can take one carry-on bag. Food and drink are available after security.\n\n1. What must every passenger do before boarding?","options":["Leave their bags unattended.","Show passports (and tickets)."],"correct":1,"arabic_explanation":"يجب إظهار جواز السفر والتذكرة قبل الصعود.","why_answer_ar":"الجملة الأولى في القطعة.","grammar_rule_ar":"اقرأ القطعة وحدد الإجابة التي يدعمها النص صراحةً.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q7-12","quiz":"Quiz 7","question_en":"Read the text:\nBefore boarding, passengers have to show passports and tickets. You mustn't leave your luggage unattended. You can take one carry-on bag. Food and drink are available after security.\n\n2. What is not allowed?","options":["Showing a ticket.","Taking one carry-on bag.","Leaving bags unattended."],"correct":2,"arabic_explanation":"يُمنع ترك الأمتعة دون مراقبة.","why_answer_ar":"«mustn't leave your luggage unattended».","grammar_rule_ar":"اقرأ القطعة وحدد الإجابة التي يدعمها النص صراحةً.","vocabulary":"","common_mistake_ar":"","example_sentence_en":"","needs_review":false},{"id":"Q7-13","quiz":"Quiz 7","question_en":"My sister's daughter is my...","options":["Father","Nephew","Sister","Niece"],"correct":3,"arabic_explanation":"ابنة الأخت هي niece بالإنجليزية.","why_answer_ar":"Niece = ابنة الأخ/الأخت.","grammar_rule_ar":"الأسرة والقرابة بالإنجليزية.","vocabulary":"niece = ابنة الأخ أو الأخت","common_mistake_ar":"الخلط بين nephew (ابن الأخ/الأخت) وniece.","example_sentence_en":"My niece is five years old.","needs_review":false},{"id":"Q7-14","quiz":"Quiz 7","question_en":"Toyota is a ... company.","options":["Japanese","Japan","Japany","Japanies"],"correct":0,"arabic_explanation":"نحتاج صفًا يصف الشركة: يابانية Japanese.","why_answer_ar":"Japanese صفة؛ Japan اسم البلد.","grammar_rule_ar":"الصفات الوطنية بصيغة صفة قبل الاسم.","vocabulary":"Japanese = ياباني","needs_review":false},{"id":"Q7-15","quiz":"Quiz 7","question_en":"Ahmed: Where ... you from?","options":["Are","Am","This","Is"],"correct":0,"arabic_explanation":"مع الضمير you يُستخدم فعل are.","why_answer_ar":"Where are you from? تعبير ثابت.","grammar_rule_ar":"فعل be مع الضمائر.","needs_review":false},{"id":"Q7-16","quiz":"Quiz 7","question_en":"My daughter's son is my...","options":["Grandson","Grandparent","Parent","Son"],"correct":0,"arabic_explanation":"ابن الابنة هو حفيد grandson.","why_answer_ar":"Grandson = ابن الابن/الابنة.","needs_review":false},{"id":"Q7-17","quiz":"Quiz 7","question_en":"I ... to school every day at 7:30 am.","options":["Go","Goes","Went","Going"],"correct":0,"arabic_explanation":"المضارع البسيط مع I والعادة اليومية.","why_answer_ar":"I go — الزمن الحاضر للعادات.","grammar_rule_ar":"Present simple للروتين.","needs_review":false},{"id":"Q7-18","quiz":"Quiz 7","question_en":"I travelled to Al-Lith last week. The weather ... great.","options":["Were","Are","Is","Was"],"correct":3,"arabic_explanation":"حدث في الماضي؛ الجو مفرد فيستخدم was.","why_answer_ar":"Last week + weather was.","grammar_rule_ar":"Past simple مع الأحداث المنتهية.","needs_review":false},{"id":"Q7-19","quiz":"Quiz 7","question_en":"How ... money do you have?","options":["Lots of","Many","A lot of","Much"],"correct":3,"arabic_explanation":"مع الاسم غير المعدود money نستخدم much في السؤال.","why_answer_ar":"How much money?","grammar_rule_ar":"much / many حسب العدّ والعدم.","needs_review":false},{"id":"Q7-20","quiz":"Quiz 7","question_en":"... are large pieces of cloth that hang across a window to stop light.","options":["Tables","Drawers","Curtains","Chairs"],"correct":2,"arabic_explanation":"الستائر curtains تُعلق على النوافذ.","why_answer_ar":"تعريف الستائر في الجملة.","vocabulary":"curtains = ستائر","needs_review":false},{"id":"Q7-21","quiz":"Quiz 7","question_en":"In Jeddah, there is a ... which has more than 10,000 books.","options":["Theater","Park","Library","Museum"],"correct":2,"arabic_explanation":"مكان يضم آلاف الكتب هو المكتبة.","vocabulary":"library = مكتبة","needs_review":false},{"id":"Q7-22","quiz":"Quiz 7","question_en":"What is the meaning of the word \"identical\"?","options":["Things look very different.","Things look different.","Things look similar.","Things look exactly the same."],"correct":3,"arabic_explanation":"Identical تعني متطابقة تمامًا.","vocabulary":"identical = متطابق تمامًا","needs_review":false},{"id":"Q7-23","quiz":"Quiz 7","question_en":"Muslims around the world ... during the daytime in Ramadan.","options":["Doesn't eat and drink.","Don't eat and drink."],"correct":1,"arabic_explanation":"جمع Muslims يتطلب don't وليس doesn't.","grammar_rule_ar":"لاتفاق الفعل مع الجمع.","needs_review":false},{"id":"Q7-24","quiz":"Quiz 7","question_en":"The summer in Saudi Arabia is ... in Iceland.","options":["Hotter","Hotter than"],"correct":1,"arabic_explanation":"المقارنة بين بلدين تتطلب than.","grammar_rule_ar":"المقارنة comparative + than.","needs_review":false},{"id":"Q7-25","quiz":"Quiz 7","question_en":"Lions are ... than cats.","options":["Dangerous","More dangerous"],"correct":1,"arabic_explanation":"than يدل على مقارنة؛ نستخدم more dangerous.","needs_review":false},{"id":"Q7-26","quiz":"Quiz 7","question_en":"Money used in a country is called ...","options":["Souvenir","Visa","Currency"],"correct":2,"arabic_explanation":"العملة الرسمية currency.","vocabulary":"currency = عملة","needs_review":false},{"id":"Q7-27","quiz":"Quiz 7","question_en":"Have you ever ... a horse?","options":["Ride","Rode","Ridden"],"correct":2,"arabic_explanation":"بعد Have you ever نستخدم التصريف الثالث ridden.","grammar_rule_ar":"Present perfect: have/has + past participle.","needs_review":false},{"id":"Q7-28","quiz":"Quiz 7","question_en":"The Amazon River ... through Brazil.","options":["Flows","Flow","To flow"],"correct":0,"arabic_explanation":"المضارع الثالث مع فاعل مفرد The river flows.","needs_review":false},{"id":"Q7-29","quiz":"Quiz 7","question_en":"Christopher Columbus ... the New World in 1492.","options":["Were discovered.","Discovers.","Was discovered.","Discovered."],"correct":3,"arabic_explanation":"كولومبوس فاعل اكتشف؛ زمن ماضٍ discovered.","grammar_rule_ar":"Past simple للأحداث التاريخية.","needs_review":false},{"id":"Q7-30","quiz":"Quiz 7","question_en":"The news ... very upsetting.","options":["Was.","Were.","Are.","Weren't."],"correct":0,"arabic_explanation":"News غالبًا يُعامل كمفرد؛ was upsetting.","grammar_rule_ar":"الاتفاق مع collective nouns.","needs_review":false},{"id":"Q7-31","quiz":"Quiz 7","question_en":"What time ... you get up in the morning?","options":["Does","Do"],"correct":1,"arabic_explanation":"مع you في السؤال نستخدم do.","needs_review":false},{"id":"Q7-32","quiz":"Quiz 7","question_en":"I have 15 ... in my fishtank.","options":["Fish","Fishes"],"correct":0,"arabic_explanation":"Fish نفس الشكل للجمع عند عدّ الأسماك.","grammar_rule_ar":"أسماء جميعها مثل fish / sheep.","needs_review":false}];
 
@@ -2155,8 +2342,905 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
 
   const APP_V = 4;
   const LS = "enmastery:v3";
-  const QUIZ_ORDER = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4", "Quiz 5", "Quiz 6 (Compensatory)", "Quiz 7"];
+  const QUIZ_ORDER = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4", "Quiz 5", "Quiz 6 (Compensatory)", "Quiz 7", "Quiz 8", "Quiz 9", "Quiz 10"];
   const DEFAULT_DAILY_GOAL = 10;
+
+  // Quiz 8 (added by request)
+  // QUESTION_BANK is defined above as a const array; we can safely push to it here.
+  const QUIZ8_ITEMS = [
+    {
+      id: "Q8-01",
+      quiz: "Quiz 8",
+      question_en: "We ________ a movie when the phone rang.",
+      options: ["watch", "watched", "were watching"],
+      correct: 2,
+      arabic_explanation: "حدث كان مستمرًا في الماضي ثم حدث مفاجئ قطعه.",
+      why_answer_ar: "نستخدم الماضي المستمر: were watching عندما كان الفعل مستمرًا وقت حدوث phone rang.",
+      grammar_rule_ar: "Past continuous: was/were + V-ing.",
+    },
+    {
+      id: "Q8-02",
+      quiz: "Quiz 8",
+      question_en: "You ________ wash the dishes. I'll do them later.",
+      options: ["shouldn't", "mustn't", "don't have to"],
+      correct: 2,
+      arabic_explanation: "المعنى: ليس من الضروري عليك.",
+      why_answer_ar: "don't have to = غير لازم. mustn't = ممنوع، shouldn't = نصيحة.",
+      grammar_rule_ar: "Don't have to = no obligation.",
+    },
+    {
+      id: "Q8-03",
+      quiz: "Quiz 8",
+      question_en: "This film is very ______. I want to go to sleep.",
+      options: ["exciting", "boring", "funny"],
+      correct: 1,
+      arabic_explanation: "إذا أردت النوم فالفيلم ممل.",
+      why_answer_ar: "boring = ممل.",
+      grammar_rule_ar: "Adjectives: boring/exciting/funny.",
+    },
+    {
+      id: "Q8-04",
+      quiz: "Quiz 8",
+      question_en: "A ________ is a period of 100 years.",
+      options: ["decade", "century", "millennium"],
+      correct: 1,
+      arabic_explanation: "100 سنة = قرن.",
+      why_answer_ar: "century = قرن.",
+      grammar_rule_ar: "Vocabulary: time periods.",
+    },
+    {
+      id: "Q8-05",
+      quiz: "Quiz 8",
+      question_en: "A ______ is a person who lives next door to you.",
+      options: ["stranger", "neighbor", "colleague"],
+      correct: 1,
+      arabic_explanation: "الشخص الذي يسكن بجانبك هو الجار.",
+      why_answer_ar: "neighbor = جار.",
+      grammar_rule_ar: "Vocabulary: people.",
+    },
+    {
+      id: "Q8-06",
+      quiz: "Quiz 8",
+      question_en: "I need to ______ some money from the bank.",
+      options: ["spend", "borrow", "save"],
+      correct: 1,
+      arabic_explanation: "من البنك عادة نقترض مالًا.",
+      why_answer_ar: "borrow = يقترض. spend = ينفق، save = يدّخر.",
+      grammar_rule_ar: "Borrow = take and return later.",
+    },
+    {
+      id: "Q8-07",
+      quiz: "Quiz 8",
+      question_en: "I like to ______ a suitcase before I go on holiday.",
+      options: ["pack", "take", "fill"],
+      correct: 0,
+      arabic_explanation: "قبل السفر نحزم حقيبة السفر.",
+      why_answer_ar: "pack a suitcase = يحزم حقيبة.",
+      grammar_rule_ar: "Collocation: pack a suitcase.",
+    },
+    {
+      id: "Q8-08",
+      quiz: "Quiz 8",
+      question_en: "He is a very ________ person. He always says \"please\" and \"thank you.\"",
+      options: ["kind", "polite", "friendly"],
+      correct: 1,
+      arabic_explanation: "قول من فضلك/شكرًا يدل على الأدب.",
+      why_answer_ar: "polite = مؤدب.",
+      grammar_rule_ar: "Vocabulary: describing people.",
+    },
+    {
+      id: "Q8-09",
+      quiz: "Quiz 8",
+      question_en: "The ______ is the person who flies a plane.",
+      options: ["driver", "pilot", "captain"],
+      correct: 1,
+      arabic_explanation: "من يقود الطائرة هو الطيار.",
+      why_answer_ar: "pilot = طيار.",
+      grammar_rule_ar: "Vocabulary: jobs.",
+    },
+    {
+      id: "Q8-10",
+      quiz: "Quiz 8",
+      question_en: "I need to buy a ______ of soap.",
+      options: ["packet", "bar", "tube"],
+      correct: 1,
+      arabic_explanation: "نقول: قطعة صابون = bar of soap.",
+      why_answer_ar: "bar هو الصحيح.",
+      grammar_rule_ar: "Quantifiers: a bar of …",
+    },
+    {
+      id: "Q8-11",
+      quiz: "Quiz 8",
+      question_en: "I am very ______ about my exam results.",
+      options: ["worried", "interesting", "lucky"],
+      correct: 0,
+      arabic_explanation: "شعور القلق على النتائج.",
+      why_answer_ar: "worried = قلق.",
+      grammar_rule_ar: "Adjectives about feelings.",
+    },
+    {
+      id: "Q8-12",
+      quiz: "Quiz 8",
+      question_en: "Can you ______ the light? It's too dark in here.",
+      options: ["turn off", "turn on", "turn up"],
+      correct: 1,
+      arabic_explanation: "إذا كان المكان مظلمًا نُشغّل الضوء.",
+      why_answer_ar: "turn on = يشغّل.",
+      grammar_rule_ar: "Phrasal verbs: turn on/off.",
+    },
+    {
+      id: "Q8-13",
+      quiz: "Quiz 8",
+      question_en: "I ______ my homework yet.",
+      options: ["didn't finish", "haven't finished", "don't finish"],
+      correct: 1,
+      arabic_explanation: "yet غالبًا مع present perfect في النفي.",
+      why_answer_ar: "haven't finished = لم أنتهِ بعد.",
+      grammar_rule_ar: "Present perfect: have/has + V3 + yet.",
+    },
+    {
+      id: "Q8-14",
+      quiz: "Quiz 8",
+      question_en: "If it rains, we ________ stay at home.",
+      options: ["will", "would", "did"],
+      correct: 0,
+      arabic_explanation: "شرط أول للمستقبل.",
+      why_answer_ar: "If + present → will + base.",
+      grammar_rule_ar: "First conditional.",
+    },
+    {
+      id: "Q8-15",
+      quiz: "Quiz 8",
+      question_en: "She is ________ than her sister.",
+      options: ["tall", "taller", "tallest"],
+      correct: 1,
+      arabic_explanation: "than تحتاج comparative.",
+      why_answer_ar: "taller = أطول.",
+      grammar_rule_ar: "Comparative: adj + -er + than.",
+    },
+    {
+      id: "Q8-16",
+      quiz: "Quiz 8",
+      question_en: "How ________ sugar do you want in your tea?",
+      options: ["many", "much", "few"],
+      correct: 1,
+      arabic_explanation: "sugar غير معدود.",
+      why_answer_ar: "How much مع غير المعدود.",
+      grammar_rule_ar: "How much + uncountable.",
+    },
+    {
+      id: "Q8-17",
+      quiz: "Quiz 8",
+      question_en: "They ________ to the cinema last night.",
+      options: ["go", "goes", "went"],
+      correct: 2,
+      arabic_explanation: "last night = ماضٍ بسيط.",
+      why_answer_ar: "went هو ماضي go.",
+      grammar_rule_ar: "Past simple: go → went.",
+    },
+    {
+      id: "Q8-18",
+      quiz: "Quiz 8",
+      question_en: "I've been working here ________ five years.",
+      options: ["since", "for", "during"],
+      correct: 1,
+      arabic_explanation: "five years مدة زمنية.",
+      why_answer_ar: "for + مدة.",
+      grammar_rule_ar: "for + duration; since + start point.",
+    },
+    {
+      id: "Q8-19",
+      quiz: "Quiz 8",
+      question_en: "Look! It ________.",
+      options: ["is raining", "rains", "rained"],
+      correct: 0,
+      arabic_explanation: "Look! يدل على حدث الآن.",
+      why_answer_ar: "is raining = present continuous.",
+      grammar_rule_ar: "Present continuous: am/is/are + V-ing.",
+    },
+    {
+      id: "Q8-20",
+      quiz: "Quiz 8",
+      question_en: "This is the ________ book I have ever read.",
+      options: ["good", "better", "best"],
+      correct: 2,
+      arabic_explanation: "the + superlative.",
+      why_answer_ar: "best هو التفضيل الأعلى.",
+      grammar_rule_ar: "Superlative: the + best.",
+    },
+    {
+      id: "Q8-21",
+      quiz: "Quiz 8",
+      question_en: "Where ________ you live?",
+      options: ["do", "does", "are"],
+      correct: 0,
+      arabic_explanation: "سؤال present simple مع you.",
+      why_answer_ar: "Do you live…؟",
+      grammar_rule_ar: "Present simple question: Do + subject + verb?",
+    },
+    {
+      id: "Q8-22",
+      quiz: "Quiz 8",
+      question_en: "He ________ speak English very well.",
+      options: ["can", "cans", "is can"],
+      correct: 0,
+      arabic_explanation: "بعد can يأتي المصدر بدون s.",
+      why_answer_ar: "can صحيح.",
+      grammar_rule_ar: "Modal: can + base verb.",
+    },
+    {
+      id: "Q8-23",
+      quiz: "Quiz 8",
+      question_en: "Listen! Someone ________ the piano.",
+      options: ["plays", "is playing", "played"],
+      correct: 1,
+      arabic_explanation: "Listen! حدث الآن.",
+      why_answer_ar: "is playing = present continuous.",
+      grammar_rule_ar: "Present continuous.",
+    },
+    {
+      id: "Q8-24",
+      quiz: "Quiz 8",
+      question_en: "I usually ________ up at 7 o'clock.",
+      options: ["get", "gets", "am getting"],
+      correct: 0,
+      arabic_explanation: "usually = عادة (روتين).",
+      why_answer_ar: "I get up…",
+      grammar_rule_ar: "Present simple for routines.",
+    },
+    {
+      id: "Q8-25",
+      quiz: "Quiz 8",
+      question_en: "There isn't ________ milk in the fridge.",
+      options: ["some", "any", "many"],
+      correct: 1,
+      arabic_explanation: "نفي + any.",
+      why_answer_ar: "There isn't any milk…",
+      grammar_rule_ar: "Negative + any.",
+    },
+    {
+      id: "Q8-26",
+      quiz: "Quiz 8",
+      question_en: "What ________ you doing at 8 PM yesterday?",
+      options: ["are", "were", "was"],
+      correct: 1,
+      arabic_explanation: "زمن ماضٍ مستمر، ومع you = were.",
+      why_answer_ar: "were صحيح.",
+      grammar_rule_ar: "Past continuous: were + V-ing.",
+    },
+    {
+      id: "Q8-27",
+      quiz: "Quiz 8",
+      question_en: "She ________ a new car last week.",
+      options: ["buy", "buys", "bought"],
+      correct: 2,
+      arabic_explanation: "last week = ماضٍ بسيط.",
+      why_answer_ar: "bought هو الماضي.",
+      grammar_rule_ar: "Past simple: buy → bought.",
+    },
+    {
+      id: "Q8-28",
+      quiz: "Quiz 8",
+      question_en: "You ________ eat more vegetables; they are good for you.",
+      options: ["should", "mustn't", "don't"],
+      correct: 0,
+      arabic_explanation: "نصيحة.",
+      why_answer_ar: "should = ينبغي.",
+      grammar_rule_ar: "Advice: should + base.",
+    },
+    {
+      id: "Q8-29",
+      quiz: "Quiz 8",
+      question_en: "Have you ________ been to London?",
+      options: ["ever", "never", "yet"],
+      correct: 0,
+      arabic_explanation: "ever في أسئلة الخبرة.",
+      why_answer_ar: "Have you ever…؟",
+      grammar_rule_ar: "Present perfect + ever.",
+    },
+    {
+      id: "Q8-30",
+      quiz: "Quiz 8",
+      question_en: "I am ________ to visit my grandparents next weekend.",
+      options: ["go", "going", "goes"],
+      correct: 1,
+      arabic_explanation: "am going to للتخطيط.",
+      why_answer_ar: "going هو الصحيح.",
+      grammar_rule_ar: "Be going to + verb.",
+    },
+    {
+      id: "Q8-31",
+      quiz: "Quiz 8",
+      question_en: "My father ________ a doctor.",
+      options: ["is", "am", "are"],
+      correct: 0,
+      arabic_explanation: "father مفرد.",
+      why_answer_ar: "is صحيح.",
+      grammar_rule_ar: "Verb be (present): singular = is.",
+    },
+  ];
+  try {
+    if (typeof QUESTION_BANK !== "undefined" && Array.isArray(QUESTION_BANK)) QUESTION_BANK.push(...QUIZ8_ITEMS);
+  } catch (e) {
+    // no-op: keep app resilient if bank isn't available for any reason
+  }
+
+  // Quiz 9 (added by request) — includes explanations on wrong answers
+  const QUIZ9_ITEMS = [
+    {
+      id: "Q9-01",
+      quiz: "Quiz 9",
+      question_en: "They ________ at home last night.",
+      options: ["wasn't", "weren't", "isn't"],
+      correct: 1,
+      arabic_explanation: "They جمع، وlast night زمن ماضٍ.",
+      why_answer_ar: "مع they في الماضي نستخدم were → weren't في النفي.",
+      grammar_rule_ar: "Past simple of be: I/he/she/it = was, you/we/they = were.",
+      vocabulary: "last night = الليلة الماضية",
+    },
+    {
+      id: "Q9-02",
+      quiz: "Quiz 9",
+      question_en: "I'm ________ in learning photography.",
+      options: ["interest", "interesting", "interested"],
+      correct: 2,
+      arabic_explanation: "المتحدث يصف شعوره (أنا…)، وليس وصف الشيء.",
+      why_answer_ar: "interested تُستخدم لوصف الشخص (شعور).",
+      grammar_rule_ar: "interested (person) vs interesting (thing).",
+      vocabulary: "photography = تصوير",
+    },
+    {
+      id: "Q9-03",
+      quiz: "Quiz 9",
+      question_en: "Where ________ your parents born?",
+      options: ["was", "were", "are"],
+      correct: 1,
+      arabic_explanation: "parents جمع، وborn عادة مع be في الماضي.",
+      why_answer_ar: "Were your parents born…؟ لأن parents جمع.",
+      grammar_rule_ar: "Past be question: Were + plural subject + born?",
+      vocabulary: "born = وُلد",
+    },
+    {
+      id: "Q9-04",
+      quiz: "Quiz 9",
+      question_en: "She speaks English ________.",
+      options: ["good", "well", "best"],
+      correct: 1,
+      arabic_explanation: "بعد الفعل نستخدم حالًا (adverb).",
+      why_answer_ar: "well حال (adverb) لوصف speak.",
+      grammar_rule_ar: "Adverb after action verbs: speak well (not good).",
+      vocabulary: "well = جيدًا",
+    },
+    {
+      id: "Q9-05",
+      quiz: "Quiz 9",
+      question_en: "I ________ play the piano when I was five.",
+      options: ["can", "could", "couldn't"],
+      correct: 1,
+      arabic_explanation: "قدرة في الماضي.",
+      why_answer_ar: "could هو ماضي can.",
+      grammar_rule_ar: "Ability in the past: could + base verb.",
+      vocabulary: "piano = بيانو",
+    },
+    {
+      id: "Q9-06",
+      quiz: "Quiz 9",
+      question_en: "Is there ________ milk in the fridge?",
+      options: ["some", "any", "many"],
+      correct: 1,
+      arabic_explanation: "سؤال عام مع اسم غير معدود.",
+      why_answer_ar: "any تُستخدم غالبًا في الأسئلة والنفي.",
+      grammar_rule_ar: "Some/any: any in questions & negatives.",
+      vocabulary: "fridge = ثلاجة",
+    },
+    {
+      id: "Q9-07",
+      quiz: "Quiz 9",
+      question_en: "How ________ water do you drink every day?",
+      options: ["many", "much", "few"],
+      correct: 1,
+      arabic_explanation: "water غير معدود.",
+      why_answer_ar: "How much مع غير المعدود.",
+      grammar_rule_ar: "How much + uncountable noun.",
+    },
+    {
+      id: "Q9-08",
+      quiz: "Quiz 9",
+      question_en: "If it rains tomorrow, we ________ at home.",
+      options: ["will stay", "stay", "stayed"],
+      correct: 0,
+      arabic_explanation: "شرط أول (مستقبل محتمل).",
+      why_answer_ar: "If + present → will + base.",
+      grammar_rule_ar: "First conditional: If + present, will + verb.",
+    },
+    {
+      id: "Q9-09",
+      quiz: "Quiz 9",
+      question_en: "I ________ to the cinema yesterday.",
+      options: ["go", "went", "gone"],
+      correct: 1,
+      arabic_explanation: "yesterday = ماضٍ بسيط.",
+      why_answer_ar: "went هو ماضي go.",
+      grammar_rule_ar: "Past simple: go → went.",
+    },
+    {
+      id: "Q9-10",
+      quiz: "Quiz 9",
+      question_en: "This is the ________ book I've ever read.",
+      options: ["good", "better", "best"],
+      correct: 2,
+      arabic_explanation: "the + superlative.",
+      why_answer_ar: "best هو التفضيل الأعلى لـ good.",
+      grammar_rule_ar: "Superlative: the + best.",
+    },
+    {
+      id: "Q9-11",
+      quiz: "Quiz 9",
+      question_en: "We ________ a movie when the phone rang.",
+      options: ["watch", "watched", "were watching"],
+      correct: 2,
+      arabic_explanation: "فعل مستمر + حدث مفاجئ.",
+      why_answer_ar: "were watching = past continuous.",
+      grammar_rule_ar: "Past continuous: was/were + V-ing.",
+    },
+    {
+      id: "Q9-12",
+      quiz: "Quiz 9",
+      question_en: "You ________ eat too much junk food.",
+      options: ["should", "shouldn't", "must"],
+      correct: 1,
+      arabic_explanation: "نصيحة سلبية.",
+      why_answer_ar: "shouldn't = لا ينبغي.",
+      grammar_rule_ar: "Advice: should/shouldn't + base verb.",
+      vocabulary: "junk food = أكل غير صحي",
+    },
+    {
+      id: "Q9-13",
+      quiz: "Quiz 9",
+      question_en: "________ you ever been to Paris?",
+      options: ["Do", "Did", "Have"],
+      correct: 2,
+      arabic_explanation: "ever مع present perfect.",
+      why_answer_ar: "Have you ever been…؟",
+      grammar_rule_ar: "Present perfect question: Have/Has + subject + V3.",
+    },
+    {
+      id: "Q9-14",
+      quiz: "Quiz 9",
+      question_en: "I ________ my keys. Have you seen them?",
+      options: ["lose", "lost", "have lost"],
+      correct: 2,
+      arabic_explanation: "النتيجة الآن (المفاتيح ضائعة الآن).",
+      why_answer_ar: "have lost = present perfect لحدث أثره مستمر.",
+      grammar_rule_ar: "Present perfect for recent results: have/has + V3.",
+    },
+    {
+      id: "Q9-15",
+      quiz: "Quiz 9",
+      question_en: "The sun ________ in the east.",
+      options: ["rise", "rises", "rising"],
+      correct: 1,
+      arabic_explanation: "حقيقة عامة + مفرد.",
+      why_answer_ar: "sun مفرد → rises.",
+      grammar_rule_ar: "Present simple 3rd person: verb + s.",
+    },
+    {
+      id: "Q9-16",
+      quiz: "Quiz 9",
+      question_en: "He is ________ than his brother.",
+      options: ["old", "older", "oldest"],
+      correct: 1,
+      arabic_explanation: "than → comparative.",
+      why_answer_ar: "older = أكبر/أقدم.",
+      grammar_rule_ar: "Comparative: adjective + -er + than.",
+    },
+    {
+      id: "Q9-17",
+      quiz: "Quiz 9",
+      question_en: "She ________ a new car last month.",
+      options: ["buy", "buys", "bought"],
+      correct: 2,
+      arabic_explanation: "last month = ماضٍ بسيط.",
+      why_answer_ar: "bought هو ماضي buy.",
+      grammar_rule_ar: "Past simple: buy → bought.",
+    },
+    {
+      id: "Q9-18",
+      quiz: "Quiz 9",
+      question_en: "I ________ finish my homework yet.",
+      options: ["didn't", "haven't", "don't"],
+      correct: 1,
+      arabic_explanation: "yet مع present perfect في النفي.",
+      why_answer_ar: "haven't + V3 (finish).",
+      grammar_rule_ar: "Present perfect negative: haven't/hasn't + V3.",
+    },
+    {
+      id: "Q9-19",
+      quiz: "Quiz 9",
+      question_en: "What ________ you doing at 10 PM last night?",
+      options: ["are", "were", "was"],
+      correct: 1,
+      arabic_explanation: "وقت محدد في الماضي + فعل مستمر.",
+      why_answer_ar: "you → were.",
+      grammar_rule_ar: "Past continuous: What were you doing…?",
+    },
+    {
+      id: "Q9-20",
+      quiz: "Quiz 9",
+      question_en: "I ________ usually drink coffee in the morning.",
+      options: ["don't", "doesn't", "am not"],
+      correct: 0,
+      arabic_explanation: "نفي حاضر بسيط مع I.",
+      why_answer_ar: "I don't…",
+      grammar_rule_ar: "Present simple negative: I/you/we/they don't + base.",
+    },
+    {
+      id: "Q9-21",
+      quiz: "Quiz 9",
+      question_en: "Look! The baby ________.",
+      options: ["sleeps", "is sleeping", "slept"],
+      correct: 1,
+      arabic_explanation: "Look! يدل على حدث الآن.",
+      why_answer_ar: "is sleeping = present continuous.",
+      grammar_rule_ar: "Present continuous: am/is/are + V-ing.",
+    },
+    {
+      id: "Q9-22",
+      quiz: "Quiz 9",
+      question_en: "There are ________ students in the classroom.",
+      options: ["much", "many", "any"],
+      correct: 1,
+      arabic_explanation: "students جمع معدود.",
+      why_answer_ar: "many مع الجمع المعدود.",
+      grammar_rule_ar: "many + countable plural; much + uncountable.",
+    },
+    {
+      id: "Q9-23",
+      quiz: "Quiz 9",
+      question_en: "He ________ speak three languages.",
+      options: ["can", "cans", "is can"],
+      correct: 0,
+      arabic_explanation: "بعد can يأتي المصدر بدون s.",
+      why_answer_ar: "can صحيح.",
+      grammar_rule_ar: "Modal: can + base verb.",
+    },
+    {
+      id: "Q9-24",
+      quiz: "Quiz 9",
+      question_en: "I ________ go to the park if the weather is nice.",
+      options: ["will", "would", "did"],
+      correct: 0,
+      arabic_explanation: "شرط أول/قرار مستقبلي محتمل.",
+      why_answer_ar: "will + base.",
+      grammar_rule_ar: "If + present, will + verb.",
+    },
+    {
+      id: "Q9-25",
+      quiz: "Quiz 9",
+      question_en: "They ________ been married for ten years.",
+      options: ["have", "has", "are"],
+      correct: 0,
+      arabic_explanation: "They جمع + present perfect.",
+      why_answer_ar: "They have been…",
+      grammar_rule_ar: "Present perfect: have/has + been/V3.",
+    },
+    {
+      id: "Q9-26",
+      quiz: "Quiz 9",
+      question_en: "This car is ________ expensive than that one.",
+      options: ["more", "most", "as"],
+      correct: 0,
+      arabic_explanation: "صفة طويلة → more + adjective.",
+      why_answer_ar: "more expensive.",
+      grammar_rule_ar: "Comparative (long adjectives): more + adjective + than.",
+    },
+    {
+      id: "Q9-27",
+      quiz: "Quiz 9",
+      question_en: "I ________ born in 1995.",
+      options: ["am", "was", "were"],
+      correct: 1,
+      arabic_explanation: "born مع be في الماضي: I was born.",
+      why_answer_ar: "I + was.",
+      grammar_rule_ar: "Past be: I/he/she/it was; you/we/they were.",
+    },
+    {
+      id: "Q9-28",
+      quiz: "Quiz 9",
+      question_en: "She ________ to the gym every day.",
+      options: ["go", "goes", "going"],
+      correct: 1,
+      arabic_explanation: "عادة يومية → present simple + s مع she.",
+      why_answer_ar: "She goes…",
+      grammar_rule_ar: "Present simple 3rd person: verb + s/es.",
+    },
+    {
+      id: "Q9-29",
+      quiz: "Quiz 9",
+      question_en: "We ________ dinner when the power went out.",
+      options: ["have", "had", "were having"],
+      correct: 2,
+      arabic_explanation: "فعل مستمر + حدث مفاجئ.",
+      why_answer_ar: "were having = past continuous.",
+      grammar_rule_ar: "Past continuous: was/were + V-ing.",
+      vocabulary: "power went out = انقطعت الكهرباء",
+    },
+    {
+      id: "Q9-30",
+      quiz: "Quiz 9",
+      question_en: "________ you like some tea?",
+      options: ["Do", "Would", "Will"],
+      correct: 1,
+      arabic_explanation: "عرض/طلب مهذب.",
+      why_answer_ar: "Would you like…؟ صيغة مهذبة للعرض.",
+      grammar_rule_ar: "Polite offers: Would you like…?",
+    },
+    {
+      id: "Q9-31",
+      quiz: "Quiz 9",
+      question_en: "I ________ seen that movie before.",
+      options: ["already", "yet", "ever"],
+      correct: 0,
+      arabic_explanation: "already تُستخدم للإثبات غالبًا.",
+      why_answer_ar: "I have already seen…",
+      grammar_rule_ar: "Present perfect + already (affirmative).",
+    },
+    {
+      id: "Q9-32",
+      quiz: "Quiz 9",
+      question_en: "My sister is ________ doctor.",
+      options: ["a", "an", "the"],
+      correct: 0,
+      arabic_explanation: "doctor يبدأ بصوت ساكن.",
+      why_answer_ar: "a doctor.",
+      grammar_rule_ar: "a/an: a + consonant sound; an + vowel sound.",
+    },
+    {
+      id: "Q9-33",
+      quiz: "Quiz 9",
+      question_en: "Listen! The birds ________.",
+      options: ["sing", "are singing", "sang"],
+      correct: 1,
+      arabic_explanation: "Listen! حدث الآن.",
+      why_answer_ar: "are singing = present continuous.",
+      grammar_rule_ar: "Present continuous: am/is/are + V-ing.",
+    },
+    {
+      id: "Q9-34",
+      quiz: "Quiz 9",
+      question_en: "He ________ at work right now.",
+      options: ["is", "am", "are"],
+      correct: 0,
+      arabic_explanation: "he مفرد.",
+      why_answer_ar: "He is…",
+      grammar_rule_ar: "Verb be (present): he/she/it + is.",
+    },
+    {
+      id: "Q9-35",
+      quiz: "Quiz 9",
+      question_en: "I ________ to Italy last summer.",
+      options: ["travel", "travels", "traveled"],
+      correct: 2,
+      arabic_explanation: "last summer = ماضٍ بسيط.",
+      why_answer_ar: "traveled هو الماضي.",
+      grammar_rule_ar: "Past simple regular: verb + -ed.",
+      vocabulary: "last summer = الصيف الماضي",
+    },
+    {
+      id: "Q9-36",
+      quiz: "Quiz 9",
+      question_en: "How ________ does this shirt cost?",
+      options: ["many", "much", "long"],
+      correct: 1,
+      arabic_explanation: "سؤال عن السعر: How much…؟",
+      why_answer_ar: "much للسعر.",
+      grammar_rule_ar: "How much is it? / How much does it cost?",
+    },
+    {
+      id: "Q9-37",
+      quiz: "Quiz 9",
+      question_en: "She ________ lunch at the moment.",
+      options: ["has", "is having", "had"],
+      correct: 1,
+      arabic_explanation: "at the moment = الآن.",
+      why_answer_ar: "is having = present continuous.",
+      grammar_rule_ar: "Present continuous: is/are/am + V-ing.",
+    },
+    {
+      id: "Q9-38",
+      quiz: "Quiz 9",
+      question_en: "You ________ smoke in here. It's forbidden.",
+      options: ["shouldn't", "mustn't", "don't have to"],
+      correct: 1,
+      arabic_explanation: "forbidden = ممنوع.",
+      why_answer_ar: "mustn't تعني ممنوع.",
+      grammar_rule_ar: "mustn't = prohibition (منع).",
+    },
+    {
+      id: "Q9-39",
+      quiz: "Quiz 9",
+      question_en: "I ________ breakfast at 7 AM every morning.",
+      options: ["eat", "eats", "eating"],
+      correct: 0,
+      arabic_explanation: "روتين يومي + I.",
+      why_answer_ar: "I eat…",
+      grammar_rule_ar: "Present simple for routines.",
+    },
+    {
+      id: "Q9-40",
+      quiz: "Quiz 9",
+      question_en: "He ________ a book when I called him.",
+      options: ["reads", "read", "was reading"],
+      correct: 2,
+      arabic_explanation: "فعل مستمر في الماضي وقت حدوث فعل آخر.",
+      why_answer_ar: "was reading = past continuous.",
+      grammar_rule_ar: "Past continuous: was/were + V-ing.",
+    },
+  ];
+  try {
+    if (typeof QUESTION_BANK !== "undefined" && Array.isArray(QUESTION_BANK)) QUESTION_BANK.push(...QUIZ9_ITEMS);
+  } catch (e) {
+    // no-op
+  }
+
+  // Quiz 10 (added by request) — rules-focused set
+  const QUIZ10_ITEMS = [
+    {
+      id: "Q10-01",
+      quiz: "Quiz 10",
+      question_en: "We ________ a movie when the phone rang.",
+      options: ["watch", "watched", "were watching"],
+      correct: 2,
+      arabic_explanation: "جملة فيها فعل مستمر + حدث مفاجئ: (when + rang).",
+      why_answer_ar:
+        "الإجابة الصحيحة were watching لأن الفعل كان مستمرًا (نحن في منتصف مشاهدة الفيلم) ثم حدث شيء مفاجئ (رنّ الهاتف) فقطع الفعل.\n" +
+        "لماذا البقية خطأ؟\n" +
+        "- watched = ماضٍ بسيط (حدث انتهى) ولا يعبّر عن الاستمرار وقت الحدث المفاجئ.\n" +
+        "- watch = مضارع/مصدر ولا يناسب سياق الماضي (when the phone rang).",
+      grammar_rule_ar: "Past continuous: was/were + V-ing (for background action) + Past simple (sudden event).",
+      common_mistake_ar: "اختيار الماضي البسيط بدل الماضي المستمر مع (when + حدث مفاجئ).",
+    },
+    {
+      id: "Q10-02",
+      quiz: "Quiz 10",
+      question_en: "Where ________ your parents born?",
+      options: ["was", "were", "are"],
+      correct: 1,
+      arabic_explanation: "born تأتي مع فعل be، وparents جمع، والسؤال عن الماضي.",
+      why_answer_ar:
+        "الإجابة الصحيحة were لأن subject هو your parents (جمع) ولأن السؤال عن الماضي (born).\n" +
+        "لماذا البقية خطأ؟\n" +
+        "- was تُستخدم مع المفرد (I/he/she/it).\n" +
+        "- are للحاضر وليس للماضي.",
+      grammar_rule_ar: "Past be questions: Were + plural subject + born?",
+      common_mistake_ar: "الخلط بين was/were حسب المفرد والجمع.",
+    },
+    {
+      id: "Q10-03",
+      quiz: "Quiz 10",
+      question_en: "She ________ a new car last week.",
+      options: ["buy", "buys", "bought"],
+      correct: 2,
+      arabic_explanation: "last week = زمن ماضٍ منتهٍ → past simple.",
+      why_answer_ar:
+        "الإجابة الصحيحة bought لأن وجود last week يحدد وقتًا في الماضي انتهى، فنستخدم الماضي البسيط.\n" +
+        "لماذا البقية خطأ؟\n" +
+        "- buy = مصدر لا يأتي بعد she في جملة ماضية مثبتة.\n" +
+        "- buys = مضارع بسيط (عادة/روتين) وليس حدثًا ماضيًا.",
+      grammar_rule_ar: "Past simple: buy → bought (finished time markers: last week/month/yesterday).",
+      common_mistake_ar: "اختيار المضارع مع كلمات زمن الماضي (last week).",
+    },
+    {
+      id: "Q10-04",
+      quiz: "Quiz 10",
+      question_en: "How ________ sugar do you want?",
+      options: ["many", "much", "few"],
+      correct: 1,
+      arabic_explanation: "sugar اسم غير معدود → much.",
+      why_answer_ar:
+        "الإجابة الصحيحة much لأن sugar غير معدود (لا يُعدّ بالوحدات عادة).\n" +
+        "لماذا البقية خطأ؟\n" +
+        "- many مع الأسماء المعدودة (apples, students).\n" +
+        "- few تعني (قليل من المعدود) وليست أداة سؤال عن الكمية هنا.",
+      grammar_rule_ar: "How much + uncountable noun / How many + countable plural.",
+      common_mistake_ar: "استخدام many مع اسم غير معدود.",
+    },
+    {
+      id: "Q10-05",
+      quiz: "Quiz 10",
+      question_en: "This is the ________ book I have ever read.",
+      options: ["good", "better", "best"],
+      correct: 2,
+      arabic_explanation: "the + superlative (الأفضل/الأعظم).",
+      why_answer_ar:
+        "الإجابة الصحيحة best لأن وجود (the) يعني تفضيل أعلى (superlative) وليس مقارنة بين اثنين.\n" +
+        "لماذا البقية خطأ؟\n" +
+        "- better هو comparative ويستخدم غالبًا مع than.\n" +
+        "- good صفة عادية بدون تفضيل.",
+      grammar_rule_ar: "Superlative: the + best (good → better → best).",
+      common_mistake_ar: "اختيار better مع وجود the بدون than.",
+    },
+    {
+      id: "Q10-06",
+      quiz: "Quiz 10",
+      question_en: "I ________ my homework yet.",
+      options: ["didn't finish", "haven't finished", "don't finish"],
+      correct: 1,
+      arabic_explanation: "yet في النفي غالبًا مع present perfect.",
+      why_answer_ar:
+        "الإجابة الصحيحة haven't finished لأن (yet) تشير لشيء لم يحدث حتى الآن، فنستخدم present perfect.\n" +
+        "لماذا البقية خطأ؟\n" +
+        "- didn't finish ماضٍ بسيط (وقت منتهٍ) ولا يعطي معنى (حتى الآن).\n" +
+        "- don't finish مضارع بسيط ويعطي معنى عادة/روتين وليس (لم يحدث حتى الآن).",
+      grammar_rule_ar: "Present perfect negative: haven't/hasn't + V3, often with yet.",
+      common_mistake_ar: "استخدام past simple مع yet بدل present perfect.",
+    },
+    {
+      id: "Q10-07",
+      quiz: "Quiz 10",
+      question_en: "Is there ________ milk in the fridge?",
+      options: ["some", "any", "many"],
+      correct: 1,
+      arabic_explanation: "في الأسئلة والنفي نستخدم any غالبًا.",
+      why_answer_ar:
+        "الإجابة الصحيحة any لأن السؤال عام عن وجود شيء.\n" +
+        "لماذا البقية خطأ؟\n" +
+        "- some تُستخدم غالبًا في الجمل المثبتة، وتأتي في السؤال فقط إذا كان عرضًا/طلبًا (Can I have some…?).\n" +
+        "- many تُستخدم للمعدود، وmilk غير معدود.",
+      grammar_rule_ar: "Some/any: any in questions/negatives; some in affirmatives (and polite offers).",
+      common_mistake_ar: "استخدام many مع milk أو استخدام some في سؤال عام.",
+    },
+    {
+      id: "Q10-08",
+      quiz: "Quiz 10",
+      question_en: "What ________ you doing at 8 PM yesterday?",
+      options: ["are", "were", "was"],
+      correct: 1,
+      arabic_explanation: "وقت محدد في الماضي + فعل مستمر → past continuous، ومع you = were.",
+      why_answer_ar:
+        "الإجابة الصحيحة were لأن السؤال عن نشاط كان مستمرًا في وقت محدد بالماضي (8 PM yesterday).\n" +
+        "لماذا البقية خطأ؟\n" +
+        "- are للحاضر.\n" +
+        "- was تُستخدم مع I/he/she/it وليس مع you.",
+      grammar_rule_ar: "Past continuous questions: What were you doing…?",
+      common_mistake_ar: "استخدام was مع you أو استخدام are بدل were في سياق الماضي.",
+    },
+    {
+      id: "Q10-09",
+      quiz: "Quiz 10",
+      question_en: "I ________ play the piano when I was five.",
+      options: ["can", "could", "couldn't"],
+      correct: 1,
+      arabic_explanation: "قدرة في الماضي → could.",
+      why_answer_ar:
+        "الإجابة الصحيحة could لأن الجملة تتكلم عن الاستطاعة في الماضي (when I was five).\n" +
+        "لماذا البقية خطأ؟\n" +
+        "- can للحاضر.\n" +
+        "- couldn't نفي (لا أستطيع)، بينما الجملة هنا مثبتة.",
+      grammar_rule_ar: "Past ability: could + base verb.",
+      common_mistake_ar: "استخدام can مع زمن ماضٍ.",
+    },
+    {
+      id: "Q10-10",
+      quiz: "Quiz 10",
+      question_en: "If it rains, we ________ stay at home.",
+      options: ["will", "would", "did"],
+      correct: 0,
+      arabic_explanation: "شرط أول (احتمال في المستقبل).",
+      why_answer_ar:
+        "الإجابة الصحيحة will لأن هذا شرط حقيقي/محتمل: If + present simple → will + base verb.\n" +
+        "لماذا البقية خطأ؟\n" +
+        "- would غالبًا مع الشرط الثاني (If + past simple) للاحتمالات غير الواقعية.\n" +
+        "- did لا يستخدم لبناء جواب الشرط هنا.",
+      grammar_rule_ar: "First conditional: If + present simple, will + base verb.",
+      common_mistake_ar: "خلط will/would بين الشرط الأول والثاني.",
+    },
+  ];
+  try {
+    if (typeof QUESTION_BANK !== "undefined" && Array.isArray(QUESTION_BANK)) QUESTION_BANK.push(...QUIZ10_ITEMS);
+  } catch (e) {
+    // no-op
+  }
 
   function displayQuizName(internal) {
     return internal === "Quiz 6 (Compensatory)" ? "Quiz 6" : internal;
@@ -2382,7 +3466,16 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
       gramUnitQuizTitle: "اختبار الوحدة",
       gramUnitNoQuestions: "لا توجد أسئلة كويز في دروس هذه الوحدة بعد.",
       gramLandingTitle: "القواعد",
-      gramLandingLead: "اختر: دروس القواعد، أو اختبارات القواعد.",
+      gramLandingLead: "اختر المسار: Grammar 1 (المحتوى الحالي) أو Grammar 2 (قريبًا).",
+      gramTrack1Title: "Grammar 1",
+      gramTrack1Sub: "الدروس والاختبارات الحالية",
+      gramTrack2Title: "Grammar 2",
+      gramTrack2Sub: "ينتظر محتواك (جاهز للتقسيم)",
+      gramTrack2Coming: "هذا المسار جاهز هيكليًا. أرسل محتوى Grammar 2 وسنركّبه هنا بدون تداخل مع Grammar 1.",
+      gramTrack2Next: "المطلوب لإكمال Grammar 2",
+      gramTrack2NextBody: "أرسل الدروس (شرح + أمثلة + تمارين + الإجابات). يمكن إرسالها كنص أو ملف أو JSON.",
+      gramIrregularTitle: "Irregular verbs",
+      gramIrregularSub: "قسم مستقل للأفعال الشاذة",
       gramLandingGrammarCard: "دروس",
       gramLandingGrammarCardSub: "الدروس، الجداول، والشرح",
       gramLandingTestsCard: "اختبارات القواعد",
@@ -2646,7 +3739,16 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
       gramUnitQuizTitle: "Unit quiz",
       gramUnitNoQuestions: "No lesson quiz items for this unit yet.",
       gramLandingTitle: "Grammar",
-      gramLandingLead: "Choose grammar lessons or grammar tests.",
+      gramLandingLead: "Choose a track: Grammar 1 (current content) or Grammar 2 (coming soon).",
+      gramTrack1Title: "Grammar 1",
+      gramTrack1Sub: "Current lessons and tests",
+      gramTrack2Title: "Grammar 2",
+      gramTrack2Sub: "Waiting for your content",
+      gramTrack2Coming: "This track is ready structurally. Send Grammar 2 content and we’ll install it here without mixing it with Grammar 1.",
+      gramTrack2Next: "What to send for Grammar 2",
+      gramTrack2NextBody: "Send lessons (explanation + examples + practice + answers). Text, file, or JSON all work.",
+      gramIrregularTitle: "Irregular verbs",
+      gramIrregularSub: "A dedicated irregular verbs section",
       gramLandingGrammarCard: "Lessons",
       gramLandingGrammarCardSub: "Units, tables, and explanations",
       gramLandingTestsCard: "Grammar tests",
@@ -4059,6 +5161,8 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
     blendedReview: false,
   };
   let grammarLessonsById = {};
+  /** ruleFingerprint -> first lessonId */
+  let grammarRuleFirstLessonByKey = {};
   /** @type {any[]} */
   let grammarQuizPoolAll = [];
   /** lessonId -> { picks: (number|null)[], done?: boolean } */
@@ -4742,6 +5846,7 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
   function bootGrammar() {
     grammarLessonsById = {};
     grammarQuizPoolAll = [];
+    grammarRuleFirstLessonByKey = {};
     const G = typeof GRAMMAR_DATA !== "undefined" && GRAMMAR_DATA && GRAMMAR_DATA.lessons ? GRAMMAR_DATA : { lessons: {} };
     function grammarLessonQuizItemsFlat(L) {
       const out = [];
@@ -4757,6 +5862,10 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
     for (const id of Object.keys(G.lessons || {})) {
       const L = G.lessons[id];
       grammarLessonsById[id] = L;
+      try {
+        const fp = String(L.rule_en || "").toLowerCase().replace(/\s+/g, " ").trim();
+        if (fp && !grammarRuleFirstLessonByKey[fp]) grammarRuleFirstLessonByKey[fp] = id;
+      } catch (_) {}
       const qs = grammarLessonQuizItemsFlat(L);
       for (let i = 0; i < qs.length; i++) {
         grammarQuizPoolAll.push({
@@ -5004,6 +6113,7 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
     grammarSeg = {
       cat: "",
       lesson: "",
+      g2Lesson: "",
       final: false,
       review: false,
       unitQuiz: "",
@@ -5012,6 +6122,7 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
       blendedQuiz: false,
       blendedReview: false,
       hubTab: "",
+      track: "g1",
     };
 
     const clearFinalTick = () => {
@@ -5028,6 +6139,14 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
 
     if (top === "grammar") {
       route = "grammar";
+      // Tracks:
+      // - Grammar 1 (current): default, uses existing routes
+      // - Grammar 2: placeholder until content arrives
+      if (parts[1] === "g2") {
+        grammarSeg.track = "g2";
+        if (parts[2]) grammarSeg.g2Lesson = decodeURIComponent(parts[2]);
+        return;
+      }
       if (parts[1] === "lessons") grammarSeg.hubTab = "lessons";
       else if (parts[1] === "tests") grammarSeg.hubTab = "tests";
       if (parts[1] === "cat" && parts[2]) grammarSeg.cat = decodeURIComponent(parts[2]);
@@ -5070,6 +6189,39 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
     });
   }
 
+  function navToHashMaybe(raw) {
+    const h = String(raw || "");
+    if (!h) return false;
+    if (!(h.startsWith("#/") || h.startsWith("#"))) return false;
+    location.hash = h.startsWith("#") ? h : `#${h}`;
+    return true;
+  }
+
+  function getEvtEl(e) {
+    const t = e && e.target;
+    // Some browsers may target Text nodes or SVG sub-elements.
+    if (t && t.nodeType === 1) return t; // Element
+    if (t && t.parentElement) return t.parentElement;
+    return null;
+  }
+
+  // Global in-app navigation handler.
+  // Capture phase so it still works even if some UI stops bubbling.
+  // Use pointerup to be reliable on mobile.
+  const onNav = (e) => {
+    const el = getEvtEl(e);
+    if (!el || !el.closest) return;
+
+    const backEl = el.closest("[data-back]");
+    const a = el.closest("a[href]");
+    const h = (backEl && backEl.getAttribute("data-back")) || (a && a.getAttribute("href")) || "";
+    if (!h) return;
+    if (!navToHashMaybe(h)) return;
+    e.preventDefault?.();
+  };
+  document.addEventListener("pointerup", onNav, true);
+  document.addEventListener("click", onNav, true);
+
   function renderProgChip() {
     const { T, ans } = totals();
     const chip = $("#progChip");
@@ -5079,7 +6231,8 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
   }
 
   function backBar(hash) {
-    return `<div class="page-back"><button type="button" class="btn btn-sec btn-back" data-back="${esc(hash)}"><span class="btn-back-ic" aria-hidden="true"><svg class="em-ic" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></span><span class="btn-back-txt">${esc(t("back"))}</span></button></div>`;
+    // Use <a href> so back works even if JS listeners fail.
+    return `<div class="page-back"><a class="btn btn-sec btn-back" href="${esc(hash)}" data-back="${esc(hash)}"><span class="btn-back-ic" aria-hidden="true"><svg class="em-ic" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></span><span class="btn-back-txt">${esc(t("back"))}</span></a></div>`;
   }
 
   function emSvg(inner) {
@@ -5104,6 +6257,10 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
     review: emSvg(`<path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/>`),
     chev: emSvg(`<path d="m15 18-6-6 6-6"/>`),
   };
+
+  // Grammar 2 dataset injection point (kept empty by default).
+  // You can later move this into a separate JSON and load it, but for now we keep it embedded.
+  window.__G2_DATA__ = window.__G2_DATA__ || [];
 
   function renderHub() {
     const v = $("#view");
@@ -5272,30 +6429,448 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
         <p class="lead">${esc(t("gramLandingLead"))}</p>
       </div>
       <div class="gram-landing-grid">
-        <button type="button" class="gram-landing-card" id="gramOpenLessons">
+        <button type="button" class="gram-landing-card" id="gramOpenG1">
           <div style="display:flex;align-items:center;gap:14px;min-width:0;flex:1">
             <span class="ic">${EM_ICON.grammar}</span>
             <div class="gram-landing-txt">
-              <h3>${esc(t("gramLandingGrammarCard"))}</h3>
-              <p>${esc(t("gramLandingGrammarCardSub"))}</p>
+              <h3>${esc(t("gramTrack1Title"))}</h3>
+              <p>${esc(t("gramTrack1Sub"))}</p>
             </div>
           </div>
           <span class="go" aria-hidden="true">${EM_ICON.chev}</span>
         </button>
-        <button type="button" class="gram-landing-card" id="gramOpenTests">
+        <button type="button" class="gram-landing-card" id="gramOpenG2">
           <div style="display:flex;align-items:center;gap:14px;min-width:0;flex:1">
             <span class="ic">${EM_ICON.tests}</span>
             <div class="gram-landing-txt">
-              <h3>${esc(t("gramLandingTestsCard"))}</h3>
-              <p>${esc(t("gramLandingTestsCardSub"))}</p>
+              <h3>${esc(t("gramTrack2Title"))}</h3>
+              <p>${esc(t("gramTrack2Sub"))}</p>
+            </div>
+          </div>
+          <span class="go" aria-hidden="true">${EM_ICON.chev}</span>
+        </button>
+        <button type="button" class="gram-landing-card" id="gramOpenIrregular">
+          <div style="display:flex;align-items:center;gap:14px;min-width:0;flex:1">
+            <span class="ic">${EM_ICON.review}</span>
+            <div class="gram-landing-txt">
+              <h3>${esc(t("gramIrregularTitle"))}</h3>
+              <p>${esc(t("gramIrregularSub"))}</p>
             </div>
           </div>
           <span class="go" aria-hidden="true">${EM_ICON.chev}</span>
         </button>
       </div>`;
-    $("#gramOpenLessons").onclick = () => (location.hash = "#/grammar/lessons");
-    $("#gramOpenTests").onclick = () => (location.hash = "#/grammar/tests");
+    $("#gramOpenG1").onclick = () => (location.hash = "#/grammar/lessons");
+    $("#gramOpenG2").onclick = () => (location.hash = "#/grammar/g2");
+    $("#gramOpenIrregular").onclick = () => (location.hash = "#/grammar/lesson/past-simple-irregular-verbs");
     $("[data-back]")?.addEventListener("click", () => (location.hash = "#/"));
+  }
+
+  function renderGrammar2Landing() {
+    const v = $("#view");
+    const G2 = window.__G2_DATA__ || [];
+
+    // If not yet injected, keep fallback minimal list (avoids blank page).
+    if (!Array.isArray(G2) || !G2.length) {
+      v.innerHTML = `${backBar("#/grammar")}<div class="panel glass-card"><p class="empty">${esc(
+        "لم يتم تحميل محتوى Grammar 2 بعد.",
+      )}</p></div>`;
+      $("[data-back]")?.addEventListener("click", () => (location.hash = "#/grammar"));
+      return;
+    }
+
+    const lessonCard = (L) => `<div class="qrow" data-g2-open="${esc(L.id)}" style="cursor:pointer">
+      <div class="t" style="font-weight:850">${esc(L.title)}</div>
+      <div class="m">Grammar 2</div>
+    </div>`;
+
+    v.innerHTML = `
+      ${backBar("#/grammar")}
+      <div class="hero">
+        <h2>${esc(t("gramTrack2Title"))}</h2>
+        <p class="lead">${esc(t("gramTrack2Coming"))}</p>
+      </div>
+      <div class="panel glass-card">
+        <h3 class="gram-sec-title">${esc("Lessons")}</h3>
+        <p class="gram-sec-kicker">${esc("اضغط أي درس لفتحه. (النص الإنجليزي محفوظ كما هو)")}</p>
+        <div class="rowlist" id="g2List">${G2.map(lessonCard).join("")}</div>
+      </div>
+      <div class="panel glass-card" style="margin-top:14px">
+        <h3 class="gram-sec-title">${esc("Copy")}</h3>
+        <p class="gram-sec-kicker">${esc("نسخ محتوى Grammar 2 الحالي كنص.")}</p>
+        <div class="pillrow" style="margin-top:12px">
+          <button type="button" class="btn btn-primary" id="g2CopyAll">${esc("نسخ الكل")}</button>
+          <a class="btn btn-sec" href="#/grammar" style="text-decoration:none">${esc(t("back"))}</a>
+        </div>
+      </div>`;
+
+    const openLesson = (id) => {
+      const L = G2.find((x) => x.id === id);
+      if (!L) return;
+      const getBlock = (k) => (L.blocks || []).find((b) => b.k === k) || { lines: [] };
+      const enLines = (getBlock("EN").lines || []).slice();
+      const arLines = (getBlock("AR").lines || []).slice();
+      const srcLines = (getBlock("SRC").lines || []).slice();
+
+      const mkList = (lines, ltr) =>
+        `<ul style="margin:0;padding-inline-start:18px;line-height:1.75;${ltr ? "direction:ltr;text-align:left" : "direction:rtl;text-align:right"}">${(lines || [])
+          .map((x) => `<li>${esc(x)}</li>`)
+          .join("")}</ul>`;
+
+      const pickExamplesHtml = () => {
+        const isExampleLine = (s) => {
+          const x = String(s || "").trim();
+          if (!x) return false;
+          if (/^source\s*:/i.test(x)) return false;
+          // Prefer real sentences.
+          if (/[.?]$/.test(x) && /[A-Za-z]/.test(x)) return true;
+          return false;
+        };
+        const isHeading = (s) => {
+          const x = String(s || "").trim();
+          if (!x) return false;
+          if (x.length > 42) return false;
+          // headings like AFFIRMATIVE:, NEGATIVE FORM (-), INTERROGATIVE FORM ...
+          return /^[A-Z0-9][A-Z0-9\s/()'+-]*:?$/.test(x) && /[A-Z]/.test(x) && !/[.?]$/.test(x);
+        };
+
+        const groups = [];
+        let cur = { title: "", lines: [] };
+        const pushCur = () => {
+          if (cur.lines.length) groups.push(cur);
+          cur = { title: "", lines: [] };
+        };
+
+        const seenSent = new Set();
+        const pushExample = (arr, s) => {
+          const k = String(s || "").trim();
+          if (!k) return;
+          if (seenSent.has(k)) return;
+          seenSent.add(k);
+          arr.push(k);
+        };
+
+        for (const raw of enLines) {
+          const s = String(raw || "").trim();
+          if (!s) continue;
+          if (isHeading(s)) {
+            pushCur();
+            cur.title = s.replace(/:$/, "");
+            continue;
+          }
+          if (isExampleLine(s)) pushExample(cur.lines, s);
+        }
+        pushCur();
+
+        // Keep 1 example per group; if there are no groups, keep 6 max.
+        const hasGroups = groups.some((g) => g.title && g.lines.length);
+        if (hasGroups) {
+          const body = groups
+            .filter((g) => g.lines.length)
+            .map((g) => {
+              const pick = g.lines.slice(0, 1);
+              // No heading repetition: show the example only.
+              return `<div class="panel" style="padding:14px 14px;border-radius:14px;background:color-mix(in srgb, var(--surface2) 88%, transparent);border:1px solid var(--border)">${mkList(
+                pick,
+                true,
+              )}</div>`;
+            })
+            .join(`<div style="height:10px"></div>`);
+          return body || `<p class="empty">(no examples found)</p>`;
+        }
+
+        const fallback = [];
+        for (const s of enLines) if (isExampleLine(s)) pushExample(fallback, s);
+        return mkList(fallback.length ? fallback : ["(no examples found)"], true);
+      };
+
+      const buildPractice = () => {
+        const ex = [];
+
+        const pushQ = (q) => {
+          if (!q || !q.answer_en || !q.stem_en || !q.choices_en || q.choices_en.length < 2) return;
+          ex.push(q);
+        };
+
+        const isSentence = (s) => {
+          const x = String(s || "").trim();
+          return !!x && /[A-Za-z]/.test(x) && /[.?]$/.test(x);
+        };
+
+        const explainBe = (sent, answer) => {
+          const s = String(sent || "");
+          const a = String(answer || "");
+          if (/^am$/i.test(a) || /^am not$/i.test(a)) return "شرح: نستخدم am مع I فقط.";
+          if (/^is$/i.test(a) || /^is not$/i.test(a) || /^isn't$/i.test(a)) return "شرح: نستخدم is مع he / she / it.";
+          if (/^are$/i.test(a) || /^are not$/i.test(a) || /^aren't$/i.test(a)) return "شرح: نستخدم are مع you / we / they.";
+          if (/^am$/i.test(a) || /^is$/i.test(a) || /^are$/i.test(a)) return "شرح: اختر فعل be الصحيح حسب الفاعل.";
+          // generic fallback
+          return "شرح: اختر الصيغة الصحيحة حسب القاعدة في الشرح.";
+        };
+
+        const blankFirst = (line, opts) => {
+          const m = String(line).match(/^\s*([A-Za-z]+(?:'[A-Za-z]+)?)\b(.*)$/);
+          if (!m) return null;
+          const head = m[1];
+          const rest = m[2] || "";
+          const correct = head;
+          const choices = shuffle([correct, ...opts.filter((x) => x !== correct)]).slice(0, 4);
+          return {
+            prompt_ar: "اختر الكلمة الصحيحة لإكمال السؤال:",
+            stem_en: `____${rest}`,
+            choices_en: choices,
+            answer_en: correct,
+            explain_ar: explainBe(line, correct),
+          };
+        };
+        const beHeads = ["Am", "Are", "Is"];
+        const doHeads = ["Do", "Does", "Did"];
+        const willHeads = ["Will"];
+        const canHeads = ["Can"];
+        for (const line of enLines) {
+          if (line.startsWith("Am ") || line.startsWith("Are ") || line.startsWith("Is ")) {
+            const q = blankFirst(line, beHeads);
+            if (q) pushQ(q);
+          } else if (line.startsWith("Do ") || line.startsWith("Does ") || line.startsWith("Did ")) {
+            const q = blankFirst(line, doHeads);
+            if (q) pushQ(q);
+          } else if (line.startsWith("Will ")) {
+            const q = blankFirst(line, willHeads);
+            if (q) pushQ(q);
+          } else if (line.startsWith("Can ")) {
+            const q = blankFirst(line, canHeads);
+            if (q) pushQ(q);
+          }
+        }
+        // Only build exercises from the current lesson's English lines (no cross-lesson mixing).
+        const addBlankFromLine = (line, target, options) => {
+          const idx = String(line).indexOf(target);
+          if (idx < 0) return;
+          const stem = String(line).slice(0, idx) + "____" + String(line).slice(idx + target.length);
+          const correct = target;
+          const choices = shuffle([correct, ...options.filter((x) => x !== correct)]).slice(0, 4);
+          pushQ({ prompt_ar: "اختر الكلمة الصحيحة:", stem_en: stem, choices_en: choices, answer_en: correct, explain_ar: explainBe(line, correct) });
+        };
+        for (const line of enLines) {
+          if (line.includes(" and ")) addBlankFromLine(line, "and", ["or", "but"]);
+          if (line.includes(" or ")) addBlankFromLine(line, "or", ["and", "but"]);
+          if (line.includes(" but ")) addBlankFromLine(line, "but", ["and", "or"]);
+          if (line.includes("There is ")) addBlankFromLine(line, "is", ["are"]);
+          if (line.includes("There are ")) addBlankFromLine(line, "are", ["is"]);
+          if (line.includes(" going to ")) addBlankFromLine(line, "going to", ["will"]);
+          if (line.includes("have ") || line.includes("has ")) addBlankFromLine(line, "have", ["has"]);
+        }
+
+        // Sentence-based be practice (am/is/are + negatives) from examples only (English as-is).
+        const sents = enLines.filter(isSentence);
+        const beTargets = [" am not ", " are not ", " is not ", " am ", " are ", " is ", " aren't ", " isn't "];
+        for (const s of sents) {
+          const t = beTargets.find((tok) => String(s).includes(tok));
+          if (!t) continue;
+          const targetWord = t.trim();
+          const idx = String(s).indexOf(t);
+          if (idx < 0) continue;
+          const stem = String(s).slice(0, idx) + " ____ " + String(s).slice(idx + t.length);
+          const pool = ["am", "is", "are", "am not", "isn't", "aren't", "is not", "are not"].filter(Boolean);
+          const correct = targetWord;
+          const choices = shuffle([correct, ...pool.filter((x) => x !== correct)]).slice(0, 4);
+          pushQ({
+            prompt_ar: "اختر الصيغة الصحيحة لفعل be:",
+            stem_en: stem.replace(/\s+/g, " ").trim(),
+            choices_en: choices,
+            answer_en: correct,
+            explain_ar: explainBe(s, correct),
+          });
+        }
+
+        return ex;
+      };
+      const practice = buildPractice();
+
+      const blocksHtml = `
+        <div class="gram-mini-tabs" style="margin:0 0 12px">
+          <button type="button" class="pill on" data-g2tab="explain">شرح</button>
+          <button type="button" class="pill" data-g2tab="examples">أمثلة</button>
+          <button type="button" class="pill" data-g2tab="practice">تمارين</button>
+        </div>
+        <div id="g2TabExplain">
+          <div class="panel glass-card">
+            <h3 class="gram-sec-title">شرح</h3>
+            ${mkList(arLines.length ? arLines : ["(لا يوجد شرح عربي مرفق لهذا الدرس بعد)"], false)}
+          </div>
+        </div>
+        <div id="g2TabExamples" style="display:none">
+          <div class="panel glass-card">
+            <h3 class="gram-sec-title">Examples (English as-is)</h3>
+            <p class="gram-sec-kicker">عرض مختصر: مثالين لكل قسم (حسب العناوين الموجودة في نفس النص).</p>
+            ${pickExamplesHtml()}
+          </div>
+          ${
+            srcLines.length
+              ? `<div class="panel glass-card" style="margin-top:12px"><h3 class="gram-sec-title">Source</h3>${mkList(srcLines, true)}</div>`
+              : ""
+          }
+        </div>
+        <div id="g2TabPractice" style="display:none">
+          ${
+            practice.length
+              ? `<div class="panel glass-card">
+                <h3 class="gram-sec-title">تمارين</h3>
+                <p class="gram-sec-kicker">نظام كويز: اختيارات + إجابة صحيحة + شرح. (مبني من نفس نصوص الدرس)</p>
+                <div class="pillrow" style="margin-top:12px;justify-content:space-between;gap:10px">
+                  <button type="button" class="btn btn-sec" id="g2PPrev">السابق</button>
+                  <div class="chip" id="g2PProg" dir="ltr" style="font-weight:850">1/1</div>
+                  <button type="button" class="btn btn-sec" id="g2PNext">التالي</button>
+                </div>
+                <div id="g2Practice"></div>
+              </div>`
+              : `<div class="panel glass-card"><p class="empty">لا توجد تمارين جاهزة لهذا الدرس بعد.</p></div>`
+          }
+        </div>
+      `;
+      v.innerHTML = `
+        ${backBar("#/grammar/g2")}
+        <div class="hero">
+          <h2>${esc(L.title)}</h2>
+          <p class="lead">${esc("Grammar 2 — درس مستقل")}</p>
+        </div>
+        <div class="pillrow" style="margin:0 0 10px">
+          <button type="button" class="btn btn-primary" id="g2CopyLesson">${esc("نسخ الدرس")}</button>
+          <a class="btn btn-sec" href="#/grammar/g2" style="text-decoration:none">${esc("رجوع إلى Grammar 2")}</a>
+        </div>
+        ${blocksHtml}
+      `;
+      const setTab = (k) => {
+        $("#g2TabExplain").style.display = k === "explain" ? "block" : "none";
+        $("#g2TabExamples").style.display = k === "examples" ? "block" : "none";
+        $("#g2TabPractice").style.display = k === "practice" ? "block" : "none";
+        v.querySelectorAll("[data-g2tab]").forEach((b) => b.classList.toggle("on", b.getAttribute("data-g2tab") === k));
+        if (k === "practice" && practice.length) {
+          const host = $("#g2Practice");
+          if (!host) return;
+          if (host.dataset.built) return;
+          host.dataset.built = "1";
+
+          // Build a "real quiz" experience without touching the main quiz system.
+          if (!state.g2 || typeof state.g2 !== "object") state.g2 = {};
+          if (!state.g2[L.id] || typeof state.g2[L.id] !== "object") state.g2[L.id] = { pos: 0, picks: [] };
+          const st = state.g2[L.id];
+          if (!Array.isArray(st.picks)) st.picks = [];
+          if (typeof st.pos !== "number") st.pos = 0;
+          st.pos = clamp(st.pos, 0, Math.max(0, practice.length - 1));
+          while (st.picks.length < practice.length) st.picks.push(null);
+
+          const letters = ["A", "B", "C", "D"];
+          const renderQuiz = () => {
+            const qi = clamp(st.pos, 0, practice.length - 1);
+            st.pos = qi;
+            saveState();
+
+            const q = practice[qi];
+            const picked = st.picks[qi];
+            const locked = picked !== null && picked !== undefined;
+            const correct = q.answer_en;
+            const correctIdx = (q.choices_en || []).indexOf(correct);
+            const ok = locked && picked === correctIdx;
+            const answered = st.picks.filter((x) => x !== null && x !== undefined).length;
+
+            $("#g2PProg").textContent = `${qi + 1}/${practice.length}`;
+            $("#g2PPrev").disabled = qi <= 0;
+            $("#g2PNext").disabled = qi >= practice.length - 1;
+
+            const opts = (q.choices_en || [])
+              .slice(0, 4)
+              .map((c, oi) => {
+                let cls = "opt";
+                if (locked) cls += oi === correctIdx ? " correct" : picked === oi ? " wrong" : "";
+                return `<button type="button" class="${cls}" data-g2qix="${qi}" data-g2oix="${oi}" ${
+                  locked ? "disabled" : ""
+                }><span class="L">${letters[oi] || ""}</span><span class="txt" dir="ltr">${esc(c)}</span></button>`;
+              })
+              .join("");
+
+            const fbCls = !locked ? "" : ok ? "ok" : "bad";
+            const fbOn = locked ? "on" : "";
+            host.innerHTML = `
+              <div class="gram-step-wrap">
+                <p class="gram-answer-remain">${esc(fmtAnswerRemainLine("quizAnswerRemainLine", answered, practice.length))}</p>
+                <div class="gram-qblock" data-qix="${qi}">
+                  <div class="q-label gram-q-line">
+                    <span class="gram-q-num">${qi + 1}.</span>
+                    <span class="ar-text" style="display:inline">${esc(q.prompt_ar || "")}</span>
+                  </div>
+                  <div class="en-text" dir="ltr" style="margin:8px 0 12px;font-weight:900">${esc(q.stem_en || "")}</div>
+                  <div class="opts">${opts}</div>
+                  <div class="gram-feedback ${fbCls} ${fbOn}">
+                    <strong>${ok ? esc(t("gramCorrect")) : esc(t("gramWrong"))}</strong>
+                    ${locked ? `— ${esc(t("gramWhy"))}: ${esc(q.explain_ar || "—")}` : ""}
+                    ${locked ? `<br/>${esc(t("gramUsedRule"))}: ${esc("اختر الصيغة الصحيحة حسب الفاعل/القاعدة في الشرح.")}` : ""}
+                  </div>
+                </div>
+              </div>
+            `;
+
+            host.querySelectorAll("[data-g2qix]").forEach((btn) => {
+              btn.addEventListener("click", () => {
+                const qix = parseInt(btn.getAttribute("data-g2qix"), 10);
+                const oix = parseInt(btn.getAttribute("data-g2oix"), 10);
+                if (!Number.isFinite(qix) || !Number.isFinite(oix)) return;
+                if (st.picks[qix] !== null && st.picks[qix] !== undefined) return;
+                st.picks[qix] = oix;
+                saveState();
+                renderQuiz();
+              });
+            });
+          };
+
+          $("#g2PPrev").onclick = () => {
+            if (st.pos > 0) st.pos--;
+            renderQuiz();
+          };
+          $("#g2PNext").onclick = () => {
+            if (st.pos < practice.length - 1) st.pos++;
+            renderQuiz();
+          };
+
+          renderQuiz();
+        }
+      };
+      v.querySelectorAll("[data-g2tab]").forEach((b) => b.addEventListener("click", () => setTab(b.getAttribute("data-g2tab"))));
+      $("#g2CopyLesson").onclick = async () => {
+        const plain = [L.title, ...L.blocks.flatMap((b) => [b.k + ":", ...(b.lines || [])])].join("\n");
+        try {
+          await navigator.clipboard.writeText(plain);
+          toast("تم النسخ.", "ok");
+        } catch (_) {
+          toast("لم يتم النسخ تلقائياً.", "bad");
+        }
+      };
+    };
+
+    // If user navigated directly to a lesson hash, open it.
+    if (grammarSeg.g2Lesson) {
+      openLesson(grammarSeg.g2Lesson);
+      return;
+    }
+
+    $("#g2List")?.querySelectorAll("[data-g2-open]").forEach((row) => {
+      row.addEventListener("click", () => {
+        const id = row.getAttribute("data-g2-open");
+        if (!id) return;
+        location.hash = "#/grammar/g2/" + encodeURIComponent(id);
+      });
+    });
+
+    $("#g2CopyAll").onclick = async () => {
+      const plain = G2.map((L) => [L.title, ...L.blocks.flatMap((b) => [b.k + ":", ...(b.lines || [])]), ""].join("\n")).join("\n");
+      try {
+        await navigator.clipboard.writeText(plain);
+        toast("تم النسخ.", "ok");
+      } catch (_) {
+        toast("لم يتم النسخ تلقائياً.", "bad");
+      }
+    };
+    $("[data-back]")?.addEventListener("click", () => (location.hash = "#/grammar"));
   }
 
   function renderGrammarLessonsHub() {
@@ -5489,6 +7064,62 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
     $("[data-back]")?.addEventListener("click", () => (location.hash = "#/grammar/lessons"));
   }
 
+  /** 52 irregular verbs (approved list) — shared by lesson table + quiz wiring */
+  const IRR_APPROVED_MASTER = [
+    { base: "become", past: "became", v3: "become", meaning: "يصبح", past_ar: "أصبح", v3_ar: "يصبح / يكون قد أصبح", group: 1, stage: 1 },
+    { base: "come", past: "came", v3: "come", meaning: "يأتي", past_ar: "جاء / أتى", v3_ar: "يأتي / قَدِمَ", group: 1, stage: 1 },
+    { base: "cost", past: "cost", v3: "cost", meaning: "يكلف", past_ar: "كَلَّفَ", v3_ar: "كَلَّفَ", group: 1, stage: 1 },
+    { base: "hurt", past: "hurt", v3: "hurt", meaning: "يؤذي", past_ar: "آذى", v3_ar: "آذى", group: 1, stage: 1 },
+    { base: "let", past: "let", v3: "let", meaning: "يسمح", past_ar: "سمح", v3_ar: "سمح", group: 1, stage: 1 },
+    { base: "put", past: "put", v3: "put", meaning: "يضع", past_ar: "وضع", v3_ar: "وضع", group: 1, stage: 1 },
+    { base: "read", past: "read", v3: "read", meaning: "يقرأ", past_ar: "قرأ", v3_ar: "قرأ", group: 1, stage: 1 },
+    { base: "run", past: "ran", v3: "run", meaning: "يركض", past_ar: "ركض", v3_ar: "يركض", group: 1, stage: 1 },
+    { base: "bring", past: "brought", v3: "brought", meaning: "يحضر", past_ar: "أحضر", v3_ar: "أحضر", group: 1, stage: 2 },
+    { base: "build", past: "built", v3: "built", meaning: "يبني", past_ar: "بنى", v3_ar: "بنى", group: 1, stage: 2 },
+    { base: "buy", past: "bought", v3: "bought", meaning: "يشتري", past_ar: "اشترى", v3_ar: "اشترى", group: 1, stage: 2 },
+    { base: "feel", past: "felt", v3: "felt", meaning: "يشعر", past_ar: "شعر", v3_ar: "شعر", group: 1, stage: 2 },
+    { base: "find", past: "found", v3: "found", meaning: "يجد", past_ar: "وجد", v3_ar: "وجد", group: 1, stage: 2 },
+    { base: "get", past: "got", v3: "got", meaning: "يحصل", past_ar: "حصل على / أخذ", v3_ar: "حصل على", group: 1, stage: 2 },
+    { base: "have", past: "had", v3: "had", meaning: "يملك", past_ar: "كان لديه / امتلك", v3_ar: "كان لديه", group: 1, stage: 2 },
+    { base: "hear", past: "heard", v3: "heard", meaning: "يسمع", past_ar: "سمع", v3_ar: "سمع", group: 1, stage: 2 },
+    { base: "keep", past: "kept", v3: "kept", meaning: "يحافظ", past_ar: "احتفظ بـ / أبقى", v3_ar: "احتفظ بـ", group: 1, stage: 2 },
+    { base: "leave", past: "left", v3: "left", meaning: "يغادر", past_ar: "غادر / ترك", v3_ar: "غادر / ترك", group: 1, stage: 3 },
+    { base: "learn", past: "learned", v3: "learned", meaning: "يتعلم", past_ar: "تعلّم", v3_ar: "تعلّم", group: 1, stage: 3 },
+    { base: "make", past: "made", v3: "made", meaning: "يصنع", past_ar: "صنع / جعل", v3_ar: "صنع / جعل", group: 1, stage: 3 },
+    { base: "meet", past: "met", v3: "met", meaning: "يقابل", past_ar: "قابل / التقى", v3_ar: "قابل", group: 1, stage: 4 },
+    { base: "pay", past: "paid", v3: "paid", meaning: "يدفع", past_ar: "دفع", v3_ar: "دفع", group: 1, stage: 4 },
+    { base: "say", past: "said", v3: "said", meaning: "يقول", past_ar: "قال", v3_ar: "قال", group: 1, stage: 4 },
+    { base: "sell", past: "sold", v3: "sold", meaning: "يبيع", past_ar: "باع", v3_ar: "باع", group: 1, stage: 4 },
+    { base: "send", past: "sent", v3: "sent", meaning: "يرسل", past_ar: "أرسل", v3_ar: "أرسل", group: 1, stage: 4 },
+    { base: "sit", past: "sat", v3: "sat", meaning: "يجلس", past_ar: "جلس", v3_ar: "جلس", group: 1, stage: 4 },
+    { base: "sleep", past: "slept", v3: "slept", meaning: "ينام", past_ar: "نام", v3_ar: "نام", group: 1, stage: 4 },
+    { base: "spend", past: "spent", v3: "spent", meaning: "يقضي / ينفق", past_ar: "أنفق / قضى", v3_ar: "أنفق", group: 1, stage: 4 },
+    { base: "teach", past: "taught", v3: "taught", meaning: "يعلم", past_ar: "علّم", v3_ar: "علّم", group: 1, stage: 4 },
+    { base: "tell", past: "told", v3: "told", meaning: "يخبر", past_ar: "أخبر / قال", v3_ar: "أخبر", group: 1, stage: 5 },
+    { base: "think", past: "thought", v3: "thought", meaning: "يفكر", past_ar: "فكّر / ظنّ", v3_ar: "فكّر", group: 1, stage: 5 },
+    { base: "understand", past: "understood", v3: "understood", meaning: "يفهم", past_ar: "فهم", v3_ar: "فهم", group: 1, stage: 5 },
+    { base: "be (am/is/are)", past: "was / were", v3: "been", meaning: "يكون", past_ar: "كان / كانوا", v3_ar: "كان قد… / في حالة كون", group: 2, stage: 6 },
+    { base: "begin", past: "began", v3: "begun", meaning: "يبدأ", past_ar: "بدأ", v3_ar: "بدأ / اُبتُدِئَ", group: 2, stage: 6 },
+    { base: "choose", past: "chose", v3: "chosen", meaning: "يختار", past_ar: "اختار", v3_ar: "اُختير / مُختار", group: 2, stage: 6 },
+    { base: "do", past: "did", v3: "done", meaning: "يفعل", past_ar: "فعل", v3_ar: "فُعلَ / تمّ فعله", group: 2, stage: 6 },
+    { base: "drink", past: "drank", v3: "drunk", meaning: "يشرب", past_ar: "شرب", v3_ar: "شُرِبَ / مُشْرَب", group: 2, stage: 6 },
+    { base: "eat", past: "ate", v3: "eaten", meaning: "يأكل", past_ar: "أكل", v3_ar: "أُكِلَ / مَأْكُول", group: 2, stage: 6 },
+    { base: "fall", past: "fell", v3: "fallen", meaning: "يسقط", past_ar: "سقط / وقع", v3_ar: "سقط / ساقط", group: 2, stage: 6 },
+    { base: "fly", past: "flew", v3: "flown", meaning: "يطير", past_ar: "طار", v3_ar: "طار / مُطير", group: 2, stage: 6 },
+    { base: "forget", past: "forgot", v3: "forgotten", meaning: "ينسى", past_ar: "نسي", v3_ar: "مَنْسِيّ / نُسي", group: 2, stage: 6 },
+    { base: "give", past: "gave", v3: "given", meaning: "يعطي", past_ar: "أعطى", v3_ar: "أُعْطِيَ / مُعْطًى", group: 2, stage: 7 },
+    { base: "go", past: "went", v3: "gone", meaning: "يذهب", past_ar: "ذهب", v3_ar: "ذَهَبَ / غائب", group: 2, stage: 7 },
+    { base: "grow", past: "grew", v3: "grown", meaning: "ينمو", past_ar: "نما / زرع", v3_ar: "نَمَى / مَزْروع", group: 2, stage: 7 },
+    { base: "know", past: "knew", v3: "known", meaning: "يعرف", past_ar: "عرف", v3_ar: "مَعْرُوف / عُرِفَ", group: 2, stage: 7 },
+    { base: "see", past: "saw", v3: "seen", meaning: "يرى", past_ar: "رأى", v3_ar: "مَرْئِيّ / رُئِيَ", group: 2, stage: 7 },
+    { base: "speak", past: "spoke", v3: "spoken", meaning: "يتكلم", past_ar: "تكلّم / قال", v3_ar: "تُكَلَّمَ / مَنْطُوق", group: 2, stage: 7 },
+    { base: "swim", past: "swam", v3: "swum", meaning: "يسبح", past_ar: "سبح", v3_ar: "سُبِحَ / مَسْبُوح", group: 2, stage: 7 },
+    { base: "take", past: "took", v3: "taken", meaning: "يأخذ", past_ar: "أخذ", v3_ar: "أُخِذَ / مَأْخُوذ", group: 2, stage: 7 },
+    { base: "wake", past: "woke", v3: "woken", meaning: "يستيقظ", past_ar: "استيقظ", v3_ar: "مُسْتَيْقِظ", group: 2, stage: 7 },
+    { base: "wear", past: "wore", v3: "worn", meaning: "يلبس", past_ar: "لبس", v3_ar: "مَلْبُوس / لُبِسَ", group: 2, stage: 7 },
+    { base: "write", past: "wrote", v3: "written", meaning: "يكتب", past_ar: "كتب", v3_ar: "مَكْتُوب / كُتِبَ", group: 2, stage: 7 },
+  ];
+
   function renderGrammarLesson(lessonId) {
     const L = grammarLessonsById[lessonId];
     const v = $("#view");
@@ -5527,13 +7158,87 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
         }
         <span aria-current="page">${esc(lessonTitleCrumb)}</span>
       </nav>`;
-    const explRaw = String(L.explanation_ar || "").trim();
-    const explainBlock = explRaw
+    const hasText = (s) => !!String(s || "").trim();
+    const topicInfer = () => {
+      const blob = [L.title_en, L.title_ar, L.rule_en, L.explanation_ar, L.keywords ? L.keywords.join(" ") : ""]
+        .join(" ")
+        .toLowerCase();
+      const TOPICS = [
+        "past simple",
+        "present simple",
+        "present continuous",
+        "present perfect",
+        "articles",
+        "prepositions",
+        "there is",
+        "there are",
+        "comparative",
+        "superlative",
+        "countable",
+        "uncountable",
+        "going to",
+        "will",
+        "possessive adjectives",
+        "pronouns",
+      ];
+      for (const k of TOPICS) {
+        if (blob.includes(k)) return { en: k, ar: EXTRA_HINTS[k] || "" };
+      }
+      return { en: "", ar: "" };
+    };
+    const topic = topicInfer();
+    const contextExample = () => {
+      const ex = Array.isArray(L.examples) && L.examples.length ? L.examples[0] : null;
+      if (ex && (ex.en || ex.ar)) return ex;
+      const qx = Array.isArray(L.quiz) && L.quiz.length ? L.quiz[0] : null;
+      if (qx && qx.question_en) return { en: qx.question_en, ar: "" };
+      return null;
+    };
+    const ctx = contextExample();
+    const conceptText = String(L.explanation_ar || "").trim();
+    const explainBlock = conceptText
       ? `<div class="gram-lesson-lead-card">
         <span class="gram-lesson-lead-kicker">${esc(t("gramLessonExplainLabel"))}</span>
-        ${grammarScopeDescHtml(L.explanation_ar)}
+        ${grammarScopeDescHtml(conceptText)}
+        ${
+          ctx && ctx.en
+            ? `<div class="panel" style="margin-top:12px;padding:12px 14px;border-radius:12px;background:color-mix(in srgb, var(--surface) 78%, transparent);border:1px dashed color-mix(in srgb, var(--border) 75%, transparent)">
+              <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:900;margin-bottom:6px">Context example</div>
+              <div class="en-text" dir="ltr">${esc(ctx.en)}</div>
+              ${ctx.ar ? `<div class="ar-text" style="margin-top:6px">${esc(ctx.ar)}</div>` : ""}
+            </div>`
+            : ""
+        }
       </div>`
       : "";
+
+    const isIrregular = lessonId === "past-simple-irregular-verbs";
+    const irrNormBaseKey = (s) =>
+      String(s || "")
+        .trim()
+        .toLowerCase()
+        .replace(/\s*\/\s*/g, "/")
+        .replace(/\s+/g, " ");
+    const irrMasterByBase = (() => {
+      const m = new Map();
+      for (const x of IRR_APPROVED_MASTER) {
+        const k = irrNormBaseKey(x.base);
+        if (k) m.set(k, x);
+      }
+      return m;
+    })();
+    const irrLookupRow = (row) => {
+      if (!Array.isArray(row) || row.length < 2) return null;
+      const v1 = irrNormBaseKey(row[1]);
+      return irrMasterByBase.get(v1) || null;
+    };
+    const irrHeaderAr = (h) => {
+      const s = String(h || "").trim();
+      if (s.includes("المصدر") && s.includes("V1")) return "المضارع (الشكل الأول)";
+      if (s.includes("الماضي") && s.includes("V2")) return "الماضي";
+      if (s.includes("المشار إليه") || (s.includes("V3") && s.includes("المشار"))) return "التصريف الثالث";
+      return s;
+    };
 
     function grammarLessonTableBlock(T) {
       if (!T || !T.headers || !T.rows) return "";
@@ -5544,15 +7249,42 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
       const cap = titleRaw
         ? `<h4 class="gram-table-caption" style="margin:14px 0 8px;font-size:15px;font-weight:700;color:var(--text)">${esc(titleRaw)}</h4>`
         : "";
-      const inner = `<table class="gram-table"><thead><tr>${T.headers.map((h) => `<th>${esc(h)}</th>`).join("")}</tr></thead><tbody>${T.rows
-        .map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join("")}</tr>`)
-        .join("")}</tbody></table>`;
+      const thead =
+        isIrregular && Array.isArray(T.headers)
+          ? `<thead><tr>${T.headers.map((h) => `<th dir="rtl" style="font-family:var(--font);font-weight:800">${esc(irrHeaderAr(h))}</th>`).join("")}</tr></thead>`
+          : `<thead><tr>${T.headers.map((h) => `<th>${esc(h)}</th>`).join("")}</tr></thead>`;
+      const tbodyIrregular = () =>
+        `<tbody>${T.rows
+          .map((r) => {
+            const irr = irrLookupRow(r);
+            const cells = r.map((c, colIdx) => {
+              const raw = String(c ?? "").trim();
+              if (colIdx === 0) return `<td dir="rtl" style="vertical-align:top">${esc(raw)}</td>`;
+              let arHint = "";
+              if (irr) {
+                if (colIdx === 1) arHint = String(irr.meaning || "").trim();
+                else if (colIdx === 2) arHint = String(irr.past_ar || "").trim();
+                else if (colIdx === 3) arHint = String(irr.v3_ar || "").trim();
+              }
+              const sub = arHint
+                ? `<div dir="rtl" style="margin-top:5px"><span class="chip" style="font-size:12px;opacity:.92">${esc(arHint)}</span></div>`
+                : "";
+              return `<td dir="ltr" style="font-family:var(--irr-en);font-weight:750;vertical-align:top">${esc(raw)}${sub}</td>`;
+            });
+            return `<tr>${cells.join("")}</tr>`;
+          })
+          .join("")}</tbody>`;
+      const tbodyDefault = () =>
+        `<tbody>${T.rows.map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody>`;
+      const inner = `<table class="gram-table gram-table--irr-source">${thead}${isIrregular ? tbodyIrregular() : tbodyDefault()}</table>`;
       return cap + `<div class="table-responsive" role="region" aria-label="${esc(titleRaw || t("gramSecTable"))}">${inner}</div>`;
     }
     const tbl =
       Array.isArray(L.tables) && L.tables.length > 0
         ? L.tables.map(grammarLessonTableBlock).join("")
         : grammarLessonTableBlock(L.table);
+    const hasTable = !!String(tbl || "").trim();
+    const hasRule = hasText(L.rule_en);
 
     const hasMultiQuiz =
       Array.isArray(L.quizStages) &&
@@ -5564,6 +7296,8 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
 
     const exList = L.examples || [];
     const qs = hasMultiQuiz ? [] : Array.isArray(L.quiz) ? L.quiz : [];
+    const hasExamples = Array.isArray(exList) && exList.length > 0;
+    const hasQuiz = !!(hasMultiQuiz || (Array.isArray(qs) && qs.length > 0));
 
     const st = grammarLessonQuiz[lessonId];
     const favOn = !!state.grammar.fav[lessonId];
@@ -5611,7 +7345,7 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
           if (locked) cls += oi === item.correct ? " correct" : picked === oi ? " wrong" : "";
           return `<button type="button" class="${cls}" data-qix="${qi}" data-oix="${oi}" data-gram-quiz="${esc(
             dataGramQuiz
-          )}" ${locked ? "disabled" : ""}><span class="L">${letters[oi]}</span><span class="txt gram-opt-tok" id="${idsPrefix}-opt-${qi}-${oi}"></span></button>`;
+          )}" ${locked ? "disabled" : ""}><span class="L">${letters[oi]}</span><span class="txt gram-opt-tok" dir="ltr" id="${idsPrefix}-opt-${qi}-${oi}"></span></button>`;
         })
         .join("");
       const fbCls = !locked ? "" : ok ? "ok" : "bad";
@@ -5691,7 +7425,7 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
         .map((op, oi) => {
           let cls = "opt";
           if (locked) cls += oi === item.correct ? " correct" : picked === oi ? " wrong" : "";
-          return `<button type="button" class="${cls}" data-qix="${qi}" data-oix="${oi}" data-gram-quiz="legacy" ${locked ? "disabled" : ""}><span class="L">${letters[oi]}</span><span class="txt gram-opt-tok" id="gramL-opt-${qi}-${oi}"></span></button>`;
+          return `<button type="button" class="${cls}" data-qix="${qi}" data-oix="${oi}" data-gram-quiz="legacy" ${locked ? "disabled" : ""}><span class="L">${letters[oi]}</span><span class="txt gram-opt-tok" dir="ltr" id="gramL-opt-${qi}-${oi}"></span></button>`;
         })
         .join("");
       const deepWrong = locked && !ok ? grammarDeepFeedbackHtml(item, picked) : "";
@@ -5723,67 +7457,103 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
       quizSection = `${quizHtml}`;
     }
 
-    const notesPanelInner = `<div class="gram-notes-stack">
-        <div class="gram-notes-lead-wrap">${grammarArabicFlowHtml(L.notes_ar)}</div>
-        <div class="gram-subsec">
-          <h5>${esc(t("gramMistakes"))}</h5>
-          ${grammarArabicFlowHtml(L.mistakes_ar)}
-        </div>
-        <div class="gram-subsec">
-          <h5>${esc(t("gramCompare"))}</h5>
-          ${grammarArabicFlowHtml(L.compare_ar)}
-        </div>
-      </div>`;
+    // Prevent repetition: if rule_en already appeared in a previous lesson, show a reference instead of repeating.
+    const ruleFp = String(L.rule_en || "").toLowerCase().replace(/\s+/g, " ").trim();
+    const firstRuleLesson = ruleFp ? grammarRuleFirstLessonByKey[ruleFp] : "";
+    const isRuleDuplicate = !!(firstRuleLesson && firstRuleLesson !== lessonId);
 
-    const rulePanel = `<div class="panel gram-sec">
-        <h3 style="margin:0 0 10px;font-size:15px;font-weight:900">${esc(t("gramSecRule"))}</h3>
-        <div class="gram-rule-sec-inner">
-          <div class="gram-rule-hint-wrap">
-            <p class="gram-rule-hint">${esc(t("gramRuleEnHint"))}</p>
-          </div>
-          <div class="gram-rule-stack">${grammarFormatRuleEn(L.rule_en)}</div>
-        </div>
-      </div>`;
+    const warnMark = (why) => `<span class="warn" title="${esc(why)}">❗</span>`;
+    const suspiciousText = (s) => {
+      const x = String(s || "").trim();
+      if (!x) return true;
+      if (x === "—" || x === "-" || x.toLowerCase().includes("todo")) return true;
+      return false;
+    };
+    const ruleWarn = hasRule && suspiciousText(L.rule_en) ? "نص القاعدة غير واضح/ناقص" : "";
 
-    const tablePanel = tbl
-      ? `<div class="panel gram-sec">
-        <h3 style="margin:0 0 10px;font-size:15px;font-weight:900">${esc(t("gramSecTable"))}</h3>
+    const rulePanel = hasRule
+      ? `<div class="panel gram-sec glass-card">
+        <h3 class="gram-sec-title">${esc("Snap explanation")}
+          ${ruleWarn ? warnMark(ruleWarn) : ""}
+        </h3>
+        ${
+          isRuleDuplicate
+            ? `<p class="lead" style="margin:0 0 10px;font-size:13px;font-weight:700;color:var(--muted)">تم شرح هذه القاعدة مسبقًا في درس آخر. يمكنك فتحه بدل إعادة القراءة هنا.</p>
+               <a class="btn btn-sec" href="#/grammar/lesson/${encodeURIComponent(firstRuleLesson)}" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">${esc(
+                 (grammarLessonsById[firstRuleLesson] && (lang === "ar" ? grammarLessonsById[firstRuleLesson].title_ar : grammarLessonsById[firstRuleLesson].title_en)) ||
+                   t("gramOpen"),
+               )}</a>`
+            : `<div class="gram-rule-sec-inner">
+              <div class="gram-rule-hint-wrap">
+                <p class="gram-rule-hint">${esc(t("gramRuleEnHint"))}</p>
+              </div>
+              <div class="gram-rule-stack">${grammarFormatRuleEn(L.rule_en)}</div>
+            </div>`
+        }
+      </div>`
+      : "";
+
+    const tableWarn = hasTable && suspiciousText(tbl) ? "محتوى الجدول غير مكتمل/غير قابل للقراءة" : "";
+    const tablePanel = hasTable
+      ? `<div class="panel gram-sec glass-card">
+        <h3 class="gram-sec-title">${esc("Rules in action")}
+          ${tableWarn ? warnMark(tableWarn) : ""}
+        </h3>
+        <p class="gram-sec-kicker">${esc(t("gramSecTable"))}</p>
         ${tbl}
       </div>`
       : "";
 
-    const pronounPanel = `<div class="panel gram-sec">
-        <h3 style="margin:0 0 10px;font-size:15px;font-weight:900">${esc(t("gramSecPronoun"))}</h3>
-        <div class="gram-pronoun-inner">${grammarPronounTableHtml()}</div>
-      </div>`;
-    const showPronounSection = lessonId !== "past-simple-irregular-verbs";
+    // We only show lesson-specific content inside lessons (no global filler).
+    const showPronounSection = false;
 
-    const examplesPanel = `<div class="panel gram-sec gram-examples-panel">
-        <h3 style="margin:0 0 10px;font-size:15px;font-weight:900">${esc(t("gramSecExamples"))}</h3>
+    const examplesPanel = hasExamples
+      ? `<div class="panel gram-sec gram-examples-panel glass-card">
+        <h3 class="gram-sec-title">${esc("Rules in action")}</h3>
+        <p class="gram-sec-kicker">${esc(t("gramSecExamples"))}</p>
         <div class="gram-sec-body">
           <div class="gram-step-wrap">${exNav}${exampleBody}</div>
         </div>
-      </div>`;
+      </div>`
+      : "";
 
-    const notesPanel = `<div class="panel gram-sec">
-        <h3 style="margin:0 0 10px;font-size:15px;font-weight:900">${esc(t("gramSecNotes"))}</h3>
+    const notesHas = hasText(L.notes_ar) || hasText(L.mistakes_ar) || hasText(L.compare_ar);
+    const notesPanelInner = (() => {
+      if (!notesHas) return "";
+      const blocks = [];
+      if (hasText(L.notes_ar)) blocks.push(`<div class="gram-notes-lead-wrap">${grammarArabicFlowHtml(L.notes_ar)}</div>`);
+      if (hasText(L.mistakes_ar))
+        blocks.push(`<div class="gram-subsec"><h5>${esc(t("gramMistakes"))}</h5>${grammarArabicFlowHtml(L.mistakes_ar)}</div>`);
+      if (hasText(L.compare_ar))
+        blocks.push(`<div class="gram-subsec"><h5>${esc(t("gramCompare"))}</h5>${grammarArabicFlowHtml(L.compare_ar)}</div>`);
+      return `<div class="gram-notes-stack">${blocks.join("")}</div>`;
+    })();
+    const notesWarn = notesHas && suspiciousText(notesPanelInner) ? "يوجد نص غير واضح/ناقص" : "";
+    const notesPanel = notesHas
+      ? `<div class="panel gram-sec glass-card">
+        <h3 class="gram-sec-title">${esc("Common pitfalls")}
+          ${notesWarn ? warnMark(notesWarn) : ""}
+        </h3>
+        <p class="gram-sec-kicker">${esc(t("gramSecNotes"))}</p>
         <div class="gram-sec-body">${notesPanelInner}</div>
-      </div>`;
+      </div>`
+      : "";
 
-    // Lesson UI tabs (stored per lesson)
+    // Special lesson: irregular verbs (no generic "stages" UI; show verb list + contextual practice)
+    // isIrregular defined above (before tbl) for source-table Arabic augmentation
+
+    // Lesson UI tabs (stored per lesson) — only tabs with real content
     if (!state.grammar.ui || typeof state.grammar.ui !== "object") state.grammar.ui = {};
     if (!state.grammar.ui[lessonId] || typeof state.grammar.ui[lessonId] !== "object") state.grammar.ui[lessonId] = {};
     const availableTabs = [
-      { k: "quiz", label: hasMultiQuiz || qs.length ? t("gramSecQuiz") : null },
-      { k: "table", label: tbl ? t("gramSecTable") : null },
-      { k: "rule", label: t("gramSecRule") },
-      { k: "pronoun", label: showPronounSection ? t("gramSecPronoun") : null },
-      { k: "examples", label: t("gramSecExamples") },
-      { k: "notes", label: t("gramSecNotes") },
+      { k: "quiz", label: hasQuiz ? t("gramSecQuiz") : null },
+      { k: "table", label: hasTable ? t("gramSecTable") : null },
+      { k: "rule", label: hasRule ? t("gramSecRule") : null },
+      { k: "examples", label: hasExamples ? t("gramSecExamples") : null },
+      { k: "notes", label: notesHas ? t("gramSecNotes") : null },
     ].filter((x) => x.label);
 
-    const defaultTab =
-      (hasMultiQuiz || qs.length) ? "quiz" : tbl ? "table" : "rule";
+    const defaultTab = hasQuiz ? "quiz" : hasTable ? "table" : hasRule ? "rule" : hasExamples ? "examples" : "notes";
     const uiTab = state.grammar.ui[lessonId].tab;
     const curTab = availableTabs.some((x) => x.k === uiTab) ? uiTab : defaultTab;
     state.grammar.ui[lessonId].tab = curTab;
@@ -5801,12 +7571,240 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
     let mainPanel = "";
     if (curTab === "rule") mainPanel = rulePanel;
     else if (curTab === "table") mainPanel = tablePanel || `<div class="panel"><p class="empty">${esc(t("gramEmptyCat"))}</p></div>`;
-    else if (curTab === "pronoun") mainPanel = pronounPanel;
     else if (curTab === "examples") mainPanel = examplesPanel;
     else if (curTab === "notes") mainPanel = notesPanel;
     else mainPanel = `<div class="panel gram-sec"><h3 style="margin:0 0 10px;font-size:15px;font-weight:900">${esc(
       t("gramSecQuiz"),
     )}</h3><div class="gram-sec-body gram-quiz-block">${quizSection || `<p class="empty">${esc(t("emptyQuiz"))}</p>`}</div></div>`;
+
+    if (isIrregular && curTab === "table") {
+      // Irregular verbs view: "common" + clean cards + quiz (no deletion).
+      const extractIrregular = () => {
+        const items = [];
+        const seen = new Set();
+        const pushRow = (base, past, v3, meaning) => {
+          const b = String(base || "").trim();
+          if (!b) return;
+          const key = b.toLowerCase();
+          if (seen.has(key)) return;
+          seen.add(key);
+          items.push({ base: b, past: String(past || "").trim(), v3: String(v3 || "").trim(), meaning: String(meaning || "").trim() });
+        };
+        const fromTable = (T) => {
+          if (!T || !Array.isArray(T.rows)) return;
+          for (const r of T.rows) {
+            if (!Array.isArray(r)) continue;
+            const rawCells = r.map((c) => String(c || "").trim());
+            const cells = rawCells.filter(Boolean);
+            const w = (x) => /^[A-Za-z]+(?:'[A-Za-z]+)?$/.test(String(x || "").trim());
+            // Many of our tables are: المعنى | V1 | V2 | V3
+            if (cells.length >= 4 && w(cells[1]) && w(cells[2]) && w(cells[3])) {
+              pushRow(cells[1], cells[2], cells[3], cells[0]);
+              continue;
+            }
+            // Fallback 3-column style: V1 | V2 | V3
+            if (cells.length >= 3 && w(cells[0]) && w(cells[1]) && w(cells[2])) {
+              pushRow(cells[0], cells[1], cells[2], "");
+              continue;
+            }
+            if (cells.length >= 1 && w(cells[0])) pushRow(cells[0], "", "");
+          }
+        };
+        if (Array.isArray(L.tables)) L.tables.forEach(fromTable);
+        else fromTable(L.table);
+        items.sort((a, b) => a.base.localeCompare(b.base));
+        return items;
+      };
+
+      // Sanity check: 52 unique verbs (V1) — IRR_APPROVED_MASTER
+      const irrBaseSet = new Set(IRR_APPROVED_MASTER.map((x) => String(x.base).toLowerCase()));
+      const irrOk = IRR_APPROVED_MASTER.length === 52 && irrBaseSet.size === 52;
+
+      const list = IRR_APPROVED_MASTER.slice().sort((a, b) => String(a.base).localeCompare(String(b.base)));
+      const byForm = new Map();
+      for (const it of list) {
+        [it.base, it.past, it.v3].filter(Boolean).forEach((f) => byForm.set(String(f).toLowerCase(), it));
+      }
+
+      const grammarSafeFind = (base) => list.find((x) => String(x.base).toLowerCase() === String(base).toLowerCase()) || null;
+      // PDF-style grouping (Group 1 / Group 2)
+      const g1 = list.filter((x) => x.group === 1);
+      const g2 = list.filter((x) => x.group === 2);
+
+      const letterMap = new Map();
+      for (const it of list) {
+        const L0 = String(it.base || "").trim().charAt(0).toUpperCase();
+        if (!L0) continue;
+        if (!letterMap.has(L0)) letterMap.set(L0, []);
+        letterMap.get(L0).push(it);
+      }
+      const letters = [...letterMap.keys()].sort((a, b) => a.localeCompare(b));
+
+      const fixCaps = (s) => {
+        const v = String(s || "").trim();
+        if (!v) return v;
+        // Keep complex forms as-is (spaces, slashes, parentheses, hyphens)
+        if (/[\s/()_-]/.test(v)) return v;
+        if (/^[A-Z][a-z']+$/.test(v)) return v.charAt(0).toLowerCase() + v.slice(1);
+        return v;
+      };
+
+      const mkCard = (it, badge) => {
+        const top = badge ? `<div class="pillrow" style="margin:0 0 10px"><span class="chip" dir="ltr" style="font-weight:900">${esc(badge)}</span></div>` : "";
+        const irrCell = (labelAr, enVal, arVal) => {
+          const en = fixCaps(enVal) || "—";
+          const ar = String(arVal || "").trim();
+          return `<div>
+            <div style="font-size:11px;color:var(--muted);font-weight:850" dir="rtl">${esc(labelAr)}</div>
+            <div style="font-family:var(--irr-en);font-weight:950" dir="ltr">${esc(en)}</div>
+            ${
+              ar
+                ? `<div style="margin-top:4px" dir="rtl"><span class="chip" style="font-size:12px;opacity:.92">${esc(ar)}</span></div>`
+                : ""
+            }
+          </div>`;
+        };
+        const cols = `<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;align-items:start">
+          ${irrCell("المضارع", it.base, it.meaning)}
+          ${irrCell("الماضي", it.past, it.past_ar)}
+          ${irrCell("التصريف الثالث", it.v3, it.v3_ar)}
+        </div>`;
+        return `<div class="panel" style="padding:14px 14px;border-radius:16px;background:color-mix(in srgb, var(--surface2) 90%, transparent);border:1px solid var(--border)">${top}${cols}</div>`;
+      };
+
+      const listHtml = letters
+        .map((L0) => {
+          const rows = (letterMap.get(L0) || []).map((it) => mkCard(it, "")).join("");
+          return `<details class="voc-phase-details" open>
+            <summary><span style="font-weight:950">${esc(L0)}</span> <span class="chip" dir="ltr">${esc(String((letterMap.get(L0) || []).length))}</span></summary>
+            <div class="grid" data-irr-letter="${esc(L0)}" style="grid-template-columns:repeat(auto-fill, minmax(min(100%, 270px), 1fr));gap:12px">${rows}</div>
+          </details>`;
+        })
+        .join("");
+
+      // Table-first premium UI (no cards)
+      if (!state.grammar.irregular || typeof state.grammar.irregular !== "object") state.grammar.irregular = {};
+      if (!state.grammar.irregular.stageDone || typeof state.grammar.irregular.stageDone !== "object") state.grammar.irregular.stageDone = {};
+
+      const stageItems = (s) => IRR_APPROVED_MASTER.filter((x) => x.stage === s);
+      const curStage = clamp(Number(state.grammar.irregular.stage || 1) || 1, 1, 7);
+      state.grammar.irregular.stage = curStage;
+      saveState();
+
+      const stageTableRow = (it) => {
+        const base = fixCaps(it.base);
+        const past = fixCaps(it.past);
+        const v3 = fixCaps(it.v3);
+        const m = String(it.meaning || "").trim();
+        return `<tr data-irr-row>
+          <td dir="ltr" style="font-family:var(--irr-en);font-weight:950">
+            ${esc(base)}
+            ${m ? `<div style="margin-top:4px" dir="rtl"><span class="chip" style="opacity:.92">${esc(m)}</span></div>` : ""}
+          </td>
+          <td dir="ltr" style="font-family:var(--irr-en);font-weight:950">
+            ${esc(past || "—")}
+            ${it.past_ar ? `<div style="margin-top:4px" dir="rtl"><span class="chip" style="opacity:.92">${esc(it.past_ar)}</span></div>` : ""}
+          </td>
+          <td dir="ltr" style="font-family:var(--irr-en);font-weight:950">
+            ${esc(v3 || "—")}
+            ${it.v3_ar ? `<div style="margin-top:4px" dir="rtl"><span class="chip" style="opacity:.92">${esc(it.v3_ar)}</span></div>` : ""}
+          </td>
+        </tr>`;
+      };
+
+      const stagePills = `<div class="pillrow" style="margin:0;gap:10px;flex-wrap:wrap">
+        ${Array.from({ length: 7 }, (_, i) => i + 1)
+          .map((s) => `<button type="button" class="pill ${s === curStage ? "on" : ""}" data-irr-stage="${esc(String(s))}">مرحلة ${esc(String(s))}</button>`)
+          .join("")}
+      </div>`;
+
+      const stagePanel = `<div class="panel glass-card" style="margin-top:12px">
+        <div class="pillrow" style="margin:0 0 10px;justify-content:space-between;gap:10px;flex-wrap:wrap">
+          <div class="pillrow" style="margin:0;gap:10px;flex-wrap:wrap">
+            <span class="chip" style="font-weight:950">مرحلة <span dir="ltr">${esc(String(curStage))}</span></span>
+            <span class="chip" style="opacity:.9">المجموعة ${esc(curStage <= 5 ? "١" : "٢")}</span>
+            <span class="chip" dir="ltr" style="font-weight:900">${esc(String(stageItems(curStage).length))}</span>
+            <span class="chip" style="font-weight:900;${irrOk ? "" : "border-color:rgba(239,68,68,.5);color:var(--bad)"}">${esc(
+              irrOk ? "✔︎ 52 فعل (معتمد)" : "تحذير: يوجد نقص/تكرار",
+            )}</span>
+          </div>
+          <div class="pillrow" style="margin:0;gap:10px;flex-wrap:wrap">
+            <button type="button" class="btn btn-sec" id="irrStageDoneBtn">${state.grammar.irregular.stageDone[String(curStage)] ? "تمت" : "علّم كـ تم"}</button>
+            <button type="button" class="btn btn-primary" id="irrStageQuizBtn">اختبار المرحلة</button>
+          </div>
+        </div>
+        ${stagePills}
+        <div class="table-responsive" style="margin-top:12px">
+          <table class="irr-prem-table">
+            <thead>
+              <tr>
+                <th dir="rtl" style="font-family:var(--font)">المضارع</th>
+                <th dir="rtl" style="font-family:var(--font)">الماضي</th>
+                <th dir="rtl" style="font-family:var(--font)">التصريف الثالث</th>
+              </tr>
+            </thead>
+            <tbody id="irrStageTbody">${stageItems(curStage).map(stageTableRow).join("")}</tbody>
+          </table>
+        </div>
+      </div>`;
+
+      const groupsHtml = stagePanel;
+
+      const tableHtml = ``;
+
+      mainPanel = `
+        <div class="panel gram-sec glass-card">
+          <h3 class="gram-sec-title">${esc("Irregular Verbs")}</h3>
+          <p class="gram-sec-kicker">عرض حسب تقسيم الملف المعتمد + A–Z + كويز.</p>
+          <label class="search" style="margin-top:12px">
+            <input type="search" id="irrSearch" placeholder="ابحث عن فعل… (مثال: go / went)" autocomplete="off" dir="ltr"/>
+          </label>
+          <div class="pillrow" style="margin-top:12px;gap:10px;flex-wrap:wrap">
+            <button type="button" class="pill on" id="irrTabCommon">المجموعات</button>
+            <button type="button" class="pill" id="irrTabList">A–Z</button>
+            <button type="button" class="pill" id="irrTabQuiz">كويز</button>
+            <span class="chip" id="irrCount" dir="ltr" style="font-weight:900">${esc(String(list.length))}</span>
+          </div>
+
+          <div id="irrPaneCommon" style="margin-top:12px">
+            ${groupsHtml}
+          </div>
+
+          <div id="irrPaneList" style="margin-top:12px;display:none">
+            <div id="irrList">${listHtml || `<p class="empty">${esc(t("gramEmptyCat"))}</p>`}</div>
+            ${tableHtml}
+          </div>
+
+          <div id="irrPaneQuiz" style="margin-top:12px;display:none">
+            <div class="panel" style="background:color-mix(in srgb, var(--surface2) 88%, transparent);border:1px solid var(--border)">
+              <div class="pillrow" style="margin-top:0;justify-content:space-between;gap:10px">
+                <button type="button" class="btn btn-sec" id="irrPrev">${esc(t("prev"))}</button>
+                <div class="chip" id="irrProg" dir="ltr" style="font-weight:900">1/1</div>
+                <button type="button" class="btn btn-sec" id="irrNext">${esc(t("next"))}</button>
+              </div>
+              <div class="pillrow" style="margin-top:10px;gap:10px;flex-wrap:wrap;justify-content:flex-start">
+                <button type="button" class="btn btn-sec" id="irrRetryQ" disabled>إعادة السؤال</button>
+                <button type="button" class="btn btn-sec" id="irrReset">إعادة الكويز من جديد</button>
+              </div>
+              <div class="ar-text" id="irrPrompt" style="margin-top:12px;font-weight:900"></div>
+              <div class="en-text" id="irrStem" dir="ltr" style="margin-top:8px;font-weight:950"></div>
+              <div class="ar-text" id="irrStemAr" dir="rtl" style="margin-top:6px;font-weight:750;display:none"></div>
+              <div class="pillrow" id="irrOpts" style="margin-top:12px;gap:10px;flex-direction:column;align-items:stretch"></div>
+              <div class="panel" id="irrFb" style="margin-top:12px;display:none;padding:12px 14px;border-radius:12px;border:1px dashed color-mix(in srgb, var(--border) 75%, transparent);background:color-mix(in srgb, var(--surface) 78%, transparent)"></div>
+            </div>
+          </div>
+
+          ${
+            tablePanel
+              ? `<details style="margin-top:12px" class="glass-card">
+                  <summary style="cursor:pointer;font-weight:900">عرض الجداول الأصلية (المصدر)</summary>
+                  <div style="margin-top:12px">${tbl}</div>
+                </details>`
+              : ""
+          }
+        </div>`;
+
+    }
 
     v.innerHTML = `
       ${backBar(back)}
@@ -5815,6 +7813,13 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
         <div class="gram-lesson-hero">
           <h2 class="gram-lesson-title-ar">${esc(L.title_ar)}</h2>
           <p class="gram-lesson-title-en" dir="ltr">${esc(L.title_en)}</p>
+          ${
+            topic.en
+              ? `<div class="pillrow" style="margin-top:10px"><span class="chip" dir="ltr" style="font-weight:850">${esc(
+                  topic.en,
+                )}</span>${topic.ar ? `<span class="chip">${esc(topic.ar)}</span>` : ""}</div>`
+              : ""
+          }
           ${explainBlock}
         </div>
         <div class="gram-lesson-meta pillrow">
@@ -5848,6 +7853,243 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
     };
 
     bindGrammarReviewOfferClicks(v);
+
+    // Irregular verbs: wire list filter + quick quiz inside the Table tab.
+    if (isIrregular && curTab === "table") {
+      const all = IRR_APPROVED_MASTER.slice();
+
+      const setPane = (k) => {
+        const onCommon = k === "common";
+        const onList = k === "list";
+        const onQuiz = k === "quiz";
+        $("#irrPaneCommon") && ($("#irrPaneCommon").style.display = onCommon ? "block" : "none");
+        $("#irrPaneList") && ($("#irrPaneList").style.display = onList ? "block" : "none");
+        $("#irrPaneQuiz") && ($("#irrPaneQuiz").style.display = onQuiz ? "block" : "none");
+        $("#irrTabCommon")?.classList.toggle("on", onCommon);
+        $("#irrTabList")?.classList.toggle("on", onList);
+        $("#irrTabQuiz")?.classList.toggle("on", onQuiz);
+      };
+      $("#irrTabCommon") && ($("#irrTabCommon").onclick = () => setPane("common"));
+      $("#irrTabList") && ($("#irrTabList").onclick = () => setPane("list"));
+      $("#irrTabQuiz") && ($("#irrTabQuiz").onclick = () => {
+        setPane("quiz");
+        renderQ();
+      });
+
+      const applyFilter = () => {
+        const q = String($("#irrSearch")?.value || "").trim().toLowerCase();
+        let shown = 0;
+        v.querySelectorAll("[data-irr-letter]").forEach((box) => {
+          let any = false;
+          box.querySelectorAll(".panel").forEach((row) => {
+            const t = row.textContent.toLowerCase();
+            const ok = !q || t.includes(q);
+            row.style.display = ok ? "" : "none";
+            if (ok) {
+              any = true;
+              shown++;
+            }
+          });
+          const det = box.closest("details");
+          if (det) det.style.display = any ? "" : "none";
+        });
+        // Also filter stage table (if present)
+        const stBody = $("#irrStageTbody");
+        if (stBody) {
+          let shownRows = 0;
+          stBody.querySelectorAll("[data-irr-row]").forEach((tr) => {
+            const t = tr.textContent.toLowerCase();
+            const ok = !q || t.includes(q);
+            tr.style.display = ok ? "" : "none";
+            if (ok) shownRows++;
+          });
+          if (q) shown = shownRows;
+        }
+        $("#irrCount") && ($("#irrCount").textContent = String(shown || 0));
+      };
+      $("#irrSearch")?.addEventListener("input", applyFilter);
+      applyFilter();
+
+      // Default pane (common)
+      setPane("common");
+
+      // Quick quiz: base -> past (or past->base if missing past)
+      let irrQuizGroup = 0; // 0=all, 1=G1, 2=G2
+      const mkQuiz = (group) => {
+        const pool = all.filter((x) => x.base && (!group || x.group === group));
+        const pastPool = pool.filter((x) => x.past);
+        const qs = [];
+        const uniq = (arr) => [...new Set(arr)];
+        /** Always include `correct`; never slice a shuffled pool (correct could be dropped). */
+        const fourChoices = (correct, distractorPool) => {
+          const wrongPool = uniq(distractorPool.filter((x) => x && x !== correct));
+          const k = Math.min(3, wrongPool.length);
+          const picks = shuffle(wrongPool).slice(0, k);
+          return shuffle([correct, ...picks]);
+        };
+        const pastIx = shuffle([...Array(pastPool.length).keys()]);
+        for (let j = 0; j < Math.min(18, pastPool.length); j++) {
+          const it = pastPool[pastIx[j]];
+          const correct = it.past;
+          const wrongs = pastPool.map((x) => x.past);
+          const choices = fourChoices(correct, wrongs);
+          qs.push({
+            prompt_ar: "ما هو الماضي للفعل التالي؟",
+            stem_en: it.base,
+            stem_ar: String(it.meaning || "").trim(),
+            choices_en: choices,
+            answer_en: correct,
+            explain_ar: `المضارع: ${it.base} (${it.meaning || "—"}) — الماضي: ${it.past} (${it.past_ar || "—"}) — التصريف الثالث: ${it.v3} (${it.v3_ar || "—"})`,
+          });
+        }
+        // If very small, add reverse questions too
+        if (qs.length < 8 && pastPool.length) {
+          const revIx = shuffle([...Array(pastPool.length).keys()]);
+          for (let j = 0; j < Math.min(12, pastPool.length); j++) {
+            const it = pastPool[revIx[j]];
+            const correct = it.base;
+            const wrongs = pastPool.map((x) => x.base);
+            const choices = fourChoices(correct, wrongs);
+            qs.push({
+              prompt_ar: "ما هو المضارع (الشكل الأول) لهذا الماضي؟",
+              stem_en: it.past,
+              stem_ar: String(it.past_ar || "").trim(),
+              choices_en: choices,
+              answer_en: correct,
+              explain_ar: `الماضي: ${it.past} (${it.past_ar || "—"}) — المضارع: ${it.base} (${it.meaning || "—"}) — التصريف الثالث: ${it.v3} (${it.v3_ar || "—"})`,
+            });
+          }
+        }
+        return qs.slice(0, 20);
+      };
+
+      let quiz = mkQuiz(irrQuizGroup);
+      let qi = 0;
+      let picked = {};
+
+      const rebuildQuiz = () => {
+        quiz = mkQuiz(irrQuizGroup);
+        qi = 0;
+        picked = {};
+        renderQ();
+      };
+
+      $("#irrReset") &&
+        ($("#irrReset").onclick = () => {
+          rebuildQuiz();
+        });
+
+      $("#irrRetryQ") &&
+        ($("#irrRetryQ").onclick = () => {
+          delete picked[qi];
+          renderQ();
+        });
+
+      // Stage-based quiz & navigation (premium dashboard)
+      const stageBtns = v.querySelectorAll("[data-irr-stage]");
+      stageBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const s = clamp(Number(btn.getAttribute("data-irr-stage")) || 1, 1, 7);
+          if (!state.grammar.irregular || typeof state.grammar.irregular !== "object") state.grammar.irregular = {};
+          state.grammar.irregular.stage = s;
+          saveState();
+          render();
+        });
+      });
+
+      $("#irrStageDoneBtn") &&
+        ($("#irrStageDoneBtn").onclick = () => {
+          if (!state.grammar.irregular || typeof state.grammar.irregular !== "object") state.grammar.irregular = {};
+          if (!state.grammar.irregular.stageDone || typeof state.grammar.irregular.stageDone !== "object") state.grammar.irregular.stageDone = {};
+          const s = clamp(Number(state.grammar.irregular.stage || 1) || 1, 1, 7);
+          state.grammar.irregular.stageDone[String(s)] = !state.grammar.irregular.stageDone[String(s)];
+          saveState();
+          render();
+        });
+
+      $("#irrStageQuizBtn") &&
+        ($("#irrStageQuizBtn").onclick = () => {
+          const s = clamp(Number(state.grammar.irregular?.stage || 1) || 1, 1, 7);
+          irrQuizGroup = s <= 5 ? 1 : 2;
+          // filter quiz pool by stage
+          const stageOnly = all.filter((x) => x.stage === s);
+          const prevAll = all.slice();
+          all.length = 0;
+          stageOnly.forEach((x) => all.push(x));
+          setPane("quiz");
+          rebuildQuiz();
+          // restore list so search and other UI remain correct
+          all.length = 0;
+          prevAll.forEach((x) => all.push(x));
+        });
+
+      // (Favorites UI disabled in table-first view)
+
+      function renderQ() {
+        if (!$("#irrPaneQuiz")) return;
+        if (!quiz.length) {
+          $("#irrPaneQuiz").innerHTML = `<p class="empty">لا توجد بيانات كافية لبناء كويز من الجداول الحالية.</p>`;
+          return;
+        }
+        qi = clamp(qi, 0, quiz.length - 1);
+        const q = quiz[qi];
+        $("#irrProg").textContent = `${qi + 1}/${quiz.length}`;
+        $("#irrPrev").disabled = qi <= 0;
+        $("#irrNext").disabled = qi >= quiz.length - 1;
+        $("#irrPrompt").textContent = q.prompt_ar || "";
+        $("#irrStem").textContent = q.stem_en || "";
+        const sar = $("#irrStemAr");
+        if (sar) {
+          const tx = String(q.stem_ar || "").trim();
+          sar.textContent = tx;
+          sar.style.display = tx ? "block" : "none";
+        }
+
+        const lock = typeof picked[qi] === "string";
+        const ans = q.answer_en;
+        $("#irrOpts").innerHTML = (q.choices_en || [])
+          .map((c) => {
+            const isAns = lock && c === ans;
+            const cls = isAns ? "btn btn-primary" : "btn btn-sec";
+            return `<button type="button" class="${cls}" data-irr-pick="${esc(c)}" ${lock ? "disabled" : ""} style="justify-content:flex-start;direction:ltr;text-align:left">${esc(
+              c,
+            )}</button>`;
+          })
+          .join("");
+
+        const fb = $("#irrFb");
+        fb.style.display = lock ? "block" : "none";
+        if (lock) {
+          const ok = picked[qi] === ans;
+          fb.innerHTML = `<div class="ar-text" style="font-weight:950;color:${ok ? "var(--ok)" : "var(--bad)"}">${esc(
+            ok ? "صحيح" : "خطأ",
+          )}</div><div class="en-text" dir="ltr" style="margin-top:6px;font-weight:950;font-family:var(--irr-en)">${esc(
+            "الإجابة الصحيحة: " + ans,
+          )}</div>${q.explain_ar ? `<div class="ar-text" style="margin-top:8px">${esc(q.explain_ar)}</div>` : ""}`;
+        }
+
+        $("#irrOpts").querySelectorAll("[data-irr-pick]").forEach((b) => {
+          b.addEventListener("click", () => {
+            const c = b.getAttribute("data-irr-pick");
+            if (!c) return;
+            picked[qi] = c;
+            renderQ();
+          });
+        });
+
+        const retryBtn = $("#irrRetryQ");
+        if (retryBtn) retryBtn.disabled = !lock;
+      }
+
+      $("#irrPrev") && ($("#irrPrev").onclick = () => {
+        qi = Math.max(0, qi - 1);
+        renderQ();
+      });
+      $("#irrNext") && ($("#irrNext").onclick = () => {
+        qi = Math.min(quiz.length - 1, qi + 1);
+        renderQ();
+      });
+    }
 
     const stNav = grammarLessonQuiz[lessonId];
     // Multi-stage quiz tab (stage/final) controls
@@ -6109,7 +8351,7 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
         .map((op, oi) => {
           let cls = "opt";
           if (locked) cls += oi === cur.correct ? " correct" : picked === oi ? " wrong" : "";
-          return `<button type="button" class="${cls}" data-fo="${oi}" ${locked ? "disabled" : ""}><span class="L">${letters[oi]}</span><span class="txt gram-opt-tok" id="gramFinal-opt-${oi}"></span></button>`;
+          return `<button type="button" class="${cls}" data-fo="${oi}" ${locked ? "disabled" : ""}><span class="L">${letters[oi]}</span><span class="txt gram-opt-tok" dir="ltr" id="gramFinal-opt-${oi}"></span></button>`;
         })
         .join("");
 
@@ -6387,7 +8629,7 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
         .map((op, oi) => {
           let cls = "opt";
           if (locked) cls += oi === cur.correct ? " correct" : picked === oi ? " wrong" : "";
-          return `<button type="button" class="${cls}" data-bfo="${oi}" ${locked ? "disabled" : ""}><span class="L">${letters[oi]}</span><span class="txt gram-opt-tok" id="gramBlended-opt-${oi}"></span></button>`;
+          return `<button type="button" class="${cls}" data-bfo="${oi}" ${locked ? "disabled" : ""}><span class="L">${letters[oi]}</span><span class="txt gram-opt-tok" dir="ltr" id="gramBlended-opt-${oi}"></span></button>`;
         })
         .join("");
       const timeRow =
@@ -6598,6 +8840,10 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
   }
 
   function renderGrammar() {
+    if (grammarSeg.track === "g2") {
+      renderGrammar2Landing();
+      return;
+    }
     if (grammarSeg.blendedQuiz) {
       renderGrammarBlendedQuiz();
       return;
@@ -7531,11 +9777,92 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
     const remainAll = Math.max(0, list.length - answeredAll);
     const progDone = list.length ? (answeredAll / list.length) * 100 : 0;
     const disp = displayQuizName(name);
+    const yourPick = locked ? q.options[s.answered] : "";
+    const correctPick = q.options[q.correctIndex];
+    const autoWhyWrong = (() => {
+      if (!locked || s.ok) return "";
+      const opts = (q.options || []).map((x) => String(x || "").trim());
+      const picked = String(yourPick || "").trim();
+      const correct = String(correctPick || "").trim();
+      const has = (x) => opts.includes(x);
+      const join = (lines) => lines.filter(Boolean).join("\n");
+
+      // Heuristics for common patterns in Quizzes 8/9/10
+      if (has("many") && has("much")) {
+        const isCorrectMuch = correct === "much";
+        return join([
+          "قاعدة سريعة: much للأسماء غير المعدودة (water, sugar, milk)، وmany للمعدودة (students, apples).",
+          picked === "many" && isCorrectMuch ? "إجابتك many خطأ لأن الاسم هنا غير معدود." : "",
+          picked === "much" && !isCorrectMuch ? "إجابتك much خطأ لأن الاسم هنا معدود (جمع)." : "",
+        ]);
+      }
+      if (has("some") && has("any")) {
+        return join([
+          "قاعدة سريعة: any تُستخدم غالبًا في النفي والأسئلة العامة. some تُستخدم غالبًا في الإثبات، وتأتي في السؤال إذا كان عرضًا/طلبًا مهذبًا.",
+          picked === "some" && correct === "any" ? "إجابتك some خطأ لأن السؤال هنا عام عن وجود شيء، وليس عرضًا/طلبًا." : "",
+        ]);
+      }
+      if (has("wasn't") && has("weren't")) {
+        return join([
+          "قاعدة سريعة: wasn't للمفرد (I/he/she/it) وweren't للجمع (you/we/they).",
+          picked === "wasn't" && correct === "weren't" ? "إجابتك wasn't خطأ لأن They/parents جمع." : "",
+        ]);
+      }
+      if (has("didn't finish") && has("haven't finished")) {
+        return join([
+          "قاعدة سريعة: yet في النفي غالبًا مع المضارع التام (haven't/hasn't + V3) لأنها تعني «حتى الآن».",
+          picked === "didn't finish" && correct === "haven't finished"
+            ? "إجابتك didn't finish خطأ لأنها ماضٍ بسيط مرتبط بوقت منتهٍ، بينما yet تربط الفكرة بالحاضر (حتى الآن)."
+            : "",
+        ]);
+      }
+      if (has("good") && has("better") && has("best")) {
+        return join([
+          "قاعدة سريعة: مع (the) نستخدم superlative مثل best. أما better فهو comparative وغالبًا يحتاج than.",
+          picked === "better" && correct === "best" ? "إجابتك better خطأ لأن وجود the هنا يعني أفضل شيء بين الكل، وليس مقارنة بين اثنين." : "",
+        ]);
+      }
+      if (has("can") && has("could")) {
+        return join([
+          "قاعدة سريعة: can للحاضر، وcould للماضي (القدرة في الماضي).",
+          picked === "can" && correct === "could" ? "إجابتك can خطأ لأن الجملة تحتوي when I was five (ماضٍ)." : "",
+        ]);
+      }
+      if (has("watch") && has("watched") && has("were watching")) {
+        return join([
+          "قاعدة سريعة: (was/were + V-ing) للفعل المستمر في الخلفية + past simple لحدث مفاجئ مع when.",
+          picked === "watched" && correct === "were watching"
+            ? "إجابتك watched خطأ لأنها لا تعطي معنى الاستمرار وقت رنين الهاتف."
+            : "",
+        ]);
+      }
+      if (has("will") && has("would")) {
+        return join([
+          "قاعدة سريعة: الشرط الأول If + present → will. الشرط الثاني If + past → would.",
+          picked === "would" && correct === "will" ? "إجابتك would خطأ لأن جملة الشرط هنا ليست If + past؛ هي If it rains (حاضر)." : "",
+        ]);
+      }
+      if (has("are") && has("were") && has("was")) {
+        return join([
+          "قاعدة سريعة: في past continuous: I/he/she/it → was، وyou/we/they → were. وare للحاضر.",
+          picked === "was" && correct === "were" ? "إجابتك was خطأ لأن you تحتاج were." : "",
+          picked === "are" && correct === "were" ? "إجابتك are خطأ لأن السؤال عن الماضي (yesterday/last night)." : "",
+        ]);
+      }
+      return "";
+    })();
     const wrongBlock =
       locked && !s.ok
         ? `<div class="quiz-wrong-explain" id="quizWrongPanel">
           <h4>${esc(t("quizWrongExplainTitle"))}</h4>
-          <p class="ar-text">${esc(q.why_answer_ar || "—")}</p>
+          <p class="quiz-wrong-meta"><strong>${esc("إجابتك")}:</strong> <span dir="ltr" style="font-family:var(--irr-en);font-weight:850">${esc(
+            yourPick || "—",
+          )}</span></p>
+          <p class="quiz-wrong-meta" style="margin-top:6px"><strong>${esc("الإجابة الصحيحة")}:</strong> <span dir="ltr" style="font-family:var(--irr-en);font-weight:850">${esc(
+            correctPick || "—",
+          )}</span></p>
+          <p class="ar-text" style="margin-top:10px;white-space:pre-line">${esc(q.why_answer_ar || q.arabic_explanation || "—")}</p>
+          ${autoWhyWrong ? `<p class="ar-text" style="margin-top:10px;white-space:pre-line">${esc(autoWhyWrong)}</p>` : ""}
           ${
             q.grammar_rule_ar && String(q.grammar_rule_ar).trim()
               ? `<p class="quiz-wrong-meta"><strong>${esc(t("quizWrongRule"))}:</strong> ${esc(q.grammar_rule_ar)}</p>`
@@ -7702,7 +10029,7 @@ const __GRAMMAR_AUDIT_EMBED__ = {"grammar-audit-summary-json":{"generated":"2026
         if (i === q.correctIndex) b.classList.add("correct");
         if (s.answered === i && i !== q.correctIndex) b.classList.add("wrong");
       }
-      b.innerHTML = `<span class="L">${String.fromCharCode(65 + i)}</span><span class="txt"></span>`;
+      b.innerHTML = `<span class="L">${String.fromCharCode(65 + i)}</span><span class="txt" dir="ltr"></span>`;
       tokenizeEn(b.querySelector(".txt"), op, map);
       b.onclick = () => {
         if (locked) return;
